@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Third-party software notices
+@noble/curves2.4.0
+The MIT License (MIT)
+
+Copyright (c) 2022 Paul Miller (https://paulmillr.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+@noble/hashes2.4.0
+The MIT License (MIT)
+
+Copyright (c) 2022 Paul Miller (https://paulmillr.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+
+<!-- TemaBlogger release | product=saemedia | releaseVersion=1.3.12 | date=2026-11-16 | delivery=free-v1 | basePremiumVersion=1.3.11 -->
+
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion="1.3.12" expr:dir='data:blog.languageDirection' expr:lang='data:blog.localeUnderscoreDelimited' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<!-- sae-theme: SaeMedia v1.3.6 -->
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<b:include data='blog' name='all-head-content'/>
+<title><b:if cond='data:view.isHomepage'><data:blog.title/><b:else/><data:view.title.escaped/> - <data:blog.title/></b:if></title>
+<link href='https://blogger.googleusercontent.com' rel='preconnect'/>
+<link href='https://fonts.googleapis.com' rel='preconnect'/>
+<link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+<link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap' rel='stylesheet'/>
+<script>/*<![CDATA[*/
+(function(){try{if(localStorage.getItem('sm-dark')==='1'){document.documentElement.className+=' sm-dark-pre'}}catch(e){}})();
+/*]]>*/</script>
+<b:skin><![CDATA[
+/* SaeMedia v1.2 - tema Blogger portal berita */
+/* -----------------------------------------------
+<Variable name="schemeColor" description="Warna utama (merah)" type="color" default="#d9091b" value="#d9091b"/>
+<Variable name="secondColor" description="Warna kedua (ungu)" type="color" default="#3920c9" value="#3920c9"/>
+<Variable name="hoverColor" description="Warna hover menu" type="color" default="#f1c40f" value="#f1c40f"/>
+<Variable name="footerBg" description="Latar footer" type="color" default="#ffffff" value="#ffffff"/>
+----------------------------------------------- */
+
+:root{--red:$(schemeColor);--blue:$(secondColor);--yel:$(hoverColor);--bg:#fff;--bg2:#f8f8f8;--txt:#000;--grey:#555;--grey2:#666;--bd:#e0e0e0;--soft:rgba(0,0,0,.05);--hdr:#fff;--nav1:$(schemeColor);--nav2:$(secondColor);--ft:$(footerBg);--pop1:#efefef;--pop2:#dddddd;--shadow:0 6px 24px rgba(0,0,0,.14)}
+body.dark,html.sm-dark-pre body{--bg:#111;--bg2:#000;--txt:#eee;--grey:#9e9e9e;--grey2:#e0e0e0;--bd:#444;--soft:rgba(255,255,255,.07);--hdr:#222;--nav1:#333;--nav2:#222;--ft:#1b1b1b;--pop1:#222;--pop2:#2c2c2c;--yel:#f1c40f}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font:400 14px/1.5 Poppins,Arial,sans-serif;background:var(--bg);color:var(--txt);overflow-wrap:break-word}
+a{color:var(--txt);text-decoration:none;transition:color .2s}
+a:hover{color:var(--red)}
+img{max-width:100%;height:auto;border:0;vertical-align:middle}
+h1,h2,h3,h4{font-weight:500;line-height:1.4;margin:0 0 10px}
+p{margin:0 0 20px}
+button{font:inherit;cursor:pointer}
+ul{margin:0;padding:0;list-style:none}
+.sm-c{max-width:1050px;margin:0 auto;padding:0 16px}
+.sm-hide,.sm-cfg{display:none!important}
+.section,.widget{margin:0;padding:0}
+.widget .widget-content{margin:0}
+.sm-skip{position:absolute;left:-9999px}
+.sm-skip:focus{left:16px;top:8px;z-index:100000;background:#fff;padding:8px}
+
+/* ===== Header ===== */
+.sm-hd{position:sticky;top:0;z-index:999;background:var(--hdr);box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.sm-top{height:60px;display:flex;align-items:center;gap:16px}
+.sm-logo{flex:0 1 auto;min-width:0;display:flex;align-items:center}
+.sm-logo .widget{line-height:0}
+.sm-logo img{max-height:40px;width:auto;display:block}
+.sm-logo-t{display:inline-block;font:700 27px/1.15 Poppins,Arial,sans-serif;letter-spacing:-.5px;text-transform:uppercase;background:linear-gradient(80deg,var(--red),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+.sm-logo h1,.sm-logo p{margin:0;line-height:1}
+.sm-logo .sm-desc{display:none}
+.sm-tr{margin-left:auto;display:flex;align-items:center;gap:12px}
+.sm-date{font-size:13px;padding-right:16px;border-right:1px solid var(--bd);white-space:nowrap}
+.sm-search{position:relative;margin:0}
+.sm-search input{width:230px;height:34px;border-radius:20px;border:1px solid var(--bd);background:var(--soft);padding:0 38px 0 16px;font:400 13px Poppins,Arial,sans-serif;color:var(--txt);outline:0}
+.sm-search input:focus{border-color:var(--blue)}
+.sm-search button{position:absolute;right:4px;top:2px;width:30px;height:30px;border:0;background:none;color:var(--txt);padding:0;display:flex;align-items:center;justify-content:center}
+.sm-ib{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;background:none;border:0;padding:0;color:var(--txt);border-radius:4px}
+.sm-ib:hover{color:var(--red)}
+.sm-ib svg{width:22px;height:22px}
+.sm-burger,.sm-sbtn{display:none}
+.sm-gw{position:relative}
+.sm-gridm{position:absolute;right:-10px;top:calc(100% + 6px);background:var(--bg);box-shadow:var(--shadow);padding:14px 18px;display:none;grid-template-columns:repeat(2,minmax(110px,auto));gap:4px 34px;z-index:20;border-radius:2px}
+.sm-gw.open .sm-gridm{display:grid}
+.sm-gw.open .sm-gbtn{color:var(--red)}
+.sm-gridm a,.sm-sub a{display:block;font-size:13px;line-height:2.1;white-space:nowrap}
+/* nav */
+.sm-nav{background:linear-gradient(80deg,var(--nav1) 0%,var(--nav2) 100%);height:44px}
+.sm-menu{display:flex;align-items:center;gap:30px;height:44px}
+.sm-menu>li{position:relative;height:44px;display:flex;align-items:center}
+.sm-menu>li>a{color:#fff;font-size:14px;font-weight:500;height:44px;display:flex;align-items:center;gap:4px;position:relative;white-space:nowrap}
+.sm-menu>li:hover>a,.sm-menu>li.on>a{color:var(--yel)!important;box-shadow:inset 0 -3px 0 var(--yel)}
+.sm-menu>li>a svg{width:12px;height:12px;transition:transform .2s}
+.sm-menu>li:hover>a svg{transform:rotate(180deg)}
+.sm-dot>a::after{content:'';position:absolute;top:11px;right:-8px;width:6px;height:6px;border-radius:50%;background:#26c6da}
+.sm-bdg{position:absolute;top:1px;right:-14px;font-size:8px;line-height:1;padding:2px 4px;border-radius:2px;background:#e00;color:#fff;font-weight:500;letter-spacing:.2px}
+.sm-bdg.g{background:#27ae60}
+.sm-sub{position:absolute;top:100%;left:-16px;background:var(--bg);box-shadow:var(--shadow);padding:12px 18px;display:none;grid-template-columns:repeat(2,minmax(110px,auto));gap:2px 34px;z-index:30;border-radius:0 0 2px 2px}
+.sm-sub.one{grid-template-columns:minmax(160px,auto)}
+.sm-menu>li:hover>.sm-sub{display:grid}
+.sm-menu>li.sm-right>.sm-sub{left:auto;right:-16px}
+
+/* ===== Breaking news ===== */
+.sm-bn{margin-top:20px;height:54px;background:var(--red);display:flex;overflow:hidden;color:#fff;font-size:14px}
+.sm-bn-l{flex:0 0 auto;background:#000;display:flex;align-items:center;padding:0 34px 0 10px;font-weight:600;clip-path:polygon(0 0,100% 0,calc(100% - 22px) 100%,0 100%);white-space:nowrap}
+.sm-bn-t{flex:1;min-width:0;overflow:hidden;position:relative}
+.sm-bn-in{position:absolute;top:0;left:0;height:100%;display:flex;align-items:center;gap:34px;width:max-content;animation:smtick var(--dur,40s) linear infinite;will-change:transform}
+.sm-bn-t:hover .sm-bn-in{animation-play-state:paused}
+.sm-bn-i{display:flex;align-items:center;gap:10px;width:290px;color:#fff;font-size:12px;font-weight:500;line-height:1.35}
+.sm-bn-i:hover{color:var(--yel)}
+.sm-bn-i img{width:32px;height:32px;object-fit:cover;flex:0 0 32px;border-radius:2px;background:rgba(255,255,255,.2)}
+.sm-bn-i span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@keyframes smtick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ===== Ads ===== */
+.sm-ad{text-align:center;line-height:0}
+.sm-ad .widget-content{line-height:normal}
+.sm-ad .widget>h2,.sm-ad .widget>h3,.sm-ad .title{display:none}
+.sm-ad img,.sm-ad iframe{max-width:100%;height:auto}
+.sm-ph{display:flex;align-items:center;justify-content:center;margin:0 auto;max-width:100%;background:repeating-linear-gradient(45deg,var(--soft),var(--soft) 10px,transparent 10px,transparent 20px);border:1px dashed var(--bd);color:var(--grey);font-size:13px;line-height:1.3;text-align:center}
+.sm-ad-hd{margin:20px 0 0}
+.sm-ad-hd .sm-ph{width:970px;height:250px}
+.sm-ad-list{margin:0 0 20px}
+.sm-ad-list .sm-ph{width:468px;height:60px}
+.sm-ad-side .sm-ph{width:325px;height:300px}
+.sm-side .sm-ad-side{margin-bottom:20px}
+/* floating */
+.sm-fl{position:fixed;top:120px;width:160px;z-index:998;display:none}
+.sm-fl-l{left:calc(50% - 525px - 176px)}
+.sm-fl-r{right:calc(50% - 525px - 176px)}
+.sm-fl .sm-ph{width:160px;height:600px;background-color:var(--bg)}
+.sm-x{position:absolute;top:-10px;right:-10px;width:24px;height:24px;border-radius:50%;border:2px solid #fff;background:#000;color:#fff;font-size:14px;line-height:1;display:flex;align-items:center;justify-content:center;z-index:2;padding:0}
+@media (min-width:1420px){.sm-fl{display:block}.sm-fl.closed{display:none}}
+/* mobile very-top parallax */
+.sm-vt{display:none;background:#000;position:relative}
+.sm-vt-bar{display:flex;align-items:center;justify-content:center;height:26px;color:#fff;font-size:11px;letter-spacing:.3px;position:relative;z-index:3;background:#000}
+.sm-vt-bar .sm-x{position:absolute;top:1px;right:8px;width:22px;height:22px;border:0;background:#333}
+.sm-px{position:relative;clip-path:inset(0 0 0 0);overflow:hidden}
+.sm-vt .sm-px{height:330px}
+.sm-vt .sm-px-in{top:191px}
+.sm-px-in{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:max-content;max-width:100vw}
+.sm-vt .sm-ph{width:325px;height:300px;background-color:#111;color:#bbb}
+
+/* ===== Layout grid ===== */
+.sm-main{padding-top:20px}
+.sm-grid{display:grid;grid-template-columns:minmax(0,672fr) minmax(0,326fr);column-gap:20px;row-gap:0;grid-template-areas:"ma sc"}
+.is-home .sm-grid{grid-template-areas:"ma sa" "fw fw" "mc sc"}
+.sm-ma{grid-area:ma;min-width:0}
+.sm-sa{grid-area:sa;min-width:0}
+.sm-fw{grid-area:fw;min-width:0}
+.sm-mc{grid-area:mc;min-width:0}
+.sm-sc{grid-area:sc;min-width:0}
+body:not(.is-home) .home-only{display:none!important}
+.sm-side{align-self:start;position:sticky;top:124px}
+.is-home .sm-sa{position:static}
+.sm-fw .widget{margin-bottom:20px}
+.sm-side .widget{margin-bottom:20px}
+
+/* ===== Titles ===== */
+.sm-st{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:500;line-height:1.4;margin:0 0 16px;color:var(--txt)}
+.sm-st::before{content:'';flex:0 0 10px;height:15px;background:var(--blue)}
+.sm-st.noicon::before{display:none}
+.sm-st img{max-height:32px;width:auto}
+.sm-st-img::before{display:none}
+.sm-wt{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}
+.sm-wt .sm-st{margin:0}
+.sm-wt-a{color:inherit;display:flex}
+.sm-wt-a svg{width:16px;height:16px}
+.sm-wdesc{font-size:13px;color:var(--grey);margin:-8px 0 12px;line-height:1.5}
+.sm-ptitle{font-size:24px;font-weight:500;margin:0 0 20px}
+.sm-ptitle small{display:block;font-size:13px;color:var(--grey);font-weight:400}
+
+/* chip + meta */
+.sm-chip{display:inline-block;background:var(--red);color:#fff!important;font-size:11px;line-height:1;padding:5px;border-radius:2px;font-weight:500;white-space:nowrap}
+.sm-chip:hover{background:var(--blue)}
+.sm-meta{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:11px;color:var(--grey)}
+.sm-meta .sm-chip{padding:4px 5px}
+
+/* ===== Slider ===== */
+.sm-sl{margin-bottom:20px}
+.sm-sl-m{position:relative;height:384px;overflow:hidden;background:#222}
+.sm-sl-tr{display:flex;height:100%;transition:transform .55s ease}
+.sm-sl-s{flex:0 0 100%;position:relative;height:100%;display:block;color:#fff}
+.sm-sl-s img{width:100%;height:100%;object-fit:cover;display:block}
+.sm-sl-info{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 16px;background:linear-gradient(0deg,rgba(0,0,0,.9),rgba(0,0,0,0) 100%)}
+.sm-sl-info h3{font-size:22px;line-height:1.4;margin:5px 0;color:#fff}
+.sm-sl-info h3 a{color:#fff}
+.sm-sl-info h3 a:hover{color:var(--yel)}
+.sm-sl-info time{font-size:11px;color:#ddd}
+.sm-sl-th{overflow:hidden}
+.sm-sl-thtr{display:flex;transition:transform .4s ease}
+.sm-sl-t{flex:0 0 25%;border-top:4px solid #000;background:var(--soft);cursor:pointer;display:block;color:var(--txt)}
+.sm-sl-t.on{border-top-color:var(--red)}
+.sm-sl-t img{display:block;width:100%;aspect-ratio:168/106;object-fit:cover}
+.sm-sl-t span{display:block;padding:10px;min-height:79px}
+.sm-sl-t span b{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;font-weight:500;line-height:1.4}
+
+/* ===== Post list (box item) ===== */
+.sm-post{margin:0 0 20px}
+.sm-box{display:flex;align-items:center;gap:16px}
+.sm-thumb{flex:0 0 25%;max-width:25%;display:block;border-radius:2px;overflow:hidden;background:var(--soft);position:relative}
+.sm-thumb img{display:block;width:100%;aspect-ratio:168/121;object-fit:cover;transition:transform .3s}
+.sm-post:hover .sm-thumb img{transform:scale(1.04)}
+.sm-box-c{flex:1;min-width:0}
+.sm-et{font-size:18px;font-weight:500;line-height:1.4;margin:0 0 10px}
+.sm-ex{font-size:12px;color:var(--grey);margin:8px 0 0;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.sm-more-wrap{text-align:center;margin:10px 0 20px}
+.sm-more{display:inline-block;background:var(--blue);color:#fff!important;padding:8px 16px;border-radius:2px;font-weight:500;font-size:14px;border:0}
+.sm-more:hover{opacity:.9}
+.sm-more.load{opacity:.6;pointer-events:none}
+.sm-nomore{font-size:13px;color:var(--grey);text-align:center;margin:10px 0 20px}
+.sm-empty{padding:30px 0;color:var(--grey)}
+
+/* ===== Carousel ===== */
+.sm-cr{position:relative}
+.sm-cr-vp{overflow:hidden}
+.sm-cr-tr{display:flex;gap:16px;transition:transform .45s ease}
+.sm-cr-i{flex:0 0 calc((100% - 16px * (var(--n,3) - 1)) / var(--n,3));min-width:0;background:var(--soft);display:block}
+.sm-cr-img{position:relative;display:block;overflow:hidden}
+.sm-cr-img img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;transition:transform .3s}
+.sm-cr-i:hover .sm-cr-img img{transform:scale(1.05)}
+.sm-cr-img .sm-chip,.sm-gb-i .sm-chip{position:absolute;left:8px;bottom:8px}
+.sm-cr-t{display:block;padding:10px;min-height:79px;color:var(--txt)}
+.sm-cr-t b{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;font-weight:500;line-height:1.4}
+.sm-arr{position:absolute;top:50%;width:48px;height:48px;border-radius:50%;background:#fff;color:#000;border:0;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,.25);z-index:3;transform:translateY(-50%);padding:0}
+.sm-arr svg{width:18px;height:18px}
+.sm-arr.p{left:6px}
+.sm-arr.n{right:6px}
+.sm-arr:hover{background:var(--yel)}
+.sm-gbox{padding:16px;border-radius:2px;background:linear-gradient(137deg,var(--red) 0%,var(--blue) 100%);color:#fff}
+.sm-gbox .sm-st,.sm-gbox .sm-wt-a,.sm-gbox .sm-cr-t{color:#fff}
+.sm-gbox .sm-st::before{background:#8bc34a}
+.sm-gbox .sm-cr-i{background:rgba(0,0,0,.12)}
+.sm-gbox .sm-cr-i:hover .sm-cr-t{color:var(--yel)}
+.sm-mod{margin:0 0 20px}
+
+/* grid box (overlay cards) */
+.sm-gb{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.sm-gb-i{position:relative;display:block;overflow:hidden;color:#fff;border-radius:2px}
+.sm-gb-i img{display:block;width:100%;aspect-ratio:148/220;object-fit:cover;transition:transform .3s}
+.sm-gb-i:hover img{transform:scale(1.05)}
+.sm-gb-i::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,0) 60%)}
+.sm-gb-c{position:absolute;left:0;right:0;bottom:0;padding:10px;z-index:2}
+.sm-gb-c .sm-chip{position:static;margin-bottom:6px}
+.sm-gb-c b{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;font-weight:500;line-height:1.4;color:#fff}
+.sm-gbox2{padding:16px;border-radius:2px;color:#fff}
+.sm-gbox2 .sm-st{color:#fff}
+.sm-gbox2 .sm-st::before{background:var(--yel)}
+
+/* side big (1 besar + kecil) */
+.sm-sb-big{position:relative;display:block;overflow:hidden;margin-bottom:12px;border-radius:2px}
+.sm-sb-big img{display:block;width:100%;aspect-ratio:326/205;object-fit:cover}
+.sm-sb-big::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85),rgba(0,0,0,0) 60%)}
+.sm-sb-bc{position:absolute;left:0;right:0;bottom:0;padding:12px;z-index:2;color:#fff}
+.sm-sb-bc b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;font-weight:500;line-height:1.4}
+.sm-sb-bc time{font-size:11px;color:#ddd}
+.sm-sm{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.sm-sm-img{flex:0 0 80px;border-radius:2px;overflow:hidden;display:block}
+.sm-sm-img img{display:block;width:80px;height:80px;object-fit:cover}
+.sm-sm b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;font-weight:500;line-height:1.4}
+.sm-sm time{font-size:11px;color:var(--grey)}
+
+/* popular */
+.sm-pop{padding:16px;border-radius:2px;background:linear-gradient(1deg,var(--pop1) 0%,var(--pop2) 100%)}
+.sm-pop .widget-content{margin:0}
+.sm-pi{display:flex;gap:10px;align-items:center;margin-top:10px;position:relative}
+.sm-pn{flex:0 0 60px;height:60px;background:var(--red);color:#fff;font-size:20px;font-weight:500;display:flex;align-items:center;justify-content:center}
+.sm-pi-c{min-width:0;flex:1}
+.sm-pi-c b{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;font-weight:500;line-height:1.4}
+.sm-pi-c time{font-size:11px;color:var(--grey)}
+.sm-pi.first{display:block;margin-top:0}
+.sm-pi.first .sm-pi-img{display:block;position:relative;overflow:hidden}
+.sm-pi.first .sm-pi-img img{display:block;width:100%;aspect-ratio:294/205;object-fit:cover}
+.sm-pi.first .sm-pi-img::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.8),rgba(0,0,0,0) 55%)}
+.sm-pi.first .sm-pi-row{position:absolute;left:0;right:0;bottom:0;display:flex;gap:10px;align-items:center;z-index:2;padding:0 10px 10px 10px}
+.sm-pi.first .sm-pi-c b,.sm-pi.first .sm-pi-c b a{color:#fff}
+.sm-pi.first .sm-pi-c time{color:#ddd}
+.sm-pi.first .sm-pn{flex-basis:40px;height:40px;font-size:16px}
+
+/* ===== Single post ===== */
+.sm-bc{font-size:13px;color:var(--grey);margin-bottom:10px;display:flex;flex-wrap:wrap;align-items:center;row-gap:2px}
+.sm-bc a{color:var(--grey)}
+.sm-bc a:hover{color:var(--red)}
+.sm-bc i{display:inline-block;width:6px;height:6px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg);margin:0 10px 0 6px}
+.sm-bc span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:280px}
+.sm-sh{margin-bottom:20px}
+.sm-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.sm-h1{font-size:30px;line-height:1.4;font-weight:500;margin:0 0 10px}
+.sm-sm-row{display:flex;align-items:center;gap:10px}
+.sm-av{flex:0 0 36px;width:36px;height:36px;border-radius:50%;overflow:hidden;background:var(--soft)}
+.sm-av img{width:36px;height:36px;object-fit:cover;display:block}
+.sm-smc{font-size:11px;color:var(--grey);line-height:1.5}
+.sm-smc a{color:var(--txt)}
+.sm-smc .sm-rt{display:inline-flex;align-items:center;gap:3px;margin-left:8px}
+.sm-smc .sm-rt svg{width:12px;height:12px}
+.sm-icons{margin-left:auto;display:flex;gap:8px}
+.sm-ic{width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff!important;border:0;padding:0;position:relative}
+.sm-ic svg{width:16px;height:16px}
+.sm-ic.cm{background:var(--blue)}
+.sm-ic.sh{background:#3c5a99}
+.sm-ic.vw{background:var(--red)}
+.sm-ic em{position:absolute;top:-6px;right:-6px;min-width:18px;height:16px;padding:0 4px;border-radius:8px;background:var(--red);color:#fff;font-size:9px;font-style:normal;line-height:16px;text-align:center;border:1px solid #fff}
+.sm-cover{margin:0 0 20px}
+.sm-cover:empty{display:none}
+.sm-cover img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover}
+.sm-cover a{display:block}
+.sm-cover figcaption,.sm-cover .tr-caption{font-size:12px;color:var(--grey);margin-top:8px;text-align:left!important;line-height:1.4}
+.sm-cover table{width:100%;border-collapse:collapse;margin:0!important}
+.sm-cover td{padding:0!important}
+.sm-wrap{display:flex;gap:20px;align-items:flex-start}
+.sm-cont{flex:1;min-width:0}
+.sm-stk{flex:0 0 120px;position:sticky;top:124px}
+.sm-stk .sm-ph{width:120px;height:600px}
+.sm-body{font-size:16px;line-height:1.5}
+.sm-body p{margin:0 0 20px}
+.sm-body h2{font-size:22px;margin:24px 0 12px}
+.sm-body h3{font-size:19px;margin:22px 0 10px}
+.sm-body a{color:var(--red)}
+.sm-body img{height:auto}
+.sm-body blockquote{margin:0 0 20px;padding:12px 18px;border-left:4px solid var(--red);background:var(--soft);color:var(--grey);font-style:italic}
+.sm-body table{max-width:100%}
+.sm-body .tr-caption{font-size:12px;color:var(--grey)}
+.sm-body iframe{max-width:100%}
+.sm-adin{margin:0 0 20px}
+.sm-adin .sm-ph{width:468px;height:60px}
+.sm-adpx{margin:0 0 20px}
+.sm-adpx .sm-px{height:630px;background:var(--soft)}
+.sm-adpx .sm-ph{width:300px;height:600px;background-color:var(--bg)}
+.sm-adaf{margin:0 0 20px}
+.sm-adaf .sm-ph{width:300px;height:250px}
+.sm-tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 0}
+.sm-tagt{background:var(--blue);color:#fff;font-size:13px;padding:6px 8px;border-radius:2px;line-height:1.2}
+.sm-tags a::before{content:'# '}
+.sm-tags a{background:var(--soft);color:var(--red);font-size:13px;padding:6px 8px;border-radius:2px;line-height:1.2;border-left:3px solid var(--blue)}
+.sm-next{display:flex;align-items:center;background:var(--red);color:#fff!important;margin-top:20px;height:60px;border-radius:2px;overflow:hidden}
+.sm-next-img{flex:0 0 60px;height:60px;background:rgba(0,0,0,.2)}
+.sm-next-img img{width:60px;height:60px;object-fit:cover;display:block}
+.sm-next-t{flex:1;min-width:0;padding:0 12px;font-size:13px;font-weight:500;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sm-next-ic{flex:0 0 30px;height:60px;background:#000;display:flex;align-items:center;justify-content:center}
+.sm-next-ic svg{width:14px;height:14px}
+.sm-next:hover .sm-next-t{color:var(--yel)}
+.sm-shb{display:flex;align-items:center;justify-content:space-between;margin:20px 0}
+.sm-shl{display:flex;gap:6px}
+.sm-shl a{width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff!important}
+.sm-shl svg{width:15px;height:15px}
+.s-fb{background:#3c5a99}.s-x{background:#0f1419}.s-tg{background:#0088cc}.s-wa{background:#25d366}.s-pin{background:#bd081c}.s-ig{background:#e4405f}.s-yt{background:#cd201f}.s-tt{background:#010101}.s-rss{background:#ee802f}.s-in{background:#0077b5}.s-wp{background:#21759b}
+.sm-rel{margin:0 0 20px}
+.sm-rg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.sm-rg-i{display:block;min-width:0}
+.sm-rg-img{position:relative;display:block;overflow:hidden;border-radius:2px}
+.sm-rg-img img{display:block;width:100%;aspect-ratio:213/134;object-fit:cover;transition:transform .3s}
+.sm-rg-i:hover img{transform:scale(1.05)}
+.sm-rg-img .sm-chip{position:absolute;left:8px;bottom:8px}
+.sm-rg-i b{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:14px;font-weight:500;line-height:1.4;margin-top:8px}
+.sm-cmt{margin:0 0 20px}
+.sm-cmt .comment-form,.sm-cmt #comment-holder{max-width:100%}
+.sm-cmt .comments h4,.sm-cmt h3.title{display:none}
+.sm-cmt .comment-thread ol{list-style:none;margin:0;padding:0}
+.sm-cmt .comment{margin:0 0 16px;padding:12px 0;border-bottom:1px solid var(--bd)}
+.sm-cmt .comment-block{margin-left:0}
+.sm-cmt .avatar-image-container{float:left;margin-right:10px;border-radius:50%;overflow:hidden;width:36px;height:36px}
+.sm-cmt .avatar-image-container img{width:36px;height:36px}
+.sm-cmt .comment-header .user{font-weight:600}
+.sm-cmt .comment-header .datetime{font-size:11px;color:var(--grey);margin-left:8px}
+.sm-cmt .comment-content{margin:6px 0 0 46px}
+.sm-cmt .comment-actions{margin-left:46px;font-size:12px}
+.sm-cmt .comment-replies{margin-left:30px}
+.sm-cmt .comment-footer a,.sm-cmt .comment-actions a{color:var(--blue)}
+.sm-cmt-note{font-size:13px;color:var(--grey);margin:0 0 10px}
+
+/* share modal */
+.sm-modal{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100001;display:none;align-items:center;justify-content:center;padding:16px}
+.sm-modal.open{display:flex}
+.sm-mbox{background:var(--bg);border-radius:4px;padding:20px;width:100%;max-width:380px;position:relative}
+.sm-mbox h4{font-size:16px;margin:0 0 14px}
+.sm-mbox .sm-shl{gap:10px}
+.sm-mbox .sm-shl a{width:40px;height:40px}
+.sm-mbox .sm-x{top:-12px;right:-12px}
+.sm-copy{margin-top:14px;display:flex;gap:6px}
+.sm-copy input{flex:1;min-width:0;height:34px;border:1px solid var(--bd);background:var(--soft);color:var(--txt);padding:0 10px;font:13px Poppins,Arial,sans-serif}
+.sm-copy button{background:var(--blue);color:#fff;border:0;padding:0 12px;border-radius:2px;font-size:13px}
+
+/* ===== Footer ===== */
+.sm-ft{margin-top:20px;border-top:1px solid var(--bd);background:var(--ft);padding:30px 0 0;color:var(--grey2)}
+.sm-ft-g{display:grid;grid-template-columns:minmax(0,2.4fr) repeat(3,minmax(0,1fr));gap:30px}
+.sm-ft-logo{margin-bottom:14px}
+.sm-ft-logo .sm-logo-t{font-size:27px}
+.sm-ft-logo img{max-height:40px;width:auto}
+.sm-ct li{display:flex;gap:12px;font-size:13px;margin-bottom:12px;line-height:1.6}
+.sm-ct svg{flex:0 0 18px;width:18px;height:18px;color:var(--txt);margin-top:1px}
+.sm-ct a{color:var(--grey2)}
+.sm-ft .sm-st{font-size:16px;margin-bottom:12px}
+.sm-fl-list li{font-size:13px;line-height:1.6;margin-bottom:8px}
+.sm-fl-list a{color:var(--grey2)}
+.sm-fl-list a:hover{color:var(--red)}
+.sm-fl-list.hash a::before{content:'#';color:var(--red);margin-right:6px}
+.sm-soc{display:flex;gap:6px;flex-wrap:wrap;margin:24px 0 0}
+.sm-soc a{width:28px;height:28px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff!important}
+.sm-soc svg{width:14px;height:14px}
+.sm-fb{border-top:1px solid var(--bd);margin-top:20px;padding:16px 0 20px;font-size:13px}
+.sm-fb-l{display:flex;flex-wrap:wrap;margin-bottom:8px}
+.sm-fb-l a{color:var(--txt)}
+.sm-fb-l a:not(:last-child)::after{content:'\2044';margin:0 8px;color:var(--grey)}
+.sm-fb-c a{color:var(--txt)}
+
+/* ===== Drawer (menu HP) ===== */
+.sm-ov{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:99998;opacity:0;visibility:hidden;transition:.25s}
+.sm-dw{position:fixed;top:0;bottom:0;left:0;width:min(400px,86vw);background:var(--bg);z-index:99999;transform:translateX(-102%);transition:transform .3s ease;overflow-y:auto;padding:16px 20px 30px}
+body.dw-open{overflow:hidden}
+body.dw-open .sm-ov{opacity:1;visibility:visible}
+body.dw-open .sm-dw{transform:none}
+.sm-dw-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.sm-dw-h .sm-logo-t{font-size:22px}
+.sm-dw-h img{max-height:34px;width:auto}
+.sm-dw-x{width:30px;height:30px;border:0;background:var(--soft);border-radius:50%;color:var(--txt);font-size:18px;line-height:1;padding:0}
+.sm-acc{border-top:1px solid var(--bd)}
+.sm-acc>button{width:100%;display:flex;align-items:center;justify-content:space-between;background:none;border:0;padding:12px 0;color:var(--txt);font-weight:600;font-size:15px;text-align:left}
+.sm-acc>button svg{width:14px;height:14px;transition:transform .2s}
+.sm-acc.open>button svg{transform:rotate(180deg)}
+.sm-acc>div{display:none;padding:0 0 12px}
+.sm-acc.open>div{display:block}
+.sm-dw-cat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.sm-dw-cat a{display:flex;align-items:center;gap:8px;font-size:13px;padding:6px;background:var(--soft);border-radius:2px}
+.sm-dw-cat img,.sm-dw-cat i{width:30px;height:30px;flex:0 0 30px;border-radius:2px;object-fit:cover}
+.sm-dw-cat i{display:flex;align-items:center;justify-content:center;font-style:normal;color:#fff;font-weight:600;background:linear-gradient(80deg,var(--red),var(--blue))}
+.sm-dw-l a{display:block;font-size:13px;line-height:2.2}
+.sm-dw .sm-soc{margin-top:16px}
+.sm-dw-s{margin:0 0 14px}
+.sm-dw-s input{width:100%}
+
+/* back to top */
+.sm-top-btn{position:fixed;right:24px;bottom:24px;width:36px;height:36px;border-radius:50%;border:2px solid var(--txt);background:var(--bg);color:var(--txt);display:flex;align-items:center;justify-content:center;z-index:997;opacity:0;visibility:hidden;transition:.25s;padding:0}
+.sm-top-btn.show{opacity:1;visibility:visible}
+.sm-top-btn svg{width:18px;height:18px}
+
+/* skeleton */
+.sm-blk{min-height:40px}
+.sm-sk{background:linear-gradient(90deg,var(--soft) 25%,rgba(0,0,0,.09) 50%,var(--soft) 75%);background-size:300% 100%;animation:smsk 1.4s infinite}
+@keyframes smsk{from{background-position:100% 0}to{background-position:0 0}}
+.sm-sk-sl{height:571px;margin-bottom:20px}
+.sm-sk-cr{height:262px;margin-bottom:20px}
+.sm-sk-sb{height:420px;margin-bottom:20px}
+
+/* ===== Dark ===== */
+body.dark .sm-arr{background:#333;color:#fff}
+body.dark .sm-gbox,body.dark .sm-gbox2{background:#2a2a2a!important}
+body.dark .sm-sl-t{border-top-color:#555}
+body.dark .sm-sl-t.on{border-top-color:var(--red)}
+body.dark .sm-search input{background:#333}
+body.dark .sm-x{border-color:#333}
+body.dark .sm-ph{color:#999}
+
+/* ===== Responsive ===== */
+@media (max-width:1199px){.sm-fl{display:none!important}}
+@media (max-width:991px){
+  .sm-grid,.is-home .sm-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"ma" "sa" "fw" "mc" "sc"}
+  .sm-side{position:static}
+  .sm-side{margin-top:10px}
+  .sm-vt{display:block}
+  .sm-vt.closed{display:none}
+  .sm-date{display:none}
+  .sm-burger,.sm-sbtn{display:inline-flex}
+  .sm-search{display:none;position:absolute;left:0;right:0;top:60px;z-index:20;height:44px;background:var(--hdr);padding:5px 16px;box-shadow:0 6px 10px rgba(0,0,0,.08)}
+  .sm-search input{width:100%}
+  /* HP: input 16px agar browser tidak memperbesar halaman saat kolom cari dibuka */
+  .sm-search input,.sm-copy input{font-size:16px}
+  .sm-search button{right:20px;top:7px}
+  .sm-hd.sopen .sm-search{display:block}
+  .sm-top{gap:8px;position:relative}
+  .sm-logo-t{font-size:22px}
+  .sm-logo img{max-height:34px}
+  .sm-nav{overflow-x:auto;overflow-y:hidden;scrollbar-width:none}
+  .sm-nav::-webkit-scrollbar{display:none}
+  .sm-menu{gap:24px;width:max-content;padding-right:16px}
+  .sm-sub,.sm-menu>li.sm-more-li{display:none!important}
+  .sm-menu>li>a svg{display:none}
+  .sm-stk{display:none}
+  .sm-h1{font-size:22px}
+  .sm-ft-g{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .sm-ft-g>div:first-child{grid-column:1/-1}
+}
+@media (max-width:767px){
+  .sm-ad-hd .sm-ph{width:100%;height:auto;aspect-ratio:970/250}
+  .sm-bn-l{padding-right:26px;font-size:13px}
+  .sm-bn-i{width:240px}
+  .sm-sl-m{height:auto;aspect-ratio:672/384}
+  .sm-sl-info h3{font-size:16px}
+  .sm-sl-t span{min-height:72px}
+  .sm-sl-t span b{font-size:13px}
+  .sm-cr-i{flex-basis:calc((100% - 16px) / 2)}
+  .sm-gb{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sm-rg{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sm-ft-g{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sm-ft-g>div:nth-child(4){grid-column:1/-1}
+}
+@media (max-width:700px){
+  .sm-thumb{flex:0 0 110px;max-width:110px}
+  .sm-thumb img{aspect-ratio:110/80}
+}
+@media (max-width:550px){
+  /* seperti demo: 4 gambar kecil, judul disembunyikan */
+  .sm-sl-t span{display:none}
+}
+@media (max-width:600px){
+  .sm-et{font-size:14px;margin-bottom:6px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .sm-ex{display:none}
+  .sm-box{gap:12px;align-items:flex-start}
+  .sm-arr{width:38px;height:38px}
+  .sm-gbox,.sm-gbox2{padding:12px}
+  .sm-top-btn{right:14px;bottom:14px}
+  .sm-adpx .sm-px{height:520px}
+  .sm-ptitle{font-size:20px}
+}
+@media (max-width:400px){
+  .sm-icons .sm-ic.vw{display:none}
+  .sm-av{display:none}
+}
+]]><![CDATA[
+.tbd-license-gate[hidden],.tbd-license-shield[hidden],.tbd-license-status[hidden],#tbd-license-context[hidden]{display:none!important}
+.tbd-license-gate,.tbd-license-gate *,.tbd-license-status,.tbd-license-status *{box-sizing:border-box}
+.tbd-license-gate{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;overflow:auto;padding:24px 16px;background:rgba(15,23,42,.55);font-family:Arial,system-ui,sans-serif;color:#172339;text-align:left;line-height:1.6}
+.tbd-license-card{width:100%;max-width:460px;margin:auto;padding:30px;background:#fff;border:1px solid #e5eaf2;border-radius:22px;box-shadow:0 24px 80px #0f172a40}
+.tbd-license-brand{display:inline-flex;align-items:center;gap:8px;color:#172339!important;text-decoration:none!important;font:bold 21px/1.3 Arial,sans-serif;letter-spacing:-.6px}
+.tbd-license-brand b{color:#2456d9}.tbd-license-logo{position:relative;display:grid;place-items:center;width:30px;height:30px;border-radius:9px;color:#fff;background:#2456d9;font:bold 24px/1 Arial,sans-serif;letter-spacing:0}.tbd-license-logo>span{position:absolute;right:5px;bottom:5px;width:6px;height:6px;border-radius:50%;background:#ffb300}
+.tbd-license-symbol{display:grid;place-items:center;width:54px;height:54px;margin-top:28px;margin-bottom:16px;border-radius:15px;background:#edf2ff;color:#2456d9}
+.tbd-license-eyebrow{margin:0 0 8px!important;color:#526178;font:bold 11px/1.5 Arial,sans-serif;letter-spacing:1.3px}
+.tbd-license-card h2{margin:0 0 14px!important;padding:0;color:#172339;font:bold 26px/1.25 Arial,sans-serif;letter-spacing:-.7px;overflow-wrap:anywhere}
+.tbd-license-card #tbd-license-description{margin:0 0 24px!important;color:#526178;font:15px/1.7 Arial,sans-serif;overflow-wrap:anywhere}
+.tbd-license-card strong{color:#172339;font-weight:700}
+.tbd-license-actions{display:grid;gap:10px}
+.tbd-license-actions a{display:flex;justify-content:center;align-items:center;min-height:48px;padding:12px 16px;border:1px solid #2456d9;border-radius:11px;background:#2456d9;color:#fff!important;text-decoration:none!important;font:bold 15px/1.45 Arial,sans-serif;text-align:center;overflow-wrap:anywhere}
+.tbd-license-actions a:hover{background:#173fa9;border-color:#173fa9}.tbd-license-actions .tbd-license-secondary{background:#fff;color:#2456d9!important;border-color:#d3ddef}.tbd-license-actions .tbd-license-secondary:hover{background:#f5f7fb}
+#tbd-license-check{display:block;margin:18px auto 0;padding:6px 3px;border:0;background:transparent;color:#526178;font:14px/1.5 Arial,sans-serif;text-align:center;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.tbd-license-gate :focus-visible,.tbd-license-status button:focus-visible{outline:3px solid #9db5ff;outline-offset:3px}
+.tbd-license-modal{overflow:hidden}.tbd-license-shield{position:fixed;inset:0;z-index:2147482000;background:transparent}
+.tbd-license-status{position:fixed;z-index:2147483001;left:50%;bottom:18px;transform:translateX(-50%);width:calc(100% - 32px);max-width:440px;padding:16px 18px;border:1px solid #e5eaf2;border-radius:12px;background:#fff;color:#526178;box-shadow:0 6px 30px #0f172a20;font:14px/1.6 Arial,sans-serif}
+.tbd-license-status button{display:block;margin-top:8px;padding:7px 12px;border:0;border-radius:8px;background:#2456d9;color:#fff;font:bold 13px/1.5 Arial,sans-serif;cursor:pointer}
+@media(max-width:380px){.tbd-license-card{padding:24px 20px}.tbd-license-card h2{font-size:23px}}
+
+
+/* Native license input is invisible on the public site. */
+.tb-license-settings{display:none!important}
+]]></b:skin>
+<b:template-skin><![CDATA[
+/* TemaBlogger License Key: native Layout controls remain editable. */
+body#layout .tb-license-settings{display:block!important;width:auto!important;clear:both!important;margin:0 0 16px!important;padding:12px!important;border:1px solid #d8e3f5!important;border-radius:12px!important;background:#f0f5ff!important}
+body#layout .tb-license-settings .add_widget{display:none!important}
+
+/* TemaBlogger: CSS khusus panel native Blogger, kompatibel parser legacy. */
+body#layout { min-width:0!important; max-width:1120px!important; margin:0 auto!important; padding:16px!important; background:#eef2f6!important; color:#26364c!important; font:14px/1.5 Arial,sans-serif!important; text-align:left!important; }
+body#layout .tbly-pass { display:contents!important; }
+body#layout .tbly-pass:before,body#layout .tbly-pass:after { content:none!important; display:none!important; }
+body#layout .tbly-ignore { display:none!important; }
+body#layout .tbly-group { display:block!important; clear:both!important; float:none!important; position:relative!important; top:auto!important; bottom:auto!important; left:auto!important; right:auto!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 20px!important; padding:18px!important; overflow:visible!important; transform:none!important; border:1px solid #d4deeb!important; border-radius:8px!important; background:#f8fafc!important; color:#26364c!important; text-align:left!important; }
+body#layout .tbly-group:before { display:block!important; position:static!important; clear:both!important; margin:0 0 16px!important; padding:0 0 10px!important; border-bottom:1px solid #dce4ef!important; font:700 16px/1.4 Arial,sans-serif!important; color:#d9091b!important; background:none!important; }
+body#layout .tbly-group:after { display:block!important; position:static!important; clear:both!important; margin:0!important; padding:4px 0 0!important; font:12px/1.6 Arial,sans-serif!important; color:#60718a!important; background:none!important; }
+body#layout div.section>h4 { margin:0 0 10px!important; padding:0!important; font:700 13px/1.5 Arial,sans-serif!important; color:#34455c!important; word-wrap:break-word!important; }
+body#layout div.section .widget { float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:10px 0 0!important; }
+body#layout div.section .widget-content { min-width:0!important; border-radius:6px!important; background:#fff!important; }
+body#layout div.section .layout-title { color:#394b62!important; }
+body#layout div.section .layout-widget-description { color:#6a7a90!important; }
+body#layout div.section .editlink,body#layout div.section .layout-widget-state { visibility:visible!important; opacity:1!important; }
+body#layout div.section .add_widget { display:none!important; }
+
+body#layout:before { content:"SaeMedia - Pengaturan Tata Letak"; display:block; margin:0 0 18px; color:#d9091b; font:700 22px/1.4 Arial,sans-serif; }
+body#layout #iklan-atas-hp { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #header { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #pengaturan-menu { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #iklan-melayang-kiri { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #iklan-melayang-kanan { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #breaking-news { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:12px!important; overflow:visible!important; background:#fff!important; border:1px solid #dbe2ec!important; border-radius:7px!important; text-align:left!important; }
+body#layout #iklan-header { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #beranda-headline { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #main { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #iklan-daftar { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #iklan-artikel-atas { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #iklan-artikel-tengah { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #iklan-artikel-bawah { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #iklan-artikel-samping { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #iklan-sidebar-beranda { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #sidebar-beranda { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #beranda-penuh { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #sisipan-1 { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #sisipan-2 { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #iklan-sidebar { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #sidebar { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #footer-kontak { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #footer-sosial { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #footer-1 { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #footer-2 { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #footer-3 { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout #footer-bawah { display:block!important; position:relative!important; float:none!important; width:auto!important; min-width:0!important; max-width:none!important; height:auto!important; min-height:0!important; margin:0 0 14px!important; padding:0!important; overflow:visible!important; background:transparent!important; border:0!important; border-radius:0!important; text-align:left!important; }
+body#layout .tbly-iklan-hp:before { content:"IKLAN ATAS HP"!important; }
+body#layout .tbly-iklan-hp:after { content:"Slot parallax di atas header ponsel. Isi kode iklan pada gadget HTML/JavaScript."!important; }
+body#layout .tbly-header:before { content:"HEADER DAN LOGO"!important; }
+body#layout .tbly-header:after { content:"Atur judul, deskripsi dan logo melalui gadget Header."!important; }
+body#layout .tbly-menu:before { content:"MENU NAVIGASI"!important; }
+body#layout .tbly-menu:after { content:"Kelola Menu Utama serta Menu Label melalui dua gadget HTML/JavaScript."!important; }
+body#layout .tbly-iklan-kiri:before { content:"IKLAN MELAYANG KIRI"!important; }
+body#layout .tbly-iklan-kiri:after { content:"Slot desktop kiri 160 x 600. Isi kode iklan melalui gadget."!important; }
+body#layout .tbly-iklan-kanan:before { content:"IKLAN MELAYANG KANAN"!important; }
+body#layout .tbly-iklan-kanan:after { content:"Slot desktop kanan 160 x 600. Isi kode iklan melalui gadget."!important; }
+body#layout #breaking-news.tbly-group:before { content:"BREAKING NEWS"!important; }
+body#layout #breaking-news.tbly-group:after { content:"Ubah label dan jumlah berita. Nilai bawaan recent/10."!important; }
+body#layout #breaking-news.tbly-group { padding:18px!important; margin-bottom:20px!important; background:#f8fafc!important; }
+body#layout #breaking-news.tbly-group>h4 { display:none!important; }
+body#layout .tbly-iklan-header:before { content:"IKLAN HEADER"!important; }
+body#layout .tbly-iklan-header:after { content:"Slot iklan setelah Breaking News. Ukuran panduan ada pada judul gadget."!important; }
+body#layout .tbly-konten-sidebar:before { content:"BERANDA DAN KONTEN ARTIKEL"!important; }
+body#layout .tbly-konten-sidebar:after { content:"Area utama, sidebar beranda, blok lebar penuh, sisipan dan sidebar umum tetap terpisah."!important; }
+body#layout .tbly-main:before { content:"KONTEN UTAMA"!important; }
+body#layout .tbly-main:after { content:"Headline memakai label/tipe/jumlah; contoh recent/slider/5. Postingan Blog berada setelah headline."!important; }
+body#layout .tbly-main { clear:none!important; float:left!important; width:54%!important; min-width:220px!important; max-width:86%!important; margin-right:2%!important; }
+body#layout .tbly-sidebar-beranda:before { content:"SIDEBAR BERANDA"!important; }
+body#layout .tbly-sidebar-beranda:after { content:"Blok Kesehatan dan iklan khusus beranda. Contoh Kesehatan/sidebig/3."!important; }
+body#layout .tbly-sidebar-beranda { clear:none!important; float:left!important; width:30%!important; min-width:220px!important; max-width:86%!important; margin-right:2%!important; }
+body#layout .tbly-beranda-penuh:before { content:"BLOK BERANDA LEBAR PENUH"!important; }
+body#layout .tbly-beranda-penuh:after { content:"Carousel berita selebar area konten. Contoh recent/carouselbox/10."!important; }
+body#layout .tbly-sisipan:before { content:"SISIPAN BERANDA"!important; }
+body#layout .tbly-sisipan:after { content:"Dua blok tambahan: Otomotif/carousel/6 dan Teknologi/gridbox/4."!important; }
+body#layout .tbly-sisipan { clear:none!important; float:left!important; width:54%!important; min-width:220px!important; max-width:86%!important; margin-right:2%!important; }
+body#layout .tbly-sidebar:before { content:"SIDEBAR UMUM"!important; }
+body#layout .tbly-sidebar:after { content:"Iklan sidebar dan Postingan Populer untuk area pendamping konten."!important; }
+body#layout .tbly-sidebar { clear:none!important; float:left!important; width:30%!important; min-width:220px!important; max-width:86%!important; margin-right:2%!important; }
+body#layout .tbly-footer-atas:before { content:"FOOTER ATAS"!important; }
+body#layout .tbly-footer-atas:after { content:"Kelola kontak redaksi, sosial media, kategori, label dan halaman melalui gadget masing-masing."!important; }
+body#layout .tbly-footer-atas #footer-kontak { float:left!important; width:42%!important; min-width:220px!important; max-width:88%!important; margin-right:2%!important; }
+body#layout .tbly-footer-atas #footer-sosial { float:left!important; width:42%!important; min-width:220px!important; max-width:88%!important; margin-right:2%!important; }
+body#layout .tbly-footer-atas #footer-1 { float:left!important; width:42%!important; min-width:220px!important; max-width:88%!important; margin-right:2%!important; }
+body#layout .tbly-footer-atas #footer-2 { float:left!important; width:42%!important; min-width:220px!important; max-width:88%!important; margin-right:2%!important; }
+body#layout .tbly-footer-atas #footer-3 { float:left!important; width:42%!important; min-width:220px!important; max-width:88%!important; margin-right:2%!important; }
+body#layout .tbly-footer-bawah:before { content:"FOOTER BAWAH"!important; }
+body#layout .tbly-footer-bawah:after { content:"Kelola tautan bawah pada gadget Link Bawah."!important; }
+body#layout #iklan-daftar.tbly-group:before { content:"IKLAN SELA DAFTAR BERITA"!important; }
+body#layout #iklan-daftar.tbly-group:after { content:"Slot iklan pada daftar berita, berbeda dari iklan dalam isi artikel."!important; }
+body#layout #iklan-daftar.tbly-group { padding:18px!important; margin-bottom:20px!important; background:#f8fafc!important; }
+body#layout #iklan-daftar.tbly-group>h4 { display:none!important; }
+body#layout #iklan-artikel-atas.tbly-group:before { content:"IKLAN SEBELUM ISI ARTIKEL"!important; }
+body#layout #iklan-artikel-atas.tbly-group:after { content:"Slot sm-ad-before yang dipakai tema untuk iklan atas artikel."!important; }
+body#layout #iklan-artikel-atas.tbly-group { padding:18px!important; margin-bottom:20px!important; background:#f8fafc!important; }
+body#layout #iklan-artikel-atas.tbly-group>h4 { display:none!important; }
+body#layout #iklan-artikel-tengah.tbly-group:before { content:"IKLAN TENGAH ARTIKEL PARALLAX"!important; }
+body#layout #iklan-artikel-tengah.tbly-group:after { content:"Slot parallax di dalam isi artikel. Pertahankan ukuran yang sudah dipakai tema."!important; }
+body#layout #iklan-artikel-tengah.tbly-group { padding:18px!important; margin-bottom:20px!important; background:#f8fafc!important; }
+body#layout #iklan-artikel-tengah.tbly-group>h4 { display:none!important; }
+body#layout #iklan-artikel-bawah.tbly-group:before { content:"IKLAN AKHIR ISI ARTIKEL"!important; }
+body#layout #iklan-artikel-bawah.tbly-group:after { content:"Slot sm-ad-after yang dipakai tema untuk iklan bawah artikel."!important; }
+body#layout #iklan-artikel-bawah.tbly-group { padding:18px!important; margin-bottom:20px!important; background:#f8fafc!important; }
+body#layout #iklan-artikel-bawah.tbly-group>h4 { display:none!important; }
+body#layout #iklan-artikel-samping.tbly-group:before { content:"IKLAN SAMPING ARTIKEL"!important; }
+body#layout #iklan-artikel-samping.tbly-group:after { content:"Slot sticky samping artikel pada desktop."!important; }
+body#layout #iklan-artikel-samping.tbly-group { padding:18px!important; margin-bottom:20px!important; background:#f8fafc!important; }
+body#layout #iklan-artikel-samping.tbly-group>h4 { display:none!important; }
+body#layout .tbly-artikel:before { content:"POSTINGAN BLOG DAN IKLAN ARTIKEL"!important; }
+body#layout .tbly-artikel:after { content:"Postingan Blog, iklan sela daftar dan empat posisi iklan artikel dikelola dalam satu kelompok."!important; }
+body#layout #HTML23 .widget-content { background:#dceeff!important; border-color:#b9d8f3!important; }
+body#layout #HTML21 .widget-content { background:#dceeff!important; border-color:#b9d8f3!important; }
+body#layout #HTML22 .widget-content { background:#dceeff!important; border-color:#b9d8f3!important; }
+body#layout #HTML24 .widget-content { background:#dceeff!important; border-color:#b9d8f3!important; }
+body#layout #HTML27 .widget-content { background:#dceeff!important; border-color:#b9d8f3!important; }
+body#layout #HTML28 .widget-content { background:#dceeff!important; border-color:#b9d8f3!important; }
+body#layout #HTML29 .widget-content { background:#dceeff!important; border-color:#b9d8f3!important; }
+body#layout #HTML30 .widget-content { background:#dceeff!important; border-color:#b9d8f3!important; }
+body#layout #HTML31 .widget-content { background:#dceeff!important; border-color:#b9d8f3!important; }
+body#layout #HTML25 .widget-content { background:#dceeff!important; border-color:#b9d8f3!important; }
+body#layout #HTML26 .widget-content { background:#dceeff!important; border-color:#b9d8f3!important; }
+
+
+/* TemaBlogger panel ringkas: bingkai hanya pada kelompok utama. */
+body#layout .tbly-group:before { border-bottom:0!important; padding-bottom:0!important; margin-bottom:14px!important; }
+body#layout .tbly-group .tbly-group { border:0!important; border-radius:0!important; background:transparent!important; box-shadow:none!important; padding:0!important; }
+body#layout .tbly-group .tbly-group:before { font-size:14px!important; margin-bottom:10px!important; }
+body#layout .tbly-group .tbly-group:after { display:none!important; }
+
+/* SaeMedia: jarak ringkas dan alur kartu native tanpa offset tampilan publik. */
+body#layout div.section { top:auto!important; right:auto!important; bottom:auto!important; left:auto!important; }
+body#layout div.section .widget-content { display:block!important; }
+body#layout #iklan-daftar.tbly-group,body#layout #iklan-artikel-atas.tbly-group,body#layout #iklan-artikel-tengah.tbly-group,body#layout #iklan-artikel-bawah.tbly-group,body#layout #iklan-artikel-samping.tbly-group { padding:0!important; margin-bottom:16px!important; }
+body#layout #iklan-daftar.tbly-group:before,body#layout #iklan-artikel-atas.tbly-group:before,body#layout #iklan-artikel-tengah.tbly-group:before,body#layout #iklan-artikel-bawah.tbly-group:before,body#layout #iklan-artikel-samping.tbly-group:before { margin-bottom:8px!important; }
+body#layout #iklan-daftar .widget,body#layout #iklan-artikel-atas .widget,body#layout #iklan-artikel-tengah .widget,body#layout #iklan-artikel-bawah .widget,body#layout #iklan-artikel-samping .widget { margin-top:0!important; }
+]]></b:template-skin>
+<style id='tb-identity-a-style'>/*<![CDATA[*/#Header1 img{width:auto;height:auto;object-fit:contain}#Header1 .header-image-wrapper{display:inline-flex;align-items:center;max-width:100%}#Header1 .header-image-wrapper img{max-width:100%}.tb-brand-title{font-size:clamp(22px,4vw,34px);font-weight:700;line-height:1.15;overflow-wrap:anywhere}.logo-image img{max-width:min(220px,100%);object-fit:contain}.ft-logo img{max-width:200px;max-height:44px;width:auto;height:auto;object-fit:contain}.sg-brand-image{height:auto;object-fit:contain}.drawer-brand .brand-image,#Text828 .brand-image{max-width:240px;max-height:68px;width:auto;height:auto;object-fit:contain}.side-menu-head [data-tb-follow-header] img,#iplusFooterLogo [data-tb-follow-header] img,[data-fallback-for=iplusFooterLogo] [data-tb-follow-header] img{max-width:220px;max-height:44px;width:auto;height:auto;object-fit:contain}@media(max-width:767px){.logo-image img{max-width:160px}.drawer-brand .brand-image,#Text828 .brand-image{max-width:200px;max-height:54px}}/*]]>*/</style><style id='tb-free-edition-style'>/* TemaBlogger Free: upgrade removes this verified block. */
+body:not(#layout) #HTML23,body:not(#layout) #HTML21,body:not(#layout) #HTML22,body:not(#layout) #HTML24,body:not(#layout) #HTML27,body:not(#layout) #HTML28,body:not(#layout) #HTML29,body:not(#layout) #HTML30,body:not(#layout) #HTML31,body:not(#layout) #HTML25,body:not(#layout) #HTML26,body:not(#layout) .sm-adhold,body:not(#layout) .sm-fl,body:not(#layout) .sm-px,body:not(#layout) .sm-adpx,body:not(#layout) .sm-ad,body:not(#layout) .sm-adslot{display:none!important}
+body:not(#layout) .tb-free-lock-note,body:not(#layout) .tb-free-edition-note{display:none!important}
+body#layout #HTML98 .editlink,body#layout #HTML98 .widget-control,body#layout #HTML98 .item-control,body#layout #HTML23 .editlink,body#layout #HTML23 .widget-control,body#layout #HTML23 .item-control,body#layout #HTML21 .editlink,body#layout #HTML21 .widget-control,body#layout #HTML21 .item-control,body#layout #HTML22 .editlink,body#layout #HTML22 .widget-control,body#layout #HTML22 .item-control,body#layout #HTML24 .editlink,body#layout #HTML24 .widget-control,body#layout #HTML24 .item-control,body#layout #HTML27 .editlink,body#layout #HTML27 .widget-control,body#layout #HTML27 .item-control,body#layout #HTML28 .editlink,body#layout #HTML28 .widget-control,body#layout #HTML28 .item-control,body#layout #HTML29 .editlink,body#layout #HTML29 .widget-control,body#layout #HTML29 .item-control,body#layout #HTML30 .editlink,body#layout #HTML30 .widget-control,body#layout #HTML30 .item-control,body#layout #HTML31 .editlink,body#layout #HTML31 .widget-control,body#layout #HTML31 .item-control,body#layout #HTML25 .editlink,body#layout #HTML25 .widget-control,body#layout #HTML25 .item-control,body#layout #HTML26 .editlink,body#layout #HTML26 .widget-control,body#layout #HTML26 .item-control{display:none!important}
+body#layout .tb-free-lock-note{display:block;color:#52627a;font-size:13px}
+</style>
+<meta content='free' name='temablogger-edition'/>
+</head>
+
+<body expr:class='data:view.isHomepage ? "is-home" : (data:view.isPost ? "is-single is-post" : (data:view.isPage ? "is-single is-page" : "is-list"))'>
+<!-- TemaBlogger key-domain-cache-v3: native license input; old widgets remain unchanged. -->
+<b:section class='tb-license-settings' id='tbLicenseSettings' name='Lisensi Tema Blogger' showaddelement='yes'>
+  <b:widget id='HTML98' locked='true' title='License Key' type='HTML' version='2' visible='true'>
+    <b:widget-settings><b:widget-setting name='content'></b:widget-setting></b:widget-settings>
+    <b:includable id='main'><div hidden='hidden' class='tb-free-edition-note'>Versi Free. Untuk iklan dan pengaturan kredit footer, gunakan paket Premium.</div></b:includable>
+  </b:widget>
+</b:section>
+
+<a class='sm-skip tbly-ignore' href='#sm-main'>Langsung ke konten</a>
+
+<!-- Iklan atas khusus HP (parallax) -->
+<div class='sm-vt tbly-group tbly-iklan-hp' id='sm-vt'>
+<div class='sm-vt-bar tbly-ignore'>Scroll untuk baca artikel<button aria-label='Tutup iklan' class='sm-x' data-close='sm-vt' type='button'>&#215;</button></div>
+<div class='sm-px tbly-pass'><div class='sm-px-in tbly-pass'>
+<b:section class='sm-ad' id='iklan-atas-hp' maxwidgets='1' name='Iklan Atas HP' showaddelement='no'>
+<b:widget id='HTML23' locked='true' title='Iklan Atas HP Parallax (325x300)' type='HTML' version='2' visible='true'>
+<b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+</b:widget>
+</b:section>
+</div></div>
+</div>
+
+<!-- Header -->
+<header class='sm-hd tbly-group tbly-header' id='sm-hd'>
+<div class='sm-c sm-top tbly-pass'>
+<button aria-label='Buka menu' class='sm-ib sm-burger tbly-ignore' type='button'><svg fill='none' stroke='currentColor' stroke-linecap='round' stroke-width='2' viewBox='0 0 24 24'><path d='M4 6h16M4 12h16M4 18h16'/></svg></button>
+<b:section class='sm-logo' id='header' maxwidgets='1' name='Logo' showaddelement='no'>
+<b:widget id='Header1' locked='true' title='Logo' type='Header' version='2' visible='true'>
+<b:includable id='main' var='this'><b:include cond='data:this.image' name='image'/><b:if cond='!data:this.image'><a class='sm-logo-a' expr:aria-label='data:blog.title' expr:href='data:blog.homepageUrl'><span class='sm-logo-t'><data:blog.title/></span></a></b:if><b:if cond='data:view.isHomepage'><h1 class='sm-hide'><data:blog.title/></h1></b:if></b:includable>
+<b:includable id='image' var='this'><a class='sm-logo-a' expr:aria-label='data:blog.title' expr:href='data:blog.homepageUrl'><img class='tb-header-image' decoding='async' expr:alt='data:blog.title' expr:src='data:this.image' fetchpriority='high'/></a></b:includable></b:widget>
+</b:section>
+<div class='sm-tr tbly-ignore'>
+<span class='sm-date' id='sm-date'>&#160;</span>
+<form action='/search' class='sm-search' method='get' role='search'><input aria-label='Search' autocomplete='off' name='q' placeholder='Search' type='search'/><button aria-label='Cari' type='submit'><svg fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24' width='18' height='18'><circle cx='12' cy='12' r='7'/><path d='M12 2v3M12 19v3M2 12h3M19 12h3'/></svg></button></form>
+<button aria-label='Cari' class='sm-ib sm-sbtn' type='button'><svg fill='none' stroke='currentColor' stroke-linecap='round' stroke-width='2' viewBox='0 0 24 24'><circle cx='11' cy='11' r='7'/><path d='m20 20-4-4'/></svg></button>
+<button aria-label='Mode gelap' class='sm-ib sm-dark' type='button'><svg fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><circle cx='12' cy='12' r='4.5'/><path d='M12 7.5v9a4.5 4.5 0 0 0 0-9z' fill='currentColor'/><path d='M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4' stroke-linecap='round'/></svg></button>
+<div class='sm-gw'><button aria-label='Daftar label' class='sm-ib sm-gbtn' type='button'><svg fill='currentColor' viewBox='0 0 24 24'><rect height='8' rx='1.5' width='8' x='3' y='3'/><rect height='8' rx='1.5' width='8' x='13' y='3'/><rect height='8' rx='1.5' width='8' x='3' y='13'/><rect height='8' rx='1.5' width='8' x='13' y='13'/></svg></button><div class='sm-gridm' id='sm-gridm'><b class='sm-hide'>&#160;</b></div></div>
+</div>
+</div>
+<nav aria-label='Menu utama' class='sm-nav tbly-ignore'><div class='sm-c'><ul class='sm-menu' id='sm-menu'><li><a expr:href='data:blog.homepageUrl'>Beranda</a></li></ul></div></nav>
+</header>
+
+<!-- Pengaturan menu (tidak tampil) -->
+<div class='sm-hide tbly-group tbly-menu'>
+<b:section id='pengaturan-menu' maxwidgets='2' name='Menu' showaddelement='no'>
+<b:widget id='HTML901' locked='true' title='Menu Utama' type='HTML' version='2' visible='true'>
+<b:includable id='main'>
+<div class='sm-cfg' data-def='menu' id='sm-cfg-menu'><data:content/></div>
+<b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+<b:widget id='HTML902' locked='true' title='Menu Label (Lainnya dan tombol kotak)' type='HTML' version='2' visible='true'>
+<b:includable id='main'>
+<div class='sm-cfg' data-def='tags' id='sm-cfg-tags'><data:content/></div>
+<b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+</b:section>
+</div>
+
+<!-- Iklan melayang kiri / kanan -->
+<div class='sm-fl sm-fl-l tbly-group tbly-iklan-kiri' id='sm-fl-l'>
+<button aria-label='Tutup iklan' class='sm-x tbly-ignore' data-close='sm-fl-l' type='button'>&#215;</button>
+<b:section class='sm-ad' id='iklan-melayang-kiri' maxwidgets='1' name='Iklan Melayang Kiri' showaddelement='no'>
+<b:widget id='HTML21' locked='true' title='Iklan Melayang Kiri (160x600)' type='HTML' version='2' visible='true'>
+<b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+</b:widget>
+</b:section>
+</div>
+<div class='sm-fl sm-fl-r tbly-group tbly-iklan-kanan' id='sm-fl-r'>
+<button aria-label='Tutup iklan' class='sm-x tbly-ignore' data-close='sm-fl-r' type='button'>&#215;</button>
+<b:section class='sm-ad' id='iklan-melayang-kanan' maxwidgets='1' name='Iklan Melayang Kanan' showaddelement='no'>
+<b:widget id='HTML22' locked='true' title='Iklan Melayang Kanan (160x600)' type='HTML' version='2' visible='true'>
+<b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+</b:widget>
+</b:section>
+</div>
+
+<!-- Breaking news -->
+<b:section id='breaking-news' maxwidgets='1' name='Breaking News' showaddelement='no' class='tbly-group tbly-breaking'>
+<b:widget id='HTML903' locked='true' title='Breaking News' type='HTML' version='2' visible='true'>
+<b:includable id='main'>
+<div class='sm-c'><div class='sm-bn' data-def='recent/10' id='sm-bn'><div class='sm-cfg'><data:content/></div><div class='sm-bn-l'><data:title/></div><div class='sm-bn-t'><div class='sm-bn-in'><b class='sm-hide'>&#160;</b></div></div></div></div>
+<b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+</b:section>
+
+<!-- Iklan header -->
+<div class='sm-c tbly-group tbly-iklan-header'>
+<b:section class='sm-ad sm-ad-hd' id='iklan-header' maxwidgets='1' name='Iklan Header' showaddelement='no'>
+<b:widget id='HTML24' locked='true' title='Iklan Header (970x250)' type='HTML' version='2' visible='true'>
+<b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+</b:widget>
+</b:section>
+</div>
+
+<!-- Konten -->
+<main class='sm-main tbly-group tbly-konten-sidebar' id='sm-main'>
+<div class='sm-c tbly-pass'>
+<div class='sm-grid tbly-pass'>
+
+<div class='sm-ma tbly-group tbly-main tbly-role-main'>
+<b:section class='home-only' id='beranda-headline' maxwidgets='1' name='Headline Beranda' showaddelement='no'>
+<b:widget id='HTML904' locked='true' title='Headline' type='HTML' version='2' visible='true'>
+<b:includable id='main'>
+<div class='sm-blk' data-def='recent/slider/5'><div class='sm-cfg'><data:content/></div><span class='sm-btitle sm-hide'><data:title/></span><div class='sm-sk sm-sk-sl'>&#160;</div></div>
+<b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+</b:section>
+
+<b:tag cond='data:view.isLayoutMode' name='div' class='tbly-shell-artikel tbly-group tbly-artikel'><b:section class='sm-blog' id='main' maxwidgets='1' name='Postingan' showaddelement='no'>
+<b:widget id='Blog1' locked='true' title='Postingan Blog' type='Blog' version='2' visible='true'>
+<b:includable id='main' var='top'>
+<b:if cond='data:view.isSingleItem'>
+<b:loop values='data:posts' var='post'><b:include data='post' name='postSingle'/></b:loop>
+<b:else/>
+<b:if cond='data:view.isHomepage'><h3 class='sm-st' id='sm-recent-t'>Recent News</h3></b:if>
+<b:if cond='data:view.isLabelSearch'><h1 class='sm-ptitle'><data:view.search.label/></h1></b:if>
+<b:if cond='data:view.isSearch'><b:if cond='data:view.search.query'><h1 class='sm-ptitle'><small>Hasil pencarian</small><data:view.search.query/></h1></b:if></b:if>
+<div class='sm-list' id='sm-list'>
+<b:loop index='i' values='data:posts' var='post'><b:include data='post' name='postItem'/></b:loop>
+<b:if cond='data:posts.empty'><p class='sm-empty'>Belum ada postingan.</p></b:if>
+</div>
+<b:if cond='data:olderPageUrl'>
+<div class='sm-more-wrap' id='sm-more-wrap'><a class='sm-more' expr:href='data:olderPageUrl' id='sm-more'>View More</a></div>
+</b:if>
+</b:if>
+</b:includable>
+
+<b:includable id='postItem' var='post'>
+<article class='sm-post'>
+<div class='sm-box'>
+<a class='sm-thumb' expr:aria-label='data:post.title' expr:href='data:post.url'><b:if cond='data:post.featuredImage'><img expr:alt='data:post.title' expr:src='resizeImage(data:post.featuredImage, 336, &quot;168:121&quot;)' height='121' loading='lazy' width='168'/><b:else/><img alt='' class='sm-noimg' height='121' src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 168 121%22%3E%3Crect width=%22168%22 height=%22121%22 fill=%22%23ddd%22/%3E%3C/svg%3E' width='168'/></b:if></a>
+<div class='sm-box-c'>
+<h2 class='sm-et'><a expr:href='data:post.url'><data:post.title/></a></h2>
+<div class='sm-meta'><b:if cond='data:post.labels'><a class='sm-chip' expr:href='data:post.labels.first.url'><data:post.labels.first.name/></a></b:if><time expr:datetime='data:post.date.iso8601'><data:post.date/></time></div>
+<p class='sm-ex'><data:post.snippets.short/></p>
+</div>
+</div>
+</article>
+</b:includable>
+
+<b:includable id='postSingle' var='post'>
+<article class='sm-single'>
+<nav aria-label='Breadcrumb' class='sm-bc'><a expr:href='data:blog.homepageUrl'>Home</a><b:if cond='data:post.labels'><i>&#160;</i><a expr:href='data:post.labels.first.url'><data:post.labels.first.name/></a></b:if><i>&#160;</i><span><data:post.title/></span></nav>
+<header class='sm-sh'>
+<b:if cond='data:post.labels'><div class='sm-chips'><b:loop values='data:post.labels' var='label'><a class='sm-chip' expr:href='data:label.url'><data:label.name/></a></b:loop></div></b:if>
+<h1 class='sm-h1'><data:post.title/></h1>
+<div class='sm-sm-row'>
+<div class='sm-av'><b:if cond='data:post.author.authorPhoto.image'><img expr:alt='data:post.author.name' expr:src='resizeImage(data:post.author.authorPhoto.image, 72, &quot;1:1&quot;)' height='36' width='36'/><b:else/><img alt='' height='36' src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 36 36%22%3E%3Crect width=%2236%22 height=%2236%22 fill=%22%23ccc%22/%3E%3Ccircle cx=%2218%22 cy=%2214%22 r=%226%22 fill=%22%23fff%22/%3E%3Cpath d=%22M6 33c2-8 22-8 24 0%22 fill=%22%23fff%22/%3E%3C/svg%3E' width='36'/></b:if></div>
+<div class='sm-smc'>
+<div><a expr:href='data:post.author.profileUrl ? data:post.author.profileUrl : data:blog.homepageUrl'><data:post.author.name/></a><span class='sm-rt'><svg fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path d='M3 5h7a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H3zM21 5h-6a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h6z'/></svg><b id='sm-rtn'>1</b>&#160;<span class='sm-rtl'>min read</span></span></div>
+<time expr:datetime='data:post.date.iso8601' id='sm-pdate'><data:post.date/></time>
+</div>
+<div class='sm-icons'>
+<b:if cond='data:view.isPost'><a aria-label='Komentar' class='sm-ic cm' href='#comments'><svg fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path d='M4 5h16v11H9l-5 4z'/><path d='M8 9h8M8 12h5' stroke-linecap='round'/></svg><em><data:post.numberOfComments/></em></a></b:if>
+<button aria-label='Bagikan' class='sm-ic sh sm-share-open' type='button'><svg fill='currentColor' viewBox='0 0 24 24'><circle cx='18' cy='5' r='3'/><circle cx='6' cy='12' r='3'/><circle cx='18' cy='19' r='3'/><path d='m8.6 13.5 6.8 4M15.4 6.5l-6.8 4' fill='none' stroke='currentColor' stroke-width='2'/></svg></button>
+</div>
+</div>
+</header>
+<figure class='sm-cover' id='sm-cover'><b class='sm-hide'>&#160;</b></figure>
+<div class='sm-wrap'>
+<div class='sm-cont'>
+<div id='sm-ad-before'><b class='sm-hide'>&#160;</b></div>
+<div class='sm-body' id='sm-body'><data:post.body/></div>
+<div id='sm-ad-after'><b class='sm-hide'>&#160;</b></div>
+<b:if cond='data:view.isPost'>
+<b:if cond='data:post.labels'><div class='sm-tags'><span class='sm-tagt'>Tags:</span><b:loop values='data:post.labels' var='label'><a expr:href='data:label.url' rel='tag'><data:label.name/></a></b:loop></div></b:if>
+<b:if cond='data:olderPageUrl'><a class='sm-next' expr:href='data:olderPageUrl' id='sm-next'><span class='sm-next-img'><b class='sm-hide'>&#160;</b></span><span class='sm-next-t'><data:olderPageTitle/></span><span class='sm-next-ic'><svg fill='none' stroke='currentColor' stroke-width='2.5' viewBox='0 0 24 24'><path d='m9 5 7 7-7 7'/></svg></span></a></b:if>
+</b:if>
+</div>
+<aside class='sm-stk' id='sm-stk'><b class='sm-hide'>&#160;</b></aside>
+</div>
+<b:if cond='data:view.isPost'>
+<div class='sm-shb'>
+<a aria-label='Komentar' class='sm-ic cm' href='#comments'><svg fill='none' stroke='currentColor' stroke-width='2' viewBox='0 0 24 24'><path d='M4 5h16v11H9l-5 4z'/><path d='M8 9h8M8 12h5' stroke-linecap='round'/></svg></a>
+<div class='sm-shl' id='sm-shl'><b class='sm-hide'>&#160;</b></div>
+</div>
+<b:if cond='data:post.labels'>
+<div class='sm-rel' expr:data-label='data:post.labels.first.name' id='sm-rel'><h3 class='sm-st'>Related Posts</h3><div class='sm-rg'><div class='sm-sk' style='height:200px;grid-column:1/-1'>&#160;</div></div></div>
+<b:else/>
+<div class='sm-rel' data-label='' id='sm-rel'><h3 class='sm-st'>Related Posts</h3><div class='sm-rg'><div class='sm-sk' style='height:200px;grid-column:1/-1'>&#160;</div></div></div>
+</b:if>
+</b:if>
+</article>
+<b:if cond='data:view.isPost'>
+<div class='sm-cmt' id='comments'>
+<h3 class='sm-st'>Leave a Reply</h3>
+<b:include data='post' name='commentPicker'/>
+</div>
+<div class='sm-readalso' id='sm-readalso'><h3 class='sm-st'>Read Also</h3><div class='sm-ra-list'><div class='sm-sk' style='height:300px'>&#160;</div></div></div>
+</b:if>
+</b:includable>
+</b:widget>
+</b:section>
+
+<!-- Iklan daftar berita (dipindah ke bawah berita pertama) -->
+<b:section class='sm-ad sm-ad-list tbly-group tbly-artikel-posisi-1' id='iklan-daftar' maxwidgets='1' name='Iklan Daftar Berita' showaddelement='no'>
+<b:widget id='HTML27' locked='true' title='Iklan Daftar Berita (468x60)' type='HTML' version='2' visible='true'>
+<b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+</b:widget>
+</b:section>
+<script>/*<![CDATA[*/
+(function(){var a=document.getElementById('iklan-daftar'),l=document.getElementById('sm-list');if(!a||!l)return;var p=l.querySelector('.sm-post');if(p){p.parentNode.insertBefore(a,p.nextSibling)}else{a.style.display='none'}})();
+/*]]>*/</script>
+
+<!-- Iklan artikel (dipindah otomatis ke dalam artikel) -->
+<div class='sm-adhold tbly-pass' id='sm-adhold'>
+<b:section class='sm-ad sm-adin tbly-group tbly-artikel-posisi-2' id='iklan-artikel-atas' maxwidgets='1' name='Iklan Artikel Atas' showaddelement='no'>
+<b:widget id='HTML28' locked='true' title='Iklan Artikel Atas (468x60)' type='HTML' version='2' visible='true'>
+<b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+</b:widget>
+</b:section>
+<b:section class='sm-ad sm-adtengah tbly-group tbly-artikel-posisi-3' id='iklan-artikel-tengah' maxwidgets='1' name='Iklan Dalam Artikel' showaddelement='no'>
+<b:widget id='HTML29' locked='true' title='Iklan Dalam Artikel Parallax (300x600)' type='HTML' version='2' visible='true'>
+<b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+</b:widget>
+</b:section>
+<b:section class='sm-ad sm-adaf tbly-group tbly-artikel-posisi-4' id='iklan-artikel-bawah' maxwidgets='1' name='Iklan Artikel Bawah' showaddelement='no'>
+<b:widget id='HTML30' locked='true' title='Iklan Artikel Bawah (300x250)' type='HTML' version='2' visible='true'>
+<b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+</b:widget>
+</b:section>
+<b:section class='sm-ad sm-adsk tbly-group tbly-artikel-posisi-5' id='iklan-artikel-samping' maxwidgets='1' name='Iklan Samping Artikel' showaddelement='no'>
+<b:widget id='HTML31' locked='true' title='Iklan Samping Artikel Sticky (120x600)' type='HTML' version='2' visible='true'>
+<b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+</b:widget>
+</b:section>
+</div></b:tag>
+
+</div>
+
+<aside class='sm-sa sm-side home-only tbly-group tbly-sidebar-beranda tbly-role-sidebar'>
+<b:section class='sm-ad sm-ad-side' id='iklan-sidebar-beranda' maxwidgets='1' name='Iklan Sidebar Beranda' showaddelement='no'>
+<b:widget id='HTML25' locked='true' title='Iklan Sidebar Beranda (325x300)' type='HTML' version='2' visible='true'>
+<b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+</b:widget>
+</b:section>
+<b:section id='sidebar-beranda' name='Sidebar Beranda' showaddelement='yes'>
+<b:widget id='HTML905' locked='false' title='Kesehatan' type='HTML' version='2' visible='true'>
+<b:includable id='main'>
+<div class='sm-blk' data-def='Kesehatan/sidebig/3||Kumpulan berita kesehatan pilihan. Judul blok bisa diganti gambar: isi judul gadget dengan alamat gambar.'><div class='sm-cfg'><data:content/></div><span class='sm-btitle sm-hide'><data:title/></span><div class='sm-sk sm-sk-sb'>&#160;</div></div>
+<b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+</b:section>
+</aside>
+
+<div class='sm-fw home-only tbly-group tbly-beranda-penuh'>
+<b:section id='beranda-penuh' name='Blok Lebar Penuh' showaddelement='yes'>
+<b:widget id='HTML906' locked='false' title='Berita Terbaru' type='HTML' version='2' visible='true'>
+<b:includable id='main'>
+<div class='sm-blk' data-def='recent/carouselbox/10'><div class='sm-cfg'><data:content/></div><span class='sm-btitle sm-hide'><data:title/></span><div class='sm-sk sm-sk-cr'>&#160;</div></div>
+<b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+</b:section>
+</div>
+
+<div class='sm-mc home-only tbly-group tbly-sisipan tbly-role-main'>
+<div class='sm-list tbly-ignore' id='sm-list2'><b class='sm-hide'>&#160;</b></div>
+<b:section class='sm-hide' id='sisipan-1' name='Sisipan Beranda 1' showaddelement='yes'>
+<b:widget id='HTML907' locked='false' title='Otomotif' type='HTML' version='2' visible='true'>
+<b:includable id='main'>
+<div class='sm-blk' data-def='Otomotif/carousel/6'><div class='sm-cfg'><data:content/></div><span class='sm-btitle sm-hide'><data:title/></span><div class='sm-sk sm-sk-cr'>&#160;</div></div>
+<b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+</b:section>
+<b:section class='sm-hide' id='sisipan-2' name='Sisipan Beranda 2' showaddelement='yes'>
+<b:widget id='HTML908' locked='false' title='Teknologi' type='HTML' version='2' visible='true'>
+<b:includable id='main'>
+<div class='sm-blk' data-def='Teknologi/gridbox/4/#962a22,#006047'><div class='sm-cfg'><data:content/></div><span class='sm-btitle sm-hide'><data:title/></span><div class='sm-sk sm-sk-cr'>&#160;</div></div>
+<b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+</b:section>
+</div>
+
+<aside class='sm-sc sm-side tbly-group tbly-sidebar tbly-role-sidebar'>
+<b:section class='sm-ad sm-ad-side' id='iklan-sidebar' maxwidgets='1' name='Iklan Sidebar' showaddelement='no'>
+<b:widget id='HTML26' locked='true' title='Iklan Sidebar (325x300)' type='HTML' version='2' visible='true'>
+<b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+</b:widget>
+</b:section>
+<b:section id='sidebar' name='Sidebar' showaddelement='yes'>
+<b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts' version='2' visible='true'>
+<b:includable id='main' var='this'>
+<div class='sm-pop'>
+<b:if cond='data:title'><h3 class='sm-st'><data:title/></h3></b:if>
+<div class='widget-content'>
+<b:loop index='i' values='data:posts' var='post'>
+<b:if cond='data:i == 0'>
+<div class='sm-pi first'><a class='sm-pi-img' expr:aria-label='data:post.title' expr:href='data:post.url'><b:if cond='data:post.featuredImage'><img expr:alt='data:post.title' expr:src='resizeImage(data:post.featuredImage, 600, &quot;294:205&quot;)' loading='lazy'/><b:else/><img alt='' src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 294 205%22%3E%3Crect width=%22294%22 height=%22205%22 fill=%22%23999%22/%3E%3C/svg%3E'/></b:if></a><div class='sm-pi-row'><span class='sm-pn'>1</span><div class='sm-pi-c'><b><a expr:href='data:post.url'><data:post.title/></a></b><time><data:post.date/></time></div></div></div>
+<b:elseif cond='data:i &lt; 5'/>
+<div class='sm-pi'><span class='sm-pn'><b:eval expr='data:i + 1'/></span><div class='sm-pi-c'><b><a expr:href='data:post.url'><data:post.title/></a></b><time><data:post.date/></time></div></div>
+</b:if>
+</b:loop>
+</div>
+</div>
+<b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+</b:section>
+</aside>
+
+</div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class='sm-ft tbly-pass'>
+<div class='sm-c tbly-pass'>
+<div class='sm-ft-g tbly-group tbly-footer-atas'>
+<div class='tbly-pass'>
+<div class='sm-ft-logo tbly-ignore' id='sm-ftlogo'><b class='sm-hide'>&#160;</b></div>
+<b:section id='footer-kontak' maxwidgets='1' name='Footer Kontak' showaddelement='no'>
+<b:widget id='HTML909' locked='true' title='Kontak Redaksi' type='HTML' version='2' visible='true'>
+<b:includable id='main'>
+<div class='sm-lw' data-def='contact' data-kind='contact'><div class='sm-cfg'><data:content/></div><ul class='sm-ct'><li>&#160;</li></ul></div>
+<b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+</b:section>
+<b:section id='footer-sosial' maxwidgets='1' name='Footer Sosial Media' showaddelement='no'>
+<b:widget id='HTML913' locked='true' title='Sosial Media' type='HTML' version='2' visible='true'>
+<b:includable id='main'>
+<div class='sm-lw' data-def='social' data-kind='social' id='sm-social'><div class='sm-cfg'><data:content/></div><div class='sm-soc'><b class='sm-hide'>&#160;</b></div></div>
+<b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+</b:section>
+</div>
+<b:section class='sm-fcol' id='footer-1' maxwidgets='1' name='Footer Kolom 1' showaddelement='no'>
+<b:widget id='HTML910' locked='true' title='Kategori' type='HTML' version='2' visible='true'>
+<b:includable id='main'>
+<div class='sm-lw' data-def='kategori' data-kind='list'><div class='sm-cfg'><data:content/></div><h3 class='sm-st'><data:title/></h3><ul class='sm-fl-list'><li>&#160;</li></ul></div>
+<b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+</b:section>
+<b:section class='sm-fcol' id='footer-2' maxwidgets='1' name='Footer Kolom 2' showaddelement='no'>
+<b:widget id='HTML911' locked='true' title='Label' type='HTML' version='2' visible='true'>
+<b:includable id='main'>
+<div class='sm-lw' data-def='tags' data-kind='list'><div class='sm-cfg'><data:content/></div><h3 class='sm-st'><data:title/></h3><ul class='sm-fl-list hash'><li>&#160;</li></ul></div>
+<b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+</b:section>
+<b:section class='sm-fcol' id='footer-3' maxwidgets='1' name='Footer Kolom 3' showaddelement='no'>
+<b:widget id='HTML912' locked='true' title='Halaman' type='HTML' version='2' visible='true'>
+<b:includable id='main'>
+<div class='sm-lw' data-def='halaman' data-kind='list' id='sm-halaman'><div class='sm-cfg'><data:content/></div><h3 class='sm-st'><data:title/></h3><ul class='sm-fl-list'><li>&#160;</li></ul></div>
+<b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+</b:section>
+</div>
+<div class='sm-fb tbly-group tbly-footer-bawah'>
+<b:section id='footer-bawah' maxwidgets='1' name='Footer Link Bawah' showaddelement='no'>
+<b:widget id='HTML914' locked='true' title='Link Bawah' type='HTML' version='2' visible='true'>
+<b:includable id='main'>
+<div class='sm-lw' data-def='bottom' data-kind='inline'><div class='sm-cfg'><data:content/></div><div class='sm-fb-l'><b class='sm-hide'>&#160;</b></div></div>
+<b:include name='quickedit'/>
+</b:includable>
+</b:widget>
+</b:section>
+<div class='sm-fb-c tbly-ignore'>© 2026 Template Blogger SEO Friendly By <a href="https://www.temablogger.com/">Tema Blogger</a>. All rights reserved.</div>
+</div>
+</div>
+</footer>
+
+<!-- Laci menu HP -->
+<div class='sm-ov tbly-ignore' id='sm-ov'><b class='sm-hide'>&#160;</b></div>
+<div aria-label='Menu' class='sm-dw tbly-ignore' id='sm-dw' role='dialog'>
+<div class='sm-dw-h'><div class='sm-dw-logo' id='sm-dwlogo'><b class='sm-hide'>&#160;</b></div><button aria-label='Tutup menu' class='sm-dw-x' type='button'>&#215;</button></div>
+<form action='/search' class='sm-search sm-dw-s' method='get' role='search' style='display:block;position:relative;padding:0;box-shadow:none;top:0;background:none'><input aria-label='Search' name='q' placeholder='Search' style='width:100%' type='search'/></form>
+<div id='sm-dwbody'><b class='sm-hide'>&#160;</b></div>
+</div>
+
+<!-- Modal bagikan -->
+<div class='sm-modal tbly-ignore' id='sm-modal'>
+<div class='sm-mbox'>
+<button aria-label='Tutup' class='sm-x sm-modal-x' type='button'>&#215;</button>
+<h4 id='sm-mtitle'>Share this article</h4>
+<div class='sm-shl' id='sm-mshl'><b class='sm-hide'>&#160;</b></div>
+<div class='sm-copy'><input aria-label='Link' id='sm-copyin' readonly='readonly' type='text'/><button id='sm-copybtn' type='button'>Salin</button></div>
+</div>
+</div>
+
+<button aria-label='Kembali ke atas' class='sm-top-btn tbly-ignore' id='sm-topbtn' type='button'><svg fill='none' stroke='currentColor' stroke-linecap='round' stroke-width='2.5' viewBox='0 0 24 24'><path d='M12 19V5M5 12l7-7 7 7'/></svg></button>
+
+<script type="text/javascript" id='tb-license-engine-saemedia' data-tb-license-engine='free-v1'>//<![CDATA[
+function _0x44db(_0x1f937e,_0x469e93){var _0x29875c=_0x2987();return _0x44db=function(_0x44db5d,_0x811d21){_0x44db5d=_0x44db5d-0x1e0;var _0x402c11=_0x29875c[_0x44db5d];if(_0x44db['GdtyfO']===undefined){var _0x4ab4b5=function(_0x1bc959){var _0x1918a5='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0x2a0876='',_0x1214df='';for(var _0x4da7ea=0x0,_0x516e18,_0x4473a7,_0x3a25c8=0x0;_0x4473a7=_0x1bc959['charAt'](_0x3a25c8++);~_0x4473a7&&(_0x516e18=_0x4da7ea%0x4?_0x516e18*0x40+_0x4473a7:_0x4473a7,_0x4da7ea++%0x4)?_0x2a0876+=String['fromCharCode'](0xff&_0x516e18>>(-0x2*_0x4da7ea&0x6)):0x0){_0x4473a7=_0x1918a5['indexOf'](_0x4473a7);}for(var _0x12452e=0x0,_0x59a963=_0x2a0876['length'];_0x12452e<_0x59a963;_0x12452e++){_0x1214df+='%'+('00'+_0x2a0876['charCodeAt'](_0x12452e)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x1214df);};_0x44db['WyRpDc']=_0x4ab4b5,_0x1f937e=arguments,_0x44db['GdtyfO']=!![];}var _0x2a8955=_0x29875c[0x0],_0x71a674=_0x44db5d+_0x2a8955,_0x5395e9=_0x1f937e[_0x71a674];return!_0x5395e9?(_0x402c11=_0x44db['WyRpDc'](_0x402c11),_0x1f937e[_0x71a674]=_0x402c11):_0x402c11=_0x5395e9,_0x402c11;},_0x44db(_0x1f937e,_0x469e93);}(function(_0x1d3180,_0x4df23a){var _0x45800f=_0x44db,_0x131320=_0x1d3180();while(!![]){try{var _0x2748a8=parseInt(_0x45800f(0x332))/0x1+-parseInt(_0x45800f(0x30b))/0x2*(-parseInt(_0x45800f(0x321))/0x3)+parseInt(_0x45800f(0x340))/0x4+parseInt(_0x45800f(0x353))/0x5+-parseInt(_0x45800f(0x2ff))/0x6*(-parseInt(_0x45800f(0x267))/0x7)+-parseInt(_0x45800f(0x252))/0x8+parseInt(_0x45800f(0x343))/0x9*(-parseInt(_0x45800f(0x238))/0xa);if(_0x2748a8===_0x4df23a)break;else _0x131320['push'](_0x131320['shift']());}catch(_0x7a2d18){_0x131320['push'](_0x131320['shift']());}}}(_0x2987,0x4bbde),function(_0x1bc959){'use strict';var _0x499dc0=_0x44db;function _0x1918a5(){var _0xe7257f=_0x44db,_0x2a0876=document,_0x1214df=_0x2a0876['documentElement'];_0x1214df[_0xe7257f(0x348)](_0xe7257f(0x2a6),'valid'),_0x1214df['setAttribute'](_0xe7257f(0x279),_0xe7257f(0x2e5)),_0x1214df[_0xe7257f(0x348)](_0xe7257f(0x2f1),_0xe7257f(0x2cc)),_0x1214df['classList']['remove']('tbd-license-modal','ts-domain-modal'),[_0xe7257f(0x30d),'tbd-license-shield',_0xe7257f(0x1e9),'ts-domain-gate',_0xe7257f(0x318),'ts-domain-status'][_0xe7257f(0x2e6)](function(_0x4da7ea){var _0x83e503=_0xe7257f,_0x516e18=_0x2a0876[_0x83e503(0x2fa)](_0x4da7ea);if(_0x516e18)_0x516e18['hidden']=!![];}),_0x1bc959();}if(document[_0x499dc0(0x363)]===_0x499dc0(0x2d0))document[_0x499dc0(0x24d)]('DOMContentLoaded',_0x1918a5,{'once':!![]});else _0x1918a5();}(function(){function _0x4473a7(_0x3a25c8){var _0x31e308=_0x44db;if(document['readyState']===_0x31e308(0x2d0))document[_0x31e308(0x24d)]('DOMContentLoaded',_0x3a25c8,{'once':!![]});else{if(typeof _0x3a25c8===_0x31e308(0x35b))_0x3a25c8[_0x31e308(0x2b7)](document);else _0x3a25c8&&typeof _0x3a25c8['handleEvent']==='function'&&_0x3a25c8['handleEvent']();}}(function(){var _0x17e9a8=_0x44db,_0x12452e=document,_0x59a963=_0x12452e[_0x17e9a8(0x2fa)]('sm-body'),_0x17f6df=_0x12452e[_0x17e9a8(0x2fa)](_0x17e9a8(0x21b));if(!_0x59a963){if(_0x17f6df)_0x17f6df['style'][_0x17e9a8(0x263)]='none';return;}var _0x5a29a4=_0x12452e[_0x17e9a8(0x2fa)](_0x17e9a8(0x239)),_0x4e500e=null,_0x3d5f69=_0x59a963['children'],_0x4ef2ba,_0x53f60e;for(_0x4ef2ba=0x0;_0x4ef2ba<_0x3d5f69[_0x17e9a8(0x2a3)];_0x4ef2ba++){_0x53f60e=_0x3d5f69[_0x4ef2ba];if(_0x53f60e[_0x17e9a8(0x202)]==='BR')continue;var _0x419c3f=(_0x53f60e[_0x17e9a8(0x2f5)]||'')[_0x17e9a8(0x33d)]();if(!_0x419c3f){if(!_0x53f60e[_0x17e9a8(0x338)](_0x17e9a8(0x1e0)))continue;}_0x4e500e=_0x53f60e;break;}if(_0x4e500e){var _0x483b31=_0x4e500e[_0x17e9a8(0x202)]===_0x17e9a8(0x2f4)?_0x4e500e:_0x4e500e['querySelector']('img'),_0x557c70=(_0x4e500e['textContent']||'')['trim']()[_0x17e9a8(0x2a3)];if(_0x483b31){if(_0x557c70<0xa0){_0x5a29a4[_0x17e9a8(0x29d)]='',_0x5a29a4['appendChild'](_0x4e500e);var _0x391a41=_0x5a29a4['querySelectorAll'](_0x17e9a8(0x299));for(_0x4ef2ba=0x0;_0x4ef2ba<_0x391a41[_0x17e9a8(0x2a3)];_0x4ef2ba++){var _0x301950=_0x391a41[_0x4ef2ba][_0x17e9a8(0x26e)](_0x17e9a8(0x2fd))||'';/blogger\.googleusercontent|bp\.blogspot|ggpht/['test'](_0x301950)&&(_0x301950=_0x301950['replace'](/\/s\d+(-[a-z0-9-]+)?\//,'/w1000/')[_0x17e9a8(0x225)](/\/w\d+-h\d+[^/]*\//,'/w1000/')[_0x17e9a8(0x225)](/=s\d+(-[a-z0-9-]+)?$/,_0x17e9a8(0x1e1))[_0x17e9a8(0x225)](/=w\d+-h\d+[^/]*$/,'=w1000'),_0x391a41[_0x4ef2ba][_0x17e9a8(0x2fd)]=_0x301950,_0x391a41[_0x4ef2ba]['removeAttribute'](_0x17e9a8(0x1e5)),_0x391a41[_0x4ef2ba]['removeAttribute']('width')),_0x391a41[_0x4ef2ba][_0x17e9a8(0x2fb)]('loading');}var _0x398c8c=_0x5a29a4[_0x17e9a8(0x28b)](_0x17e9a8(0x2dd));for(_0x4ef2ba=0x0;_0x4ef2ba<_0x398c8c[_0x17e9a8(0x2a3)];_0x4ef2ba++){_0x398c8c[_0x4ef2ba][_0x17e9a8(0x20f)]['margin']='',_0x398c8c[_0x4ef2ba][_0x17e9a8(0x20f)][_0x17e9a8(0x346)]='',_0x398c8c[_0x4ef2ba][_0x17e9a8(0x20f)][_0x17e9a8(0x1f0)]='',_0x398c8c[_0x4ef2ba][_0x17e9a8(0x20f)]['marginRight']='';}}}}var _0x24f603=(_0x59a963[_0x17e9a8(0x2f5)]||'')[_0x17e9a8(0x33d)]()['split'](/\s+/)[_0x17e9a8(0x2a3)],_0x45627a=_0x12452e['getElementById'](_0x17e9a8(0x1e8));if(_0x45627a)_0x45627a[_0x17e9a8(0x2f5)]=Math[_0x17e9a8(0x2c0)](0x1,Math['round'](_0x24f603/0xc8));if(!_0x17f6df)return;var _0x556e9b=_0x12452e[_0x17e9a8(0x2fa)]('iklan-artikel-atas'),_0x31542c=_0x12452e['getElementById']('iklan-artikel-tengah'),_0x50b715=_0x12452e[_0x17e9a8(0x2fa)](_0x17e9a8(0x327)),_0xca0a96=_0x12452e[_0x17e9a8(0x2fa)]('iklan-artikel-samping'),_0x1523c5=_0x12452e['getElementById'](_0x17e9a8(0x219)),_0x51d5ac=_0x12452e[_0x17e9a8(0x2fa)](_0x17e9a8(0x335)),_0x5dac34=_0x12452e[_0x17e9a8(0x2fa)](_0x17e9a8(0x1f9));_0x556e9b&&(_0x1523c5&&_0x1523c5[_0x17e9a8(0x35d)](_0x556e9b));_0x50b715&&(_0x51d5ac&&_0x51d5ac[_0x17e9a8(0x35d)](_0x50b715));_0xca0a96&&(_0x5dac34&&_0x5dac34[_0x17e9a8(0x35d)](_0xca0a96));if(_0x31542c){var _0x1c382b=(window[_0x17e9a8(0x2d2)]?window[_0x17e9a8(0x2d2)]['inAdAfterP']:0x0)||0x2,_0x123f02=0x0,_0x2b0108=null;for(_0x4ef2ba=0x0;_0x4ef2ba<_0x59a963[_0x17e9a8(0x27f)]['length'];_0x4ef2ba++){_0x53f60e=_0x59a963['children'][_0x4ef2ba];if(/^(P|DIV|BLOCKQUOTE|UL|OL|H2|H3)$/['test'](_0x53f60e['tagName'])){if((_0x53f60e[_0x17e9a8(0x2f5)]||'')['trim']()[_0x17e9a8(0x2a3)]>0x28){_0x123f02++;if(_0x123f02===_0x1c382b){_0x2b0108=_0x53f60e;break;}}}}var _0x2cfd9c=_0x12452e[_0x17e9a8(0x290)](_0x17e9a8(0x365));_0x2cfd9c[_0x17e9a8(0x298)]=_0x17e9a8(0x22d),_0x2cfd9c[_0x17e9a8(0x29d)]='<div\x20class=\x22sm-px\x22><div\x20class=\x22sm-px-in\x22></div></div>',_0x2cfd9c[_0x17e9a8(0x338)](_0x17e9a8(0x21e))['appendChild'](_0x31542c),_0x2b0108?_0x2b0108[_0x17e9a8(0x360)][_0x17e9a8(0x2de)](_0x2cfd9c,_0x2b0108[_0x17e9a8(0x2bd)]):_0x59a963[_0x17e9a8(0x35d)](_0x2cfd9c);}_0x17f6df[_0x17e9a8(0x20f)]['display']='none';}()),(function(){'use strict';var _0x2c0585=_0x44db;var _0x34d444=document,_0x5b9284=window,_0x4c15ae=_0x34d444[_0x2c0585(0x31e)],_0x37b031={'locale':_0x2c0585(0x362),'homeSplit':0x3,'insertAt':[0x6,0x9],'inAdAfterP':0x2,'tickerSpeed':0x46,'sliderDelay':0x1194,'texts':{'recent':_0x2c0585(0x337),'related':'Related\x20Posts','readAlso':'Read\x20Also','viewMore':_0x2c0585(0x275),'loading':'Memuat...','noMore':'No\x20More\x20Posts\x20Available.','share':_0x2c0585(0x1ea),'minRead':'min\x20read','more':'Lainnya','copy':_0x2c0585(0x22c),'copied':'Tersalin','kategori':'Kategori','label':'Label','laman':_0x2c0585(0x1f5)}};if(_0x5b9284['SAE_CFG']){var _0x4ec04c;for(_0x4ec04c in _0x5b9284[_0x2c0585(0x2d2)]){if(_0x4ec04c==='texts'){var _0x2c20b9;for(_0x2c20b9 in _0x5b9284[_0x2c0585(0x2d2)]['texts'])_0x37b031[_0x2c0585(0x31a)][_0x2c20b9]=_0x5b9284[_0x2c0585(0x2d2)][_0x2c0585(0x31a)][_0x2c20b9];}else _0x37b031[_0x4ec04c]=_0x5b9284['SAE_CFG'][_0x4ec04c];}}var _0x34817d=_0x37b031[_0x2c0585(0x31a)],_0x33fe83={'menu':_0x2c0585(0x2b8),'tags':_0x2c0585(0x210),'kategori':_0x2c0585(0x33f),'halaman':_0x2c0585(0x286),'contact':_0x2c0585(0x316),'social':_0x2c0585(0x349),'bottom':'Privacy\x20Policy|/p/privacy-policy.html\x0aIndeks\x20Berita|/search\x0aPedoman\x20Media\x20Siber|/p/pedoman-media-siber.html'},_0x56bae4={'down':_0x2c0585(0x2b1),'left':_0x2c0585(0x25f),'right':'<svg\x20fill=\x22none\x22\x20stroke=\x22currentColor\x22\x20stroke-width=\x222.5\x22\x20viewBox=\x220\x200\x2024\x2024\x22><path\x20d=\x22m9\x205\x207\x207-7\x207\x22/></svg>','ext':_0x2c0585(0x35e),'pin':'<svg\x20fill=\x22none\x22\x20stroke=\x22currentColor\x22\x20stroke-width=\x221.8\x22\x20viewBox=\x220\x200\x2024\x2024\x22><path\x20d=\x22M12\x2021s-7-6.2-7-11.5a7\x207\x200\x200\x201\x2014\x200C19\x2014.8\x2012\x2021\x2012\x2021z\x22/><circle\x20cx=\x2212\x22\x20cy=\x229.5\x22\x20r=\x222.5\x22/></svg>','phone':_0x2c0585(0x1ff),'mail':'<svg\x20fill=\x22none\x22\x20stroke=\x22currentColor\x22\x20stroke-width=\x221.8\x22\x20viewBox=\x220\x200\x2024\x2024\x22><rect\x20height=\x2214\x22\x20rx=\x222\x22\x20width=\x2218\x22\x20x=\x223\x22\x20y=\x225\x22/><path\x20d=\x22m3\x207\x209\x206\x209-6\x22/></svg>','facebook':_0x2c0585(0x1f7),'x':'<svg\x20fill=\x22currentColor\x22\x20viewBox=\x220\x200\x2024\x2024\x22><path\x20d=\x22M17.8\x203H21l-7\x208\x208.2\x2010H16l-5-6.3L5.3\x2021H2l7.5-8.6L1.8\x203h6.5l4.5\x205.8zM16.7\x2019h1.8L7.4\x204.9H5.5z\x22/></svg>','twitter':'','pinterest':'<svg\x20fill=\x22currentColor\x22\x20viewBox=\x220\x200\x2024\x2024\x22><path\x20d=\x22M12\x202a10\x2010\x200\x200\x200-3.6\x2019.3c-.1-.8-.2-2\x200-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4\x201.8-2.4.9\x200\x201.3.6\x201.3\x201.4\x200\x20.9-.5\x202.1-.8\x203.3-.2\x201\x20.5\x201.8\x201.5\x201.8\x201.8\x200\x203.1-1.9\x203.1-4.6\x200-2.4-1.7-4.1-4.2-4.1-2.9\x200-4.5\x202.1-4.5\x204.4\x200\x20.9.3\x201.8.8\x202.3.1.1.1.2.1.3l-.3\x201.2c0\x20.2-.2.3-.4.2-1.3-.6-2.1-2.5-2.1-4\x200-3.3\x202.4-6.3\x206.9-6.3\x203.6\x200\x206.4\x202.6\x206.4\x206\x200\x203.6-2.3\x206.5-5.4\x206.5-1.1\x200-2.1-.6-2.4-1.2l-.7\x202.5c-.2.9-.9\x202.1-1.3\x202.8A10\x2010\x200\x201\x200\x2012\x202z\x22/></svg>','instagram':_0x2c0585(0x29e),'youtube':'<svg\x20fill=\x22currentColor\x22\x20viewBox=\x220\x200\x2024\x2024\x22><path\x20d=\x22M21.6\x207.2a2.5\x202.5\x200\x200\x200-1.8-1.8C18.2\x205\x2012\x205\x2012\x205s-6.2\x200-7.8.4A2.5\x202.5\x200\x200\x200\x202.4\x207.2\x2026\x2026\x200\x200\x200\x202\x2012a26\x2026\x200\x200\x200\x20.4\x204.8\x202.5\x202.5\x200\x200\x200\x201.8\x201.8C5.8\x2019\x2012\x2019\x2012\x2019s6.2\x200\x207.8-.4a2.5\x202.5\x200\x200\x200\x201.8-1.8A26\x2026\x200\x200\x200\x2022\x2012a26\x2026\x200\x200\x200-.4-4.8zM10\x2015V9l5.2\x203z\x22/></svg>','whatsapp':_0x2c0585(0x230),'telegram':_0x2c0585(0x29f),'tiktok':_0x2c0585(0x2d5),'linkedin':_0x2c0585(0x220),'rss':_0x2c0585(0x218),'wordpress':_0x2c0585(0x27d)};_0x56bae4[_0x2c0585(0x333)]=_0x56bae4['x'];var _0x32454c={'facebook':_0x2c0585(0x24b),'x':'s-x','twitter':_0x2c0585(0x262),'pinterest':_0x2c0585(0x284),'instagram':'s-ig','youtube':'s-yt','whatsapp':_0x2c0585(0x303),'telegram':'s-tg','tiktok':'s-tt','linkedin':_0x2c0585(0x249),'rss':'s-rss','wordpress':'s-wp'},_0x54034f='data:image/svg+xml,%3Csvg\x20xmlns=%22http://www.w3.org/2000/svg%22\x20viewBox=%220\x200\x2016\x2010%22%3E%3Crect\x20width=%2216%22\x20height=%2210%22\x20fill=%22%23d5d5d5%22/%3E%3C/svg%3E';function _0xd9f438(_0x589ba8,_0x517eb6){var _0x3fabb7=_0x2c0585;return(_0x517eb6||_0x34d444)[_0x3fabb7(0x338)](_0x589ba8);}function _0x5e8ddc(_0x3c2ea3,_0x41edb3){var _0x36a38f=_0x2c0585;return Array['prototype'][_0x36a38f(0x20a)][_0x36a38f(0x2b7)]((_0x41edb3||_0x34d444)['querySelectorAll'](_0x3c2ea3));}function _0x10eb4a(_0xb25d3){var _0x22d796=_0x2c0585;return String(_0xb25d3==null?'':_0xb25d3)[_0x22d796(0x225)](/[&<>"']/g,function(_0x300f6d){var _0x39bb54=_0x22d796;return{'&':_0x39bb54(0x322),'<':_0x39bb54(0x23e),'>':_0x39bb54(0x27b),'\x22':_0x39bb54(0x246),'\x27':_0x39bb54(0x258)}[_0x300f6d];});}function _0xc3e04d(_0x1d41ff,_0x10fb8f,_0x6fa782,_0x13c51a){var _0x206d1c=_0x2c0585;if(_0x1d41ff)_0x1d41ff[_0x206d1c(0x24d)](_0x10fb8f,_0x6fa782,_0x13c51a||![]);}function _0x4c307c(){var _0x53c763=_0x2c0585;return _0x4c15ae[_0x53c763(0x223)][_0x53c763(0x289)](_0x53c763(0x328));}function _0x2ff49a(){var _0xafacf8=_0x2c0585;return _0x4c15ae['classList'][_0xafacf8(0x289)](_0xafacf8(0x232));}function _0x37cbe7(_0x17a154){return'/search/label/'+encodeURIComponent(_0x17a154);}function _0x10ba60(_0x3c3cf6){var _0x28a027=_0x2c0585;return _0x3c3cf6=(_0x3c3cf6||'#')['trim'](),_0x3c3cf6[_0x28a027(0x225)](/ /g,_0x28a027(0x1fe));}function _0x59e27f(_0x364858){var _0x589fd5=_0x2c0585;if(!_0x364858)return'';var _0xa5760a=_0x364858[_0x589fd5(0x223)]['contains'](_0x589fd5(0x255))?_0x364858:_0xd9f438(_0x589fd5(0x2d7),_0x364858),_0x1a471b=_0xa5760a?_0xa5760a[_0x589fd5(0x29d)]:'';if(/<a\s/i[_0x589fd5(0x2e0)](_0x1a471b)){var _0x1598da=_0x34d444[_0x589fd5(0x290)](_0x589fd5(0x365));_0x1598da['innerHTML']=_0x1a471b;var _0x4e32e1=_0x5e8ddc('a',_0x1598da);if(_0x4e32e1[_0x589fd5(0x2a3)])return _0x4e32e1['map'](function(_0x17ed29){var _0x1300e7=_0x589fd5;return _0x17ed29['textContent'][_0x1300e7(0x33d)]()+'|'+_0x17ed29['getAttribute']('href');})['join']('\x0a');}_0x1a471b=_0x1a471b[_0x589fd5(0x225)](/<br\s*\/?>/gi,'\x0a')[_0x589fd5(0x225)](/<\/(p|div|li)>/gi,'\x0a')[_0x589fd5(0x225)](/<[^>]+>/g,'');var _0x3b04f9=_0x34d444[_0x589fd5(0x290)]('textarea');_0x3b04f9[_0x589fd5(0x29d)]=_0x1a471b;var _0x9e53a2=_0x3b04f9[_0x589fd5(0x21c)]['trim']();if(!_0x9e53a2){var _0x28e848=(_0xa5760a?_0xa5760a['getAttribute']('data-def'):'')||_0x364858[_0x589fd5(0x26e)](_0x589fd5(0x274))||'';_0x9e53a2=_0x33fe83[_0x28e848]!=null?_0x33fe83[_0x28e848]:_0x28e848;}return _0x9e53a2;}function _0x56efe7(_0x4642e1){var _0x546c79=_0x2c0585;return String(_0x4642e1||'')[_0x546c79(0x344)](/\n|\r/)[_0x546c79(0x2a5)](function(_0x5134be){var _0x4bcc8b=_0x546c79;return _0x5134be[_0x4bcc8b(0x33d)]();})[_0x546c79(0x34d)](Boolean);}var _0x258e16={};function _0x31f791(_0x41e283,_0xe4e42e,_0x4ce94a){var _0xa61baa=_0x2c0585;if(!_0x41e283)return _0x54034f;if(/blogger\.googleusercontent|bp\.blogspot|ggpht|googleusercontent\.com/['test'](_0x41e283)){var _0x1fa96a='w'+_0xe4e42e+'-h'+_0x4ce94a+_0xa61baa(0x2aa);if(/\/s\d+(-[a-z0-9-]+)?\//[_0xa61baa(0x2e0)](_0x41e283))return _0x41e283[_0xa61baa(0x225)](/\/s\d+(-[a-z0-9-]+)?\//,'/'+_0x1fa96a+'/');if(/\/w\d+-h\d+[^/]*\//[_0xa61baa(0x2e0)](_0x41e283))return _0x41e283['replace'](/\/w\d+-h\d+[^/]*\//,'/'+_0x1fa96a+'/');if(/=[swh]\d+[^/]*$/['test'](_0x41e283))return _0x41e283[_0xa61baa(0x225)](/=[swh]\d+[^/]*$/,'='+_0x1fa96a);if(/blogger_img_proxy/[_0xa61baa(0x2e0)](_0x41e283))return _0x41e283+'='+_0x1fa96a;}return _0x41e283;}function _0x324cc9(_0x23a4c1){var _0x40f866=_0x2c0585,_0x147b64='';(_0x23a4c1['link']||[])['forEach'](function(_0x248675){var _0x3a2eff=_0x44db;if(_0x248675[_0x3a2eff(0x259)]===_0x3a2eff(0x352))_0x147b64=_0x248675[_0x3a2eff(0x295)];});var _0xf06534=((_0x23a4c1[_0x40f866(0x28f)]||_0x23a4c1[_0x40f866(0x1f8)]||{})['$t']||'')['replace'](/<[^>]+>/g,'\x20')[_0x40f866(0x225)](/\s+/g,'\x20')[_0x40f866(0x33d)](),_0x5553c1=_0x23a4c1[_0x40f866(0x266)]?_0x23a4c1[_0x40f866(0x266)][_0x40f866(0x240)]:'';if(!_0x5553c1){var _0x508953=((_0x23a4c1[_0x40f866(0x1f8)]||{})['$t']||'')[_0x40f866(0x203)](/<img[^>]+src=["']([^"']+)/i);if(_0x508953)_0x5553c1=_0x508953[0x1];}return{'id':(_0x23a4c1['id']||{})['$t'],'title':(_0x23a4c1[_0x40f866(0x205)]||{})['$t']||'','url':_0x147b64,'img':_0x5553c1,'date':new Date((_0x23a4c1[_0x40f866(0x25e)]||{})['$t']),'labels':(_0x23a4c1[_0x40f866(0x281)]||[])[_0x40f866(0x2a5)](function(_0x3caa90){return _0x3caa90['term'];}),'sum':_0xf06534,'author':((_0x23a4c1['author']||[{}])[0x0]['name']||{})['$t']||''};}function _0x356795(_0x2b18cb){var _0x2fddaa=_0x2c0585;return fetch(_0x2b18cb,{'credentials':_0x2fddaa(0x1e2)})['then'](function(_0x45815d){var _0x29ed32=_0x2fddaa;if(!_0x45815d['ok'])throw new Error(_0x45815d[_0x29ed32(0x209)]);return _0x45815d[_0x29ed32(0x2ca)]();});}function _0x4a05d6(_0x200b56,_0x5e80a6,_0x44703e,_0x1a4663){var _0x46c314=_0x2c0585,_0x2b2d23=_0x46c314(0x2ce)+_0x5e80a6+(_0x44703e?_0x46c314(0x229)+_0x44703e:'')+(_0x1a4663||''),_0x2b40b7=_0x200b56?'/-/'+encodeURIComponent(_0x200b56):'',_0x58a7dc=_0x2b40b7+_0x2b2d23;if(_0x258e16[_0x58a7dc])return _0x258e16[_0x58a7dc];return _0x258e16[_0x58a7dc]=_0x356795(_0x46c314(0x334)+_0x2b40b7+_0x2b2d23)['then'](function(_0x175d16){var _0x2d7322=_0x46c314,_0x4d09fb=(_0x175d16['feed'][_0x2d7322(0x247)]||[])[_0x2d7322(0x2a5)](_0x324cc9),_0x24dae5=_0x4d09fb[_0x2d7322(0x34d)](function(_0x259f96){return!_0x259f96['img'];});if(!_0x24dae5[_0x2d7322(0x2a3)])return _0x4d09fb;return _0x356795('/feeds/posts/default'+_0x2b40b7+_0x2b2d23)[_0x2d7322(0x292)](function(_0x5628cb){var _0x42c808=_0x2d7322,_0x3b8c05={};return(_0x5628cb[_0x42c808(0x34b)]['entry']||[])[_0x42c808(0x2e6)](function(_0xa8322c){var _0x3bd69c=_0x324cc9(_0xa8322c);_0x3b8c05[_0x3bd69c['id']]=_0x3bd69c['img'];}),_0x4d09fb[_0x42c808(0x2e6)](function(_0x2b9678){var _0x5d6b03=_0x42c808;if(!_0x2b9678['img'])_0x2b9678[_0x5d6b03(0x299)]=_0x3b8c05[_0x2b9678['id']]||'';}),_0x4d09fb;})['catch'](function(){return _0x4d09fb;});})['catch'](function(){return[];}),_0x258e16[_0x58a7dc];}function _0x372905(_0x55a002,_0x4d6229){var _0x421d0a=_0x2c0585;if(!_0x55a002||_0x55a002===_0x421d0a(0x297))return _0x4a05d6(null,_0x4d6229);return _0x4a05d6(_0x55a002,_0x4d6229)[_0x421d0a(0x292)](function(_0x5887e9){var _0x20366c=_0x421d0a;if(_0x5887e9[_0x20366c(0x2a3)]>=_0x4d6229)return _0x5887e9;return _0x4a05d6(null,_0x4d6229+_0x5887e9[_0x20366c(0x2a3)])['then'](function(_0x2a02e0){var _0x33b988=_0x20366c,_0x50dd57={};return _0x5887e9[_0x33b988(0x2e6)](function(_0x31f4f9){_0x50dd57[_0x31f4f9['url']]=0x1;}),_0x5887e9[_0x33b988(0x273)](_0x2a02e0['filter'](function(_0x1ac1c4){return!_0x50dd57[_0x1ac1c4['url']];}))[_0x33b988(0x20a)](0x0,_0x4d6229);});});}var _0x1b5aec=null;function _0x5383f0(_0x51040c){var _0x5d03b8=_0x2c0585;try{if(!_0x1b5aec)_0x1b5aec=new Intl['DateTimeFormat'](_0x37b031[_0x5d03b8(0x23d)],{'day':_0x5d03b8(0x32c),'month':'long','year':_0x5d03b8(0x32c)});return _0x1b5aec['format'](_0x51040c);}catch(_0xcbc976){return _0x51040c[_0x5d03b8(0x30e)]();}}function _0x5745d7(_0x3d2392){var _0x2892b0=_0x2c0585;return _0x3d2392[_0x2892b0(0x1f3)]['length']?_0x2892b0(0x26c)+_0x37cbe7(_0x3d2392['labels'][0x0])+'\x22>'+_0x10eb4a(_0x3d2392[_0x2892b0(0x1f3)][0x0])+_0x2892b0(0x204):'';}function _0x243d15(_0x5c11dc,_0x35bd40,_0x42ab08,_0x22a072){var _0x43c01e=_0x2c0585;return _0x43c01e(0x2d9)+_0x10eb4a(_0x5c11dc[_0x43c01e(0x205)])+_0x43c01e(0x2a0)+_0x10eb4a(_0x31f791(_0x5c11dc['img'],_0x35bd40,_0x42ab08))+'\x22'+(_0x22a072===![]?'':'\x20loading=\x22lazy\x22')+'/>';}function _0x4acd9a(_0x2fe41b,_0x343661,_0x6708b9){var _0x5be31e=_0x2c0585;_0x2fe41b=(_0x2fe41b||'')['trim']();if(!_0x2fe41b)return'';var _0x5e480e=/^https?:\/\/\S+\.(png|jpe?g|gif|webp|svg|avif)(\?\S*)?$/i[_0x5be31e(0x2e0)](_0x2fe41b)||/^https?:\/\/(blogger\.googleusercontent|\d\.bp\.blogspot)/i[_0x5be31e(0x2e0)](_0x2fe41b),_0xee168=_0x5e480e?_0x5be31e(0x325)+_0x10eb4a(_0x2fe41b)+_0x5be31e(0x294):_0x10eb4a(_0x2fe41b),_0x3c7e9b=_0x5be31e(0x1f2)+(_0x5e480e?'\x20sm-st-img':'')+'\x22>'+_0xee168+_0x5be31e(0x264);return _0x5be31e(0x236)+(_0x343661?'\x20'+_0x343661:'')+'\x22>'+_0x3c7e9b+(_0x6708b9?'<a\x20aria-label=\x22Lihat\x20semua\x22\x20class=\x22sm-wt-a\x22\x20href=\x22'+_0x6708b9+'\x22>'+_0x56bae4['ext']+_0x5be31e(0x204):'')+_0x5be31e(0x242);}var _0x362068={};_0x362068['slider']=function(_0x3712ac,_0x3698ef){var _0x766dac=_0x2c0585;if(!_0x3698ef[_0x766dac(0x2a3)]){_0x3712ac[_0x766dac(0x29d)]='';return;}var _0xdc1f81='',_0x9dfab1='';_0x3698ef[_0x766dac(0x2e6)](function(_0x18882a,_0x2b3109){var _0x1fd82a=_0x766dac;_0xdc1f81+=_0x1fd82a(0x22f)+_0x10eb4a(_0x18882a[_0x1fd82a(0x205)])+_0x1fd82a(0x28e)+_0x10eb4a(_0x18882a[_0x1fd82a(0x240)])+'\x22>'+_0x243d15(_0x18882a,0x3e8,0x23c,_0x2b3109>0x0)+_0x1fd82a(0x276)+_0x5745d7(_0x18882a)+_0x1fd82a(0x23c)+_0x10eb4a(_0x18882a['url'])+'\x22>'+_0x10eb4a(_0x18882a[_0x1fd82a(0x205)])+_0x1fd82a(0x359)+_0x5383f0(_0x18882a['date'])+_0x1fd82a(0x2b9),_0x9dfab1+=_0x1fd82a(0x2b3)+(_0x2b3109?'':'\x20on')+_0x1fd82a(0x2a8)+_0x2b3109+_0x1fd82a(0x28e)+_0x10eb4a(_0x18882a[_0x1fd82a(0x240)])+'\x22>'+_0x243d15(_0x18882a,0x154,0xd6)+_0x1fd82a(0x2bb)+_0x10eb4a(_0x18882a['title'])+_0x1fd82a(0x300);}),_0x3712ac['innerHTML']=_0x766dac(0x233)+_0xdc1f81+_0x766dac(0x253)+_0x9dfab1+'</div></div></div>';var _0x5b9871=_0xd9f438('.sm-sl-tr',_0x3712ac),_0x1f28c7=_0xd9f438(_0x766dac(0x341),_0x3712ac),_0x1bddbe=_0x5e8ddc('.sm-sl-t',_0x3712ac),_0x17f057=_0x3698ef[_0x766dac(0x2a3)],_0x35962b=0x0,_0x10e705=null,_0x15b980=![];function _0x9c6cd0(){return 0x4;}function _0x2ef314(_0x522c21){var _0x1cead1=_0x766dac;_0x35962b=(_0x522c21+_0x17f057)%_0x17f057,_0x5b9871[_0x1cead1(0x20f)]['transform']='translateX('+-_0x35962b*0x64+'%)',_0x1bddbe[_0x1cead1(0x2e6)](function(_0x27bb12,_0x29a69b){var _0x1b84d8=_0x1cead1;_0x27bb12[_0x1b84d8(0x223)]['toggle']('on',_0x29a69b===_0x35962b);});var _0x4336b4=_0x9c6cd0(),_0x16053e=Math['max'](0x0,Math[_0x1cead1(0x25c)](_0x35962b-_0x4336b4+0x1,_0x17f057-_0x4336b4));_0x1f28c7[_0x1cead1(0x20f)][_0x1cead1(0x277)]=_0x1cead1(0x2c2)+-_0x16053e*0x64/_0x4336b4+'%)';}function _0x202a2d(){var _0x51fcbd=_0x766dac;_0x3311ec(),_0x10e705=setInterval(function(){var _0x129fbf=_0x44db;if(!_0x15b980){if(!_0x34d444[_0x129fbf(0x20c)])_0x2ef314(_0x35962b+0x1);}},_0x37b031[_0x51fcbd(0x2c8)]);}function _0x3311ec(){if(_0x10e705)clearInterval(_0x10e705);_0x10e705=null;}_0x1bddbe[_0x766dac(0x2e6)](function(_0x5c80ff){_0xc3e04d(_0x5c80ff,'click',function(_0x51d22a){var _0x2f9e60=_0x44db;_0x51d22a['preventDefault'](),_0x2ef314(+_0x5c80ff[_0x2f9e60(0x26e)](_0x2f9e60(0x2ae))),_0x202a2d();});});var _0x4bb35c=_0xd9f438(_0x766dac(0x339),_0x3712ac);_0xc3e04d(_0x4bb35c,_0x766dac(0x323),function(){_0x15b980=!![];}),_0xc3e04d(_0x4bb35c,_0x766dac(0x207),function(){_0x15b980=![];});var _0xac72a7=0x0;_0xc3e04d(_0x4bb35c,'touchstart',function(_0xb65be3){var _0x179947=_0x766dac;_0xac72a7=_0xb65be3[_0x179947(0x30a)][0x0][_0x179947(0x296)];},{'passive':!![]}),_0xc3e04d(_0x4bb35c,_0x766dac(0x304),function(_0x52b456){var _0x4b12ed=_0x766dac,_0x514ccf=_0x52b456[_0x4b12ed(0x25d)][0x0][_0x4b12ed(0x296)]-_0xac72a7;Math[_0x4b12ed(0x330)](_0x514ccf)>0x28&&(_0x2ef314(_0x35962b+(_0x514ccf<0x0?0x1:-0x1)),_0x202a2d());},{'passive':!![]}),_0xc3e04d(_0x5b9284,_0x766dac(0x34e),function(){_0x2ef314(_0x35962b);}),_0x202a2d();};function _0x47c356(_0x97c3cc,_0x38b867,_0x385b21,_0x14694b,_0x579073){var _0x143f38=_0x2c0585,_0xf64e85=_0x38b867[_0x143f38(0x2a5)](function(_0x546e7e){var _0x29019d=_0x143f38;return _0x29019d(0x1f6)+_0x10eb4a(_0x546e7e['url'])+_0x29019d(0x35a)+_0x243d15(_0x546e7e,0x1e0,0x12c)+(_0x546e7e[_0x29019d(0x1f3)][_0x29019d(0x2a3)]?_0x29019d(0x357)+_0x10eb4a(_0x546e7e[_0x29019d(0x1f3)][0x0])+'</span>':'')+_0x29019d(0x278)+_0x10eb4a(_0x546e7e['title'])+_0x29019d(0x300);})['join']('');_0x97c3cc['innerHTML']='<div\x20class=\x22sm-mod'+(_0x385b21?'\x20sm-gbox':'')+'\x22>'+_0x4acd9a(_0x14694b,'',_0x385b21?_0x579073:'')+_0x143f38(0x28c)+_0xf64e85+_0x143f38(0x2f2)+_0x56bae4[_0x143f38(0x293)]+_0x143f38(0x301)+_0x56bae4[_0x143f38(0x2bc)]+'</button></div></div>';var _0x2edef5=_0xd9f438(_0x143f38(0x20e),_0x97c3cc),_0x196ba9=_0xd9f438('.sm-cr-tr',_0x97c3cc),_0x22e386=_0x5e8ddc(_0x143f38(0x350),_0x97c3cc),_0x163a8e=0x0;function _0x10dbfd(){var _0x28e5e6=_0x2edef5['clientWidth'];return _0x28e5e6>=0x384?0x5:_0x28e5e6>=0x208?0x3:0x2;}function _0x155757(){var _0x3d0ced=_0x143f38,_0x4aec56=_0x10dbfd();_0x2edef5[_0x3d0ced(0x20f)][_0x3d0ced(0x25a)]('--n',_0x4aec56);var _0x440006=_0x22e386[0x0];if(!_0x440006)return;var _0xbe7554=_0x440006[_0x3d0ced(0x1fa)]+0x10,_0x3cfc21=Math['max'](0x0,_0x22e386['length']-_0x4aec56);if(_0x163a8e>_0x3cfc21)_0x163a8e=_0x3cfc21;_0x196ba9['style'][_0x3d0ced(0x277)]='translateX('+-_0x163a8e*_0xbe7554+'px)';var _0x103352=_0x440006['offsetWidth']*0xa/0x10;_0x5e8ddc('.sm-arr',_0x97c3cc)[_0x3d0ced(0x2e6)](function(_0x2f933a){var _0x45a6c9=_0x3d0ced;_0x2f933a[_0x45a6c9(0x20f)]['top']=_0x103352/0x2+'px';}),_0x5e8ddc(_0x3d0ced(0x2b5),_0x97c3cc)[_0x3d0ced(0x2e6)](function(_0x542a8b){var _0x5f0be5=_0x3d0ced;_0x542a8b[_0x5f0be5(0x20f)][_0x5f0be5(0x263)]=_0x3cfc21?'':_0x5f0be5(0x1ee);});}function _0x5391bf(_0x55e129){var _0x3962e8=_0x143f38,_0x41976b=_0x10dbfd(),_0x474245=Math[_0x3962e8(0x2c0)](0x0,_0x22e386['length']-_0x41976b);_0x163a8e+=_0x55e129;if(_0x163a8e>_0x474245)_0x163a8e=0x0;if(_0x163a8e<0x0)_0x163a8e=_0x474245;_0x155757();}_0xc3e04d(_0xd9f438('.sm-arr.p',_0x97c3cc),'click',function(){_0x5391bf(-0x1);}),_0xc3e04d(_0xd9f438(_0x143f38(0x33a),_0x97c3cc),_0x143f38(0x2d4),function(){_0x5391bf(0x1);});var _0x40ecb5=0x0;_0xc3e04d(_0x2edef5,_0x143f38(0x270),function(_0x56a188){var _0xcb4f5d=_0x143f38;_0x40ecb5=_0x56a188[_0xcb4f5d(0x30a)][0x0][_0xcb4f5d(0x296)];},{'passive':!![]}),_0xc3e04d(_0x2edef5,_0x143f38(0x304),function(_0x7a18c1){var _0x3d5d62=_0x143f38,_0x24e786=_0x7a18c1[_0x3d5d62(0x25d)][0x0][_0x3d5d62(0x296)]-_0x40ecb5;if(Math[_0x3d5d62(0x330)](_0x24e786)>0x28)_0x5391bf(_0x24e786<0x0?0x1:-0x1);},{'passive':!![]}),_0xc3e04d(_0x5b9284,_0x143f38(0x34e),_0x155757),_0x155757(),setTimeout(_0x155757,0x12c);}_0x362068[_0x2c0585(0x21a)]=function(_0x4f959e,_0x1a81f4,_0x417a30){var _0x55df91=_0x2c0585;_0x47c356(_0x4f959e,_0x1a81f4,![],_0x417a30[_0x55df91(0x205)],_0x417a30['link']);},_0x362068['carouselbox']=function(_0x263f13,_0x4a9890,_0xac340f){var _0x3bb936=_0x2c0585;_0x47c356(_0x263f13,_0x4a9890,!![],_0xac340f[_0x3bb936(0x205)],_0xac340f['link']);},_0x362068[_0x2c0585(0x34a)]=function(_0x34f2f0,_0x195407,_0x3ab809){var _0x6ad6f=_0x2c0585,_0xe7eabf=(_0x3ab809['extra']||'#962a22,#006047')[_0x6ad6f(0x344)](',')[_0x6ad6f(0x2a5)](function(_0x15b05a){var _0x1f5482=_0x6ad6f;return _0x15b05a[_0x1f5482(0x33d)]();})[_0x6ad6f(0x34d)](Boolean),_0x585069=_0xe7eabf['length']>0x1?'linear-gradient(154deg,'+_0xe7eabf[0x0]+_0x6ad6f(0x2ed)+_0xe7eabf[0x1]+_0x6ad6f(0x1e3):_0xe7eabf[0x0]||'#333';_0x34f2f0[_0x6ad6f(0x29d)]=_0x6ad6f(0x307)+_0x10eb4a(_0x585069)+'\x22>'+_0x4acd9a(_0x3ab809[_0x6ad6f(0x205)],'',_0x3ab809[_0x6ad6f(0x354)])+_0x6ad6f(0x2cb)+_0x195407[_0x6ad6f(0x2a5)](function(_0x54c935){var _0x3177ed=_0x6ad6f;return _0x3177ed(0x2b2)+_0x10eb4a(_0x54c935['url'])+'\x22>'+_0x243d15(_0x54c935,0x12c,0x1be)+_0x3177ed(0x2a9)+(_0x54c935[_0x3177ed(0x1f3)][_0x3177ed(0x2a3)]?_0x3177ed(0x357)+_0x10eb4a(_0x54c935['labels'][0x0])+_0x3177ed(0x212):'')+_0x3177ed(0x305)+_0x10eb4a(_0x54c935['title'])+_0x3177ed(0x300);})[_0x6ad6f(0x2c9)]('')+_0x6ad6f(0x216);var _0x413b8c=_0xd9f438(_0x6ad6f(0x2da),_0x34f2f0);if(_0x413b8c)_0x413b8c[_0x6ad6f(0x20f)][_0x6ad6f(0x24a)]=_0x6ad6f(0x21f);},_0x362068[_0x2c0585(0x244)]=function(_0x12cbd4,_0x6ee5fb,_0x300b7b){var _0x1b6155=_0x2c0585;if(!_0x6ee5fb['length']){_0x12cbd4[_0x1b6155(0x29d)]='';return;}var _0x340c07=_0x6ee5fb[0x0],_0x1e843b=_0x4acd9a(_0x300b7b[_0x1b6155(0x205)])+(_0x300b7b[_0x1b6155(0x33b)]?'<p\x20class=\x22sm-wdesc\x22>'+_0x10eb4a(_0x300b7b['desc'])+_0x1b6155(0x2f6):'');_0x1e843b+=_0x1b6155(0x254)+_0x10eb4a(_0x340c07['url'])+'\x22>'+_0x243d15(_0x340c07,0x28c,0x19a)+_0x1b6155(0x308)+_0x10eb4a(_0x340c07[_0x1b6155(0x205)])+_0x1b6155(0x2cf)+_0x5383f0(_0x340c07[_0x1b6155(0x227)])+'</time></span></a>',_0x6ee5fb[_0x1b6155(0x20a)](0x1)[_0x1b6155(0x2e6)](function(_0x3aa774){var _0x212c77=_0x1b6155;_0x1e843b+='<div\x20class=\x22sm-sm\x22><a\x20aria-label=\x22'+_0x10eb4a(_0x3aa774[_0x212c77(0x205)])+'\x22\x20class=\x22sm-sm-img\x22\x20href=\x22'+_0x10eb4a(_0x3aa774[_0x212c77(0x240)])+'\x22>'+_0x243d15(_0x3aa774,0xa0,0xa0)+_0x212c77(0x27a)+_0x10eb4a(_0x3aa774[_0x212c77(0x240)])+'\x22>'+_0x10eb4a(_0x3aa774[_0x212c77(0x205)])+'</a></b><time>'+_0x5383f0(_0x3aa774['date'])+'</time></div></div>';}),_0x12cbd4[_0x1b6155(0x29d)]=_0x1b6155(0x28a)+_0x1e843b+'</div>';},_0x362068['list']=function(_0x55e3ee,_0x28a947,_0x4a1e61){var _0x35cc81=_0x2c0585;_0x55e3ee[_0x35cc81(0x29d)]='<div\x20class=\x22sm-mod\x22>'+_0x4acd9a(_0x4a1e61[_0x35cc81(0x205)])+_0x28a947[_0x35cc81(0x2a5)](function(_0x47363b){var _0x5260b8=_0x35cc81;return _0x5260b8(0x269)+_0x10eb4a(_0x47363b['title'])+_0x5260b8(0x1ec)+_0x10eb4a(_0x47363b[_0x5260b8(0x240)])+'\x22>'+_0x243d15(_0x47363b,0xa0,0xa0)+_0x5260b8(0x27a)+_0x10eb4a(_0x47363b[_0x5260b8(0x240)])+'\x22>'+_0x10eb4a(_0x47363b['title'])+_0x5260b8(0x1fd)+_0x5383f0(_0x47363b[_0x5260b8(0x227)])+'</time></div></div>';})['join']('')+_0x35cc81(0x242);},_0x362068[_0x2c0585(0x2b0)]=function(_0xd1e598,_0x58f098,_0x5507bc){var _0x18ed24=_0x2c0585;_0xd1e598['innerHTML']='<div\x20class=\x22sm-mod\x22>'+_0x4acd9a(_0x5507bc[_0x18ed24(0x205)],'',_0x5507bc[_0x18ed24(0x354)])+'<div\x20class=\x22sm-rg\x22>'+_0x58f098[_0x18ed24(0x2a5)](_0x4185f7)[_0x18ed24(0x2c9)]('')+_0x18ed24(0x216);};function _0x4185f7(_0x246ea1){var _0x2e7d76=_0x2c0585;return'<a\x20class=\x22sm-rg-i\x22\x20href=\x22'+_0x10eb4a(_0x246ea1['url'])+_0x2e7d76(0x221)+_0x243d15(_0x246ea1,0x1aa,0x10c)+(_0x246ea1[_0x2e7d76(0x1f3)][_0x2e7d76(0x2a3)]?_0x2e7d76(0x357)+_0x10eb4a(_0x246ea1[_0x2e7d76(0x1f3)][0x0])+_0x2e7d76(0x212):'')+'</span><b>'+_0x10eb4a(_0x246ea1[_0x2e7d76(0x205)])+_0x2e7d76(0x32f);}function _0x44a211(_0x376657){var _0x4156ad=_0x2c0585;return _0x4156ad(0x2f3)+_0x10eb4a(_0x376657[_0x4156ad(0x205)])+_0x4156ad(0x2df)+_0x10eb4a(_0x376657[_0x4156ad(0x240)])+'\x22>'+_0x243d15(_0x376657,0x150,0xf2)+_0x4156ad(0x29a)+_0x10eb4a(_0x376657['url'])+'\x22>'+_0x10eb4a(_0x376657[_0x4156ad(0x205)])+_0x4156ad(0x2ef)+_0x5745d7(_0x376657)+_0x4156ad(0x2c6)+_0x5383f0(_0x376657[_0x4156ad(0x227)])+_0x4156ad(0x2d6)+_0x10eb4a(_0x376657[_0x4156ad(0x256)]['slice'](0x0,0x8c))+'</p></div></div></article>';}function _0x37ef6d(_0x150a3d){var _0x49499d=_0x2c0585,_0x493f3a=_0x59e27f(_0x150a3d)[_0x49499d(0x225)](/\n/g,'\x20')[_0x49499d(0x33d)](),_0x4826a2='',_0x4ed014=_0x493f3a[_0x49499d(0x2b6)]('||');_0x4ed014>-0x1&&(_0x4826a2=_0x493f3a['slice'](_0x4ed014+0x2)['trim'](),_0x493f3a=_0x493f3a['slice'](0x0,_0x4ed014)[_0x49499d(0x33d)]());var _0x58857f=_0x493f3a[_0x49499d(0x344)]('/'),_0x5a3adf=(_0x58857f[0x0]||_0x49499d(0x297))['trim'](),_0x32f953=(_0x58857f[0x1]||'list')[_0x49499d(0x33d)]()['toLowerCase'](),_0x393b06=parseInt(_0x58857f[0x2],0xa)||0x5,_0x4f084a=_0x58857f[_0x49499d(0x20a)](0x3)[_0x49499d(0x2c9)]('/')[_0x49499d(0x33d)](),_0x152428=_0xd9f438('.sm-btitle',_0x150a3d),_0x2d6f42=_0x152428?_0x152428['textContent'][_0x49499d(0x33d)]():'';return{'label':_0x5a3adf,'type':_0x32f953,'n':_0x393b06,'extra':_0x4f084a,'desc':_0x4826a2,'title':_0x2d6f42,'link':_0x5a3adf?_0x5a3adf!==_0x49499d(0x297)?_0x37cbe7(_0x5a3adf):_0x49499d(0x2f8):_0x49499d(0x2f8)};}function _0x287f11(_0x5bb1f2){var _0x55f577=_0x2c0585;if(_0x5bb1f2[_0x55f577(0x26e)](_0x55f577(0x250)))return;_0x5bb1f2[_0x55f577(0x348)](_0x55f577(0x250),'1');var _0x42874b=_0x37ef6d(_0x5bb1f2),_0xe1810d=_0x362068[_0x42874b['type']]||_0x362068[_0x55f577(0x309)];_0x372905(_0x42874b['label'],_0x42874b['n'])[_0x55f577(0x292)](function(_0x223207){var _0x2a30d6=_0x55f577;try{_0xe1810d(_0x5bb1f2,_0x223207['slice'](0x0,_0x42874b['n']),_0x42874b);}catch(_0x52e94e){_0x5bb1f2[_0x2a30d6(0x29d)]='';}});}function _0x4067c9(){var _0x5e54ee=_0x2c0585,_0x56418d=_0x5e8ddc(_0x5e54ee(0x2fc)),_0x242ae6=_0x5e54ee(0x356)in _0x5b9284?new IntersectionObserver(function(_0x15aa0b){var _0x5e9264=_0x5e54ee;_0x15aa0b[_0x5e9264(0x2e6)](function(_0x49e399){var _0x4b2c8d=_0x5e9264;_0x49e399[_0x4b2c8d(0x312)]&&(_0x242ae6['unobserve'](_0x49e399['target']),_0x287f11(_0x49e399['target']));});},{'rootMargin':_0x5e54ee(0x364)}):null;_0x56418d[_0x5e54ee(0x2e6)](function(_0x591c84){var _0x1b87d0=_0x5e54ee;if(!_0x4c307c()){if(_0x591c84[_0x1b87d0(0x32b)]('.home-only'))return;}var _0x5ea3f1=_0x37ef6d(_0x591c84);if(_0x5ea3f1['type']==='slider'||!_0x242ae6)_0x287f11(_0x591c84);else _0x242ae6['observe'](_0x591c84);});}function _0x5bf1dd(_0x53e019){return _0x56efe7(_0x53e019)['map'](function(_0x1f9b4d){var _0x50bf86=_0x44db,_0x128b1c=![];_0x1f9b4d[_0x50bf86(0x231)](0x0)==='_'&&(_0x128b1c=!![],_0x1f9b4d=_0x1f9b4d['slice'](0x1));var _0x232e6f=_0x1f9b4d['split']('|');return{'sub':_0x128b1c,'name':(_0x232e6f[0x0]||'')['trim'](),'url':_0x10ba60(_0x232e6f[0x1]),'color':(_0x232e6f[0x2]||'')['trim'](),'badge':(_0x232e6f[0x3]||'')[_0x50bf86(0x33d)](),'icon':(_0x232e6f[0x4]||'')['trim']()};})['filter'](function(_0x2e5974){return _0x2e5974['name'];});}function _0x3e57e9(){var _0x5d988c=_0x2c0585,_0x55c302=_0x5bf1dd(_0x59e27f(_0xd9f438(_0x5d988c(0x306)))),_0x42b63c=_0x5bf1dd(_0x59e27f(_0xd9f438('#sm-cfg-tags'))),_0x3e218c=_0xd9f438(_0x5d988c(0x23a));if(!_0x3e218c)return;var _0xfaf173='',_0x20b0ca=![],_0x1fd02c=location['pathname']+location[_0x5d988c(0x280)];_0x55c302[_0x5d988c(0x2e6)](function(_0x47db70,_0x156a0e){var _0x1f477d=_0x5d988c;if(_0x47db70[_0x1f477d(0x211)])return;var _0x5e529c=[];for(var _0x56afbd=_0x156a0e+0x1;_0x56afbd<_0x55c302[_0x1f477d(0x2a3)];_0x56afbd++){if(!_0x55c302[_0x56afbd]['sub'])break;_0x5e529c[_0x1f477d(0x347)](_0x55c302[_0x56afbd]);}var _0xe1b609=[];if(_0x47db70[_0x1f477d(0x26f)]===_0x1f477d(0x331))_0xe1b609[_0x1f477d(0x347)](_0x1f477d(0x2ad));var _0x15d328=decodeURIComponent(_0x47db70['url'])===decodeURIComponent(_0x1fd02c)||decodeURIComponent(location[_0x1f477d(0x319)])===decodeURIComponent(_0x47db70[_0x1f477d(0x240)]);if(_0x15d328)_0xe1b609[_0x1f477d(0x347)]('on');var _0x457767='';if(_0x47db70[_0x1f477d(0x26f)]){if(_0x47db70['badge']!==_0x1f477d(0x331)){var _0x3da209=_0x47db70[_0x1f477d(0x26f)][_0x1f477d(0x344)]('#');_0x457767='<span\x20class=\x22sm-bdg'+(/^(hot|baru|new)$/i[_0x1f477d(0x2e0)](_0x3da209[0x0])?'\x20g':'')+'\x22'+(_0x3da209[0x1]?'\x20style=\x22background:#'+_0x10eb4a(_0x3da209[0x1])+'\x22':'')+'>'+_0x10eb4a(_0x3da209[0x0])+_0x1f477d(0x212);}}_0xfaf173+=_0x1f477d(0x2ac)+_0xe1b609[_0x1f477d(0x2c9)]('\x20')+'\x22><a\x20href=\x22'+_0x10eb4a(_0x47db70[_0x1f477d(0x240)])+'\x22'+(_0x47db70[_0x1f477d(0x24a)]?'\x20style=\x22color:'+_0x10eb4a(_0x47db70['color'])+'\x22':'')+'>'+_0x10eb4a(_0x47db70[_0x1f477d(0x313)])+(_0x5e529c['length']?_0x56bae4['down']:'')+_0x457767+_0x1f477d(0x204)+(_0x5e529c[_0x1f477d(0x2a3)]?_0x1f477d(0x2e9)+(_0x5e529c['length']<0x5?_0x1f477d(0x27c):'')+'\x22>'+_0x5e529c['map'](function(_0x5726bf){var _0x1d2805=_0x1f477d;return'<a\x20href=\x22'+_0x10eb4a(_0x5726bf[_0x1d2805(0x240)])+'\x22>'+_0x10eb4a(_0x5726bf[_0x1d2805(0x313)])+_0x1d2805(0x204);})[_0x1f477d(0x2c9)]('')+'</div>':'')+'</li>';});if(_0x42b63c[_0x5d988c(0x2a3)])_0xfaf173+=_0x5d988c(0x2c1)+_0x10eb4a(_0x34817d[_0x5d988c(0x302)])+_0x56bae4[_0x5d988c(0x2af)]+_0x5d988c(0x1fc)+_0x42b63c[_0x5d988c(0x2a5)](function(_0x628257){var _0x220279=_0x5d988c;return'<a\x20href=\x22'+_0x10eb4a(_0x628257['url'])+'\x22>'+_0x10eb4a(_0x628257[_0x220279(0x313)])+_0x220279(0x204);})[_0x5d988c(0x2c9)]('')+_0x5d988c(0x27e);_0x3e218c[_0x5d988c(0x29d)]=_0xfaf173;var _0x5deec5=_0xd9f438(_0x5d988c(0x2ea));if(_0x5deec5){if(_0x42b63c[_0x5d988c(0x2a3)])_0x5deec5[_0x5d988c(0x29d)]=_0x42b63c['map'](function(_0x1edf0b){var _0x883b2=_0x5d988c;return _0x883b2(0x282)+_0x10eb4a(_0x1edf0b[_0x883b2(0x240)])+'\x22>'+_0x10eb4a(_0x1edf0b[_0x883b2(0x313)])+'</a>';})[_0x5d988c(0x2c9)]('');else _0xd9f438(_0x5d988c(0x23f))['style'][_0x5d988c(0x263)]=_0x5d988c(0x1ee);}var _0x237829=_0xd9f438(_0x5d988c(0x23b));if(!_0x237829)return;var _0x3dbfd4=_0x55c302[_0x5d988c(0x34d)](function(_0x2ed296){return!_0x2ed296['sub'];}),_0x5e3a77=_0x5bf1dd(_0x59e27f(_0xd9f438('#sm-halaman'))),_0x3342cc=function(_0x33a5d0,_0x1300e0,_0x167337){var _0x550a2a=_0x5d988c;return'<div\x20class=\x22sm-acc'+(_0x167337?_0x550a2a(0x287):'')+_0x550a2a(0x213)+_0x10eb4a(_0x33a5d0)+_0x56bae4['down']+_0x550a2a(0x2e4)+_0x1300e0+_0x550a2a(0x216);},_0x11ef05='<div\x20class=\x22sm-dw-cat\x22>'+_0x3dbfd4[_0x5d988c(0x2a5)](function(_0x4910df){var _0x29b3e4=_0x5d988c;return _0x29b3e4(0x282)+_0x10eb4a(_0x4910df[_0x29b3e4(0x240)])+'\x22>'+(_0x4910df['icon']?_0x29b3e4(0x35f)+_0x10eb4a(_0x4910df[_0x29b3e4(0x361)])+_0x29b3e4(0x294):_0x29b3e4(0x2fe)+_0x10eb4a(_0x4910df['name'][_0x29b3e4(0x231)](0x0))+_0x29b3e4(0x29c))+_0x10eb4a(_0x4910df['name'])+_0x29b3e4(0x204);})[_0x5d988c(0x2c9)]('')+_0x5d988c(0x242),_0x499847=_0x3342cc(_0x34817d[_0x5d988c(0x28d)],_0x11ef05,!![]);if(_0x42b63c[_0x5d988c(0x2a3)])_0x499847+=_0x3342cc(_0x34817d[_0x5d988c(0x222)],'<div\x20class=\x22sm-dw-l\x22>'+_0x42b63c['map'](function(_0x2ea806){var _0x4b6e40=_0x5d988c;return _0x4b6e40(0x282)+_0x10eb4a(_0x2ea806[_0x4b6e40(0x240)])+_0x4b6e40(0x33c)+_0x10eb4a(_0x2ea806[_0x4b6e40(0x313)])+_0x4b6e40(0x204);})[_0x5d988c(0x2c9)]('')+_0x5d988c(0x242));if(_0x5e3a77[_0x5d988c(0x2a3)])_0x499847+=_0x3342cc(_0x34817d['laman'],'<div\x20class=\x22sm-dw-l\x22>'+_0x5e3a77[_0x5d988c(0x2a5)](function(_0x4e00b){var _0x6621f2=_0x5d988c;return _0x6621f2(0x282)+_0x10eb4a(_0x4e00b['url'])+'\x22>'+_0x10eb4a(_0x4e00b[_0x6621f2(0x313)])+'</a>';})[_0x5d988c(0x2c9)]('')+_0x5d988c(0x242));_0x237829[_0x5d988c(0x29d)]=_0x499847+_0x5d988c(0x235),_0x5e8ddc('.sm-acc>button',_0x237829)[_0x5d988c(0x2e6)](function(_0x10708b){_0xc3e04d(_0x10708b,'click',function(){var _0x14d678=_0x44db;_0x10708b[_0x14d678(0x360)][_0x14d678(0x223)]['toggle'](_0x14d678(0x320));});});}function _0x149f16(_0x135dfa){var _0xbd2cc0=_0x2c0585;return _0x135dfa[_0xbd2cc0(0x2a5)](function(_0x4999b2){var _0x1e494d=_0xbd2cc0,_0x38b698=_0x4999b2[_0x1e494d(0x313)][_0x1e494d(0x32d)](),_0xedd360=_0x56bae4[_0x38b698]||_0x56bae4[_0x1e494d(0x32e)];return'<a\x20aria-label=\x22'+_0x10eb4a(_0x4999b2[_0x1e494d(0x313)])+_0x1e494d(0x26a)+(_0x32454c[_0x38b698]||'s-rss')+_0x1e494d(0x28e)+_0x10eb4a(_0x4999b2['url'])+_0x1e494d(0x2e7)+_0xedd360+'</a>';})[_0xbd2cc0(0x2c9)]('');}function _0x13fe78(){var _0xb369c4=_0x2c0585;_0x5e8ddc(_0xb369c4(0x310))['forEach'](function(_0x509567){var _0x23e235=_0xb369c4,_0x151230=_0x509567['getAttribute'](_0x23e235(0x261)),_0x159b37=_0x59e27f(_0x509567),_0x431440=_0x5bf1dd(_0x159b37);if(_0x151230==='list'){var _0x347efe=_0xd9f438('ul',_0x509567);if(_0x347efe)_0x347efe[_0x23e235(0x29d)]=_0x431440[_0x23e235(0x2a5)](function(_0x2aebe4){var _0x47d1b6=_0x23e235;return _0x47d1b6(0x2eb)+_0x10eb4a(_0x2aebe4[_0x47d1b6(0x240)])+'\x22>'+_0x10eb4a(_0x2aebe4['name'])+'</a></li>';})[_0x23e235(0x2c9)]('');}else{if(_0x151230===_0x23e235(0x226)){var _0x813a57=_0xd9f438(_0x23e235(0x2e8),_0x509567);if(_0x813a57)_0x813a57[_0x23e235(0x29d)]=_0x431440[_0x23e235(0x2a5)](function(_0x5637e0){var _0x315af1=_0x23e235;return'<a\x20href=\x22'+_0x10eb4a(_0x5637e0[_0x315af1(0x240)])+'\x22>'+_0x10eb4a(_0x5637e0[_0x315af1(0x313)])+'</a>';})['join']('');}else{if(_0x151230===_0x23e235(0x291)){var _0x2c51b2=_0xd9f438(_0x23e235(0x215),_0x509567);if(_0x2c51b2)_0x2c51b2[_0x23e235(0x29d)]=_0x149f16(_0x431440);var _0x40f6d8=_0xd9f438('#sm-dwsoc');if(_0x40f6d8)_0x40f6d8[_0x23e235(0x29d)]=_0x149f16(_0x431440);}else{if(_0x151230===_0x23e235(0x1eb)){var _0xa32d45=_0xd9f438('ul',_0x509567);if(_0xa32d45)_0xa32d45['innerHTML']=_0x56efe7(_0x159b37)[_0x23e235(0x2a5)](function(_0x5db7a1){var _0x5dd178=_0x23e235,_0x3986e7=_0x5db7a1['split']('|'),_0xc4c4da=(_0x3986e7[0x0]||'')['trim']()['toLowerCase'](),_0x155d7c=(_0x3986e7[_0x5dd178(0x20a)](0x1)[_0x5dd178(0x2c9)]('|')||'')['trim']();!_0x155d7c&&(_0x155d7c=_0xc4c4da,_0xc4c4da='alamat');var _0x4167c2=/tel|telp|phone|hp|wa/[_0x5dd178(0x2e0)](_0xc4c4da)?_0x56bae4[_0x5dd178(0x243)]:/mail/['test'](_0xc4c4da)?_0x56bae4[_0x5dd178(0x260)]:_0x56bae4['pin'],_0x531dcb=_0x10eb4a(_0x155d7c);if(/mail/[_0x5dd178(0x2e0)](_0xc4c4da))_0x531dcb='<a\x20href=\x22mailto:'+_0x10eb4a(_0x155d7c)+'\x22>'+_0x10eb4a(_0x155d7c)+'</a>';else{if(/tel|telp|phone|hp/[_0x5dd178(0x2e0)](_0xc4c4da))_0x531dcb=_0x5dd178(0x2cd)+_0x10eb4a(_0x155d7c[_0x5dd178(0x225)](/[^\d+]/g,''))+'\x22>'+_0x10eb4a(_0x155d7c)+_0x5dd178(0x204);}return _0x5dd178(0x351)+_0x4167c2+'<span>'+_0x531dcb+'</span></li>';})['join']('');}}}}});}function _0x2501fb(){var _0x1d37ac=_0x2c0585,_0x1410fa=_0xd9f438('#sm-bn');if(!_0x1410fa)return;var _0x1e1eea=_0x59e27f(_0x1410fa)[_0x1d37ac(0x225)](/\n/g,'\x20')[_0x1d37ac(0x344)]('/'),_0x464683=(_0x1e1eea[0x0]||'recent')['trim'](),_0x18f727=parseInt(_0x1e1eea[_0x1e1eea[_0x1d37ac(0x2a3)]-0x1],0xa)||0xa;_0x372905(_0x464683,_0x18f727)['then'](function(_0x37fb37){var _0x400c3c=_0x1d37ac,_0x511be8=_0xd9f438('.sm-bn-in',_0x1410fa);if(!_0x37fb37[_0x400c3c(0x2a3)]){_0x1410fa['style'][_0x400c3c(0x263)]=_0x400c3c(0x1ee);return;}var _0x22973b=_0x37fb37[_0x400c3c(0x2a5)](function(_0x40b30e){var _0x1cf09e=_0x400c3c;return'<a\x20class=\x22sm-bn-i\x22\x20href=\x22'+_0x10eb4a(_0x40b30e[_0x1cf09e(0x240)])+'\x22>'+_0x243d15(_0x40b30e,0x40,0x40)+_0x1cf09e(0x324)+_0x10eb4a(_0x40b30e[_0x1cf09e(0x205)])+_0x1cf09e(0x329);})[_0x400c3c(0x2c9)]('');_0x511be8['innerHTML']=_0x22973b+_0x22973b;var _0x2be8f6=_0x511be8[_0x400c3c(0x228)]/0x2;_0x511be8[_0x400c3c(0x20f)][_0x400c3c(0x25a)](_0x400c3c(0x237),Math[_0x400c3c(0x2c0)](0xf,_0x2be8f6/_0x37b031[_0x400c3c(0x2f9)])+'s');});}function _0x45ecc8(){var _0x106ca1=_0x2c0585,_0x59b64a=_0xd9f438(_0x106ca1(0x2c5)),_0xbbac45=_0xd9f438(_0x106ca1(0x1e7)),_0x29be72=_0xd9f438(_0x106ca1(0x224));if(_0x29be72)_0x29be72[_0x106ca1(0x2f5)]=_0x34817d[_0x106ca1(0x297)];if(!_0x4c307c()||!_0x59b64a||!_0xbbac45)return;var _0x2f6c6f=_0x5e8ddc(_0x106ca1(0x326),_0x59b64a),_0x5ce043=_0x37b031[_0x106ca1(0x35c)];_0x2f6c6f[_0x106ca1(0x20a)](_0x5ce043)['forEach'](function(_0x4d9d99){_0xbbac45['appendChild'](_0x4d9d99);});var _0xb8c0ac=_0x37b031[_0x106ca1(0x311)];[0x1,0x2]['forEach'](function(_0x2bf0f1,_0x5b0576){var _0x1aedd3=_0x106ca1,_0x5c675f=_0xd9f438(_0x1aedd3(0x1e6)+_0x2bf0f1);if(!_0x5c675f)return;var _0x43d034=_0x5e8ddc(_0x1aedd3(0x201),_0x5c675f);if(!_0x43d034[_0x1aedd3(0x2a3)])return;var _0x35d514=_0x34d444[_0x1aedd3(0x290)]('div');_0x35d514[_0x1aedd3(0x298)]=_0x1aedd3(0x288),_0x43d034['forEach'](function(_0x3f55e8){var _0x2c904d=_0x1aedd3;_0x35d514[_0x2c904d(0x35d)](_0x3f55e8);});var _0x4b1485=_0x2f6c6f[(_0xb8c0ac[_0x5b0576]||0x6)-0x1];_0x4b1485?_0x4b1485['parentNode']===_0xbbac45?_0x4b1485[_0x1aedd3(0x360)][_0x1aedd3(0x2de)](_0x35d514,_0x4b1485[_0x1aedd3(0x2bd)]):_0xbbac45[_0x1aedd3(0x2de)](_0x35d514,_0xbbac45['firstChild']):_0xbbac45['appendChild'](_0x35d514);});var _0x5386e0=_0xd9f438('#sm-more-wrap');if(_0x5386e0)_0xbbac45[_0x106ca1(0x360)][_0x106ca1(0x2de)](_0x5386e0,_0xbbac45[_0x106ca1(0x2bd)]);if(!_0xbbac45[_0x106ca1(0x338)](_0x106ca1(0x241)))_0xbbac45['parentNode']['style'][_0x106ca1(0x263)]=_0x106ca1(0x1ee);}function _0x55cda7(){var _0x11a7a8=_0x2c0585,_0x1edebf=_0xd9f438(_0x11a7a8(0x20d));if(!_0x1edebf)return;_0x1edebf[_0x11a7a8(0x2f5)]=_0x34817d[_0x11a7a8(0x1fb)],_0xc3e04d(_0x1edebf,_0x11a7a8(0x2d4),function(_0x569df6){var _0x35324e=_0x11a7a8;_0x569df6[_0x35324e(0x2c3)]();if(_0x1edebf['classList']['contains'](_0x35324e(0x272)))return;_0x1edebf[_0x35324e(0x223)]['add'](_0x35324e(0x272)),_0x1edebf[_0x35324e(0x2f5)]=_0x34817d[_0x35324e(0x2d0)],fetch(_0x1edebf[_0x35324e(0x295)],{'credentials':'same-origin'})['then'](function(_0x20eebf){return _0x20eebf['text']();})['then'](function(_0x29f5f6){var _0x48740b=_0x35324e,_0x5c05d0=new DOMParser()[_0x48740b(0x25b)](_0x29f5f6,'text/html'),_0x2920b8=(_0x4c307c()?_0xd9f438('#sm-list2'):null)||_0xd9f438(_0x48740b(0x2c5));_0x5e8ddc(_0x48740b(0x1f1),_0x5c05d0)[_0x48740b(0x2e6)](function(_0x52e0e1){var _0x2e647b=_0x48740b;_0x2920b8[_0x2e647b(0x35d)](_0x34d444['importNode'](_0x52e0e1,!![]));});var _0x4d5580=_0xd9f438(_0x48740b(0x20d),_0x5c05d0);if(_0x4d5580)_0x1edebf[_0x48740b(0x295)]=_0x4d5580[_0x48740b(0x26e)](_0x48740b(0x295)),_0x1edebf['classList']['remove']('load'),_0x1edebf[_0x48740b(0x2f5)]=_0x34817d[_0x48740b(0x1fb)];else{var _0x25a2b1=_0xd9f438(_0x48740b(0x2a2));_0x25a2b1[_0x48740b(0x29d)]=_0x48740b(0x2d8)+_0x10eb4a(_0x34817d['noMore'])+_0x48740b(0x2f6);}})[_0x35324e(0x358)](function(){var _0x4aef16=_0x35324e;location[_0x4aef16(0x295)]=_0x1edebf[_0x4aef16(0x295)];});});}function _0x3723c4(){var _0x3c43d2=_0x2c0585,_0x464f39=encodeURIComponent(location['href']['split']('#')[0x0][_0x3c43d2(0x344)]('?')[0x0]),_0x28d464=encodeURIComponent(_0x34d444[_0x3c43d2(0x205)]);return[['facebook','https://www.facebook.com/sharer/sharer.php?u='+_0x464f39],['x',_0x3c43d2(0x2e3)+_0x28d464+_0x3c43d2(0x2e1)+_0x464f39],['telegram','https://t.me/share/url?url='+_0x464f39+_0x3c43d2(0x2c7)+_0x28d464],['whatsapp',_0x3c43d2(0x24e)+_0x28d464+'%20'+_0x464f39]];}function _0x5e8a6b(){var _0x36a1ee=_0x2c0585;if(!_0x4c15ae['classList'][_0x36a1ee(0x289)]('is-single'))return;var _0x83cec0=_0xd9f438('.sm-rtl');if(_0x83cec0)_0x83cec0['textContent']=_0x34817d[_0x36a1ee(0x2a1)];var _0x3076ab=_0x3723c4(),_0x319393=_0x3076ab[_0x36a1ee(0x2a5)](function(_0x350ad5){var _0x8a260c=_0x36a1ee;return _0x8a260c(0x26b)+_0x350ad5[0x0]+_0x8a260c(0x26a)+_0x32454c[_0x350ad5[0x0]]+'\x22\x20href=\x22'+_0x350ad5[0x1]+'\x22\x20rel=\x22noopener\x20nofollow\x22\x20target=\x22_blank\x22>'+_0x56bae4[_0x350ad5[0x0]]+_0x8a260c(0x204);})[_0x36a1ee(0x2c9)](''),_0xef5532=_0xd9f438('#sm-shl');if(_0xef5532)_0xef5532[_0x36a1ee(0x29d)]=_0x319393;var _0x397a55=_0xd9f438('#sm-mshl');if(_0x397a55)_0x397a55[_0x36a1ee(0x29d)]=_0x319393+_0x36a1ee(0x26d)+encodeURIComponent(location[_0x36a1ee(0x295)])+'\x22\x20rel=\x22noopener\x20nofollow\x22\x20target=\x22_blank\x22>'+_0x56bae4[_0x36a1ee(0x206)]+'</a>';var _0xbe4ccd=_0xd9f438(_0x36a1ee(0x2ba));if(_0xbe4ccd)_0xbe4ccd[_0x36a1ee(0x2f5)]=_0x34817d[_0x36a1ee(0x248)];var _0x43ff75=_0xd9f438('#sm-modal'),_0x231947=_0xd9f438(_0x36a1ee(0x2f0));if(_0x231947)_0x231947[_0x36a1ee(0x21c)]=location[_0x36a1ee(0x295)][_0x36a1ee(0x344)]('#')[0x0];_0x5e8ddc('.sm-share-open')[_0x36a1ee(0x2e6)](function(_0x2e8cd7){_0xc3e04d(_0x2e8cd7,'click',function(){var _0x3302b4=_0x44db;if(navigator['share']){if(_0x5b9284[_0x3302b4(0x30c)]<0x300){navigator[_0x3302b4(0x248)]({'title':_0x34d444['title'],'url':location['href']})['catch'](function(){});return;}}_0x43ff75[_0x3302b4(0x223)][_0x3302b4(0x2ee)]('open');});}),_0xc3e04d(_0xd9f438('.sm-modal-x'),_0x36a1ee(0x2d4),function(){var _0x4ef23c=_0x36a1ee;_0x43ff75[_0x4ef23c(0x223)][_0x4ef23c(0x257)]('open');}),_0xc3e04d(_0x43ff75,'click',function(_0x18ab9f){var _0x2f5cd0=_0x36a1ee;if(_0x18ab9f[_0x2f5cd0(0x24c)]===_0x43ff75)_0x43ff75['classList'][_0x2f5cd0(0x257)]('open');});var _0x584c06=_0xd9f438(_0x36a1ee(0x24f));_0x584c06&&(_0x584c06['textContent']=_0x34817d[_0x36a1ee(0x2ec)],_0xc3e04d(_0x584c06,_0x36a1ee(0x2d4),function(){var _0x25ae0c=_0x36a1ee;_0x231947[_0x25ae0c(0x214)]();try{navigator['clipboard'][_0x25ae0c(0x31f)](_0x231947['value']);}catch(_0x4e0b7b){try{_0x34d444[_0x25ae0c(0x2a4)]('copy');}catch(_0x630138){}}_0x584c06['textContent']=_0x34817d[_0x25ae0c(0x2d1)],setTimeout(function(){var _0x1b6857=_0x25ae0c;_0x584c06[_0x1b6857(0x2f5)]=_0x34817d['copy'];},0x5dc);}));if(!_0x2ff49a())return;var _0x16cb3d=location['pathname'];function _0x1ac978(_0x3bf1bb){var _0x375e0b=_0x36a1ee;try{return new URL(_0x3bf1bb[_0x375e0b(0x240)])[_0x375e0b(0x319)]!==_0x16cb3d;}catch(_0xc282bb){return!![];}}var _0x34efca=_0xd9f438(_0x36a1ee(0x268));if(_0x34efca){var _0xd7c561=_0x34efca['getAttribute'](_0x36a1ee(0x22a));_0xd9f438(_0x36a1ee(0x2c4),_0x34efca)[_0x36a1ee(0x2f5)]=_0x34817d[_0x36a1ee(0x336)];var _0x1bd87f=_0x36a1ee(0x356)in _0x5b9284?new IntersectionObserver(function(_0x2e482e){var _0x1cbadf=_0x36a1ee;_0x2e482e[0x0]['isIntersecting']&&(_0x1bd87f[_0x1cbadf(0x2db)](),_0x12647f());},{'rootMargin':_0x36a1ee(0x283)}):null,_0x12647f=function(){var _0x4844b1=_0x36a1ee;_0x372905(_0xd7c561||_0x4844b1(0x297),0x7)['then'](function(_0x2f48a3){var _0x2d326d=_0x4844b1;_0x2f48a3=_0x2f48a3[_0x2d326d(0x34d)](_0x1ac978)[_0x2d326d(0x20a)](0x0,0x6);if(!_0x2f48a3[_0x2d326d(0x2a3)]){_0x34efca['style'][_0x2d326d(0x263)]=_0x2d326d(0x1ee);return;}_0xd9f438(_0x2d326d(0x1f4),_0x34efca)[_0x2d326d(0x29d)]=_0x2f48a3[_0x2d326d(0x2a5)](_0x4185f7)['join']('');});};if(_0x1bd87f)_0x1bd87f['observe'](_0x34efca);else _0x12647f();}var _0x56a8ff=_0xd9f438('#sm-readalso');if(_0x56a8ff){_0xd9f438(_0x36a1ee(0x2c4),_0x56a8ff)['textContent']=_0x34817d['readAlso'];var _0x1fc9de=_0x36a1ee(0x356)in _0x5b9284?new IntersectionObserver(function(_0x31ac6d){var _0x581405=_0x36a1ee;_0x31ac6d[0x0][_0x581405(0x312)]&&(_0x1fc9de['disconnect'](),_0x4fe26f());},{'rootMargin':'600px\x200px'}):null,_0x4fe26f=function(){_0x4a05d6(null,0x7)['then'](function(_0x412ea9){var _0x40a673=_0x44db;_0x412ea9=_0x412ea9['filter'](_0x1ac978)[_0x40a673(0x20a)](0x0,0x6);if(!_0x412ea9[_0x40a673(0x2a3)]){_0x56a8ff[_0x40a673(0x20f)][_0x40a673(0x263)]=_0x40a673(0x1ee);return;}_0xd9f438('.sm-ra-list',_0x56a8ff)[_0x40a673(0x29d)]=_0x412ea9['map'](_0x44a211)[_0x40a673(0x2c9)]('');});};if(_0x1fc9de)_0x1fc9de['observe'](_0x56a8ff);else _0x4fe26f();}var _0x3d87fa=_0xd9f438(_0x36a1ee(0x265)),_0x510cc8=_0xd9f438('#sm-pdate');if(_0x3d87fa){if(_0x510cc8){var _0x1df263=new Date(_0x510cc8['getAttribute']('datetime'));if(!isNaN(_0x1df263)){var _0x9b5280=new Date(_0x1df263['getTime']()-0x3e8)['toISOString']()[_0x36a1ee(0x225)](/\.\d{3}Z$/,'Z');_0x4a05d6(null,0x1,0x0,'&orderby=published&published-max='+encodeURIComponent(_0x9b5280))['then'](function(_0x427243){var _0x12afda=_0x36a1ee,_0x436b90=_0x427243[0x0];if(!_0x436b90)return;var _0x3cdbe9=![];try{_0x3cdbe9=new URL(_0x436b90['url'])[_0x12afda(0x319)]===new URL(_0x3d87fa[_0x12afda(0x295)])[_0x12afda(0x319)];}catch(_0x412560){}if(_0x3cdbe9){_0xd9f438('.sm-next-img',_0x3d87fa)['innerHTML']=_0x243d15(_0x436b90,0x78,0x78);if(!_0xd9f438(_0x12afda(0x315),_0x3d87fa)['textContent']['trim']())_0xd9f438('.sm-next-t',_0x3d87fa)['textContent']=_0x436b90[_0x12afda(0x205)];}});}}}}function _0x5a46cc(){var _0x362849=_0x2c0585,_0x178305=_0x5e8ddc(_0x362849(0x271));if(!_0x178305[_0x362849(0x2a3)])return;var _0x58b3ad=![];function _0x4a69e5(){var _0x4816d3=_0x362849;_0x58b3ad=![],_0x178305[_0x4816d3(0x2e6)](function(_0x6c4315){var _0x53b98c=_0x4816d3,_0x5c4121=_0x6c4315[_0x53b98c(0x34c)](),_0x36dac6=_0x6c4315[_0x53b98c(0x342)];if(!_0x36dac6)return;if(_0x5c4121['bottom']<-0x32||_0x5c4121[_0x53b98c(0x317)]>_0x5b9284[_0x53b98c(0x31b)]+0x32)return;_0x36dac6['style'][_0x53b98c(0x293)]=_0x5c4121[_0x53b98c(0x293)]+_0x5c4121[_0x53b98c(0x2ab)]/0x2+'px';});}_0xc3e04d(_0x5b9284,_0x362849(0x2f7),function(){!_0x58b3ad&&(_0x58b3ad=!![],requestAnimationFrame(_0x4a69e5));},{'passive':!![]}),_0xc3e04d(_0x5b9284,_0x362849(0x34e),_0x4a69e5),_0x4a69e5();}function _0x2534b3(){var _0x4b3d78=_0x2c0585,_0x592d3b=_0xd9f438(_0x4b3d78(0x21d));if(_0x592d3b)try{_0x592d3b[_0x4b3d78(0x2f5)]=new Date()[_0x4b3d78(0x366)](_0x37b031[_0x4b3d78(0x23d)],{'weekday':_0x4b3d78(0x355),'day':_0x4b3d78(0x32c),'month':'long','year':_0x4b3d78(0x32c)});}catch(_0x2fa7ad){_0x592d3b[_0x4b3d78(0x2f5)]=new Date()[_0x4b3d78(0x30e)]();}var _0x322b96=_0xd9f438('.sm-logo-a');_0x322b96&&['#sm-ftlogo','#sm-dwlogo'][_0x4b3d78(0x2e6)](function(_0x1f36d6){var _0x202c42=_0x4b3d78,_0x5808d8=_0xd9f438(_0x1f36d6);if(_0x5808d8){_0x5808d8[_0x202c42(0x29d)]='';var _0x32dec4=_0x322b96[_0x202c42(0x245)](!![]);_0x32dec4[_0x202c42(0x2fb)]('id'),_0x5808d8['appendChild'](_0x32dec4);}});var _0xc65532=_0x34d444[_0x4b3d78(0x217)];_0xc65532[_0x4b3d78(0x223)][_0x4b3d78(0x289)](_0x4b3d78(0x1e4))&&(_0x4c15ae['classList'][_0x4b3d78(0x2ee)](_0x4b3d78(0x251)),_0xc65532[_0x4b3d78(0x223)][_0x4b3d78(0x257)]('sm-dark-pre'));_0xc3e04d(_0xd9f438(_0x4b3d78(0x2be)),_0x4b3d78(0x2d4),function(){var _0x547d30=_0x4b3d78,_0x1c39dc=_0x4c15ae[_0x547d30(0x223)][_0x547d30(0x22b)]('dark');try{localStorage[_0x547d30(0x1ef)](_0x547d30(0x2e2),_0x1c39dc?'1':'0');}catch(_0x74a36c){}});var _0x5172e6=_0xd9f438(_0x4b3d78(0x23f));_0xc3e04d(_0xd9f438('.sm-gbtn'),_0x4b3d78(0x2d4),function(_0x187567){var _0xca0ff6=_0x4b3d78;_0x187567[_0xca0ff6(0x200)](),_0x5172e6[_0xca0ff6(0x223)]['toggle'](_0xca0ff6(0x320));}),_0xc3e04d(_0x34d444,'click',function(_0x419cb0){var _0x2e2ac0=_0x4b3d78;if(_0x5172e6){if(!_0x5172e6[_0x2e2ac0(0x289)](_0x419cb0[_0x2e2ac0(0x24c)]))_0x5172e6['classList'][_0x2e2ac0(0x257)](_0x2e2ac0(0x320));}}),_0xc3e04d(_0xd9f438(_0x4b3d78(0x2dc)),'click',function(){var _0x18c7fc=_0x4b3d78,_0x42e63a=_0xd9f438(_0x18c7fc(0x31d));_0x42e63a[_0x18c7fc(0x223)][_0x18c7fc(0x22b)]('sopen');if(_0x42e63a[_0x18c7fc(0x223)][_0x18c7fc(0x289)]('sopen')){var _0x93a5dc=_0xd9f438(_0x18c7fc(0x2d3),_0x42e63a);if(_0x93a5dc)_0x93a5dc[_0x18c7fc(0x2b4)]();}});function _0x81e560(_0x3533b3){var _0x46b8df=_0x4b3d78;_0x4c15ae[_0x46b8df(0x223)]['toggle'](_0x46b8df(0x33e),_0x3533b3);}_0xc3e04d(_0xd9f438('.sm-burger'),_0x4b3d78(0x2d4),function(){_0x81e560(!![]);}),_0xc3e04d(_0xd9f438(_0x4b3d78(0x208)),_0x4b3d78(0x2d4),function(){_0x81e560(![]);}),_0xc3e04d(_0xd9f438(_0x4b3d78(0x34f)),_0x4b3d78(0x2d4),function(){_0x81e560(![]);}),_0xc3e04d(_0x34d444,_0x4b3d78(0x234),function(_0x7da393){var _0x38a225=_0x4b3d78;if(_0x7da393['key']==='Escape'){_0x81e560(![]);var _0x4d9311=_0xd9f438(_0x38a225(0x31c));if(_0x4d9311)_0x4d9311[_0x38a225(0x223)][_0x38a225(0x257)](_0x38a225(0x320));}}),_0x5e8ddc(_0x4b3d78(0x1ed))['forEach'](function(_0x3343c7){var _0x1eb3bd=_0x4b3d78;_0xc3e04d(_0x3343c7,_0x1eb3bd(0x2d4),function(){var _0x92060d=_0x1eb3bd,_0x4d7100=_0x34d444[_0x92060d(0x2fa)](_0x3343c7['getAttribute'](_0x92060d(0x2bf)));if(_0x4d7100)_0x4d7100['classList'][_0x92060d(0x2ee)](_0x92060d(0x32a));});});var _0x4bc5d7=_0xd9f438(_0x4b3d78(0x2a7));_0xc3e04d(_0x4bc5d7,_0x4b3d78(0x2d4),function(){var _0x113a47=_0x4b3d78;_0x5b9284[_0x113a47(0x345)]({'top':0x0,'behavior':_0x113a47(0x20b)});});var _0x4f51e6=![];_0xc3e04d(_0x5b9284,_0x4b3d78(0x2f7),function(){if(_0x4f51e6)return;_0x4f51e6=!![],requestAnimationFrame(function(){var _0x5517ae=_0x44db;_0x4f51e6=![];if(_0x4bc5d7)_0x4bc5d7[_0x5517ae(0x223)][_0x5517ae(0x22b)](_0x5517ae(0x314),_0x5b9284[_0x5517ae(0x22e)]>0x190);});},{'passive':!![]});}function _0x4c4197(){var _0x580486=[_0x2534b3,_0x3e57e9,_0x13fe78,_0x2501fb,_0x45ecc8,_0x55cda7,_0x4067c9,_0x5e8a6b,_0x5a46cc];_0x580486['forEach'](function(_0x39c419){var _0x5a547c=_0x44db;try{_0x39c419();}catch(_0x3d383b){if(_0x5b9284[_0x5a547c(0x29b)])console[_0x5a547c(0x285)](_0x5a547c(0x30f),_0x39c419[_0x5a547c(0x313)],_0x3d383b);}});}if(_0x34d444['readyState']===_0x2c0585(0x2d0))_0x4473a7(_0x4c4197);else _0x4c4197();}());}));function _0x2987(){var _0x5d36f3=['y29WAwvK','u0ffx0ngrW','lNnTlxnLyxjJAcbPBNb1Da','y2XPy2S','phn2zYbMAwXSpsjJDxjYzw50q29SB3iIihzPzxDcB3G9iJaGmcaYncaYnci+phbHDgGGzd0Itte2lJyGm2mUncaYlJiGms43idmUnIaZlJKGmY44DJnHnYa3idaGmcaXltmUos0XlJj2nI4YqtuUoca1lJGGmcaXideGmtaUoca5DJmUmweYlJGGmI44idaGmsaWidiUocaYlJHwm3OIlZ48l3n2zZ4','pc90Aw1LpJWVzgL2pJXWignSyxnZpsjZBs1LEci+','lNnTlwnMzW','phaGy2XHC3m9iNnTlw5VBw9Yzsi+','pgLTzYbHBhq9iG','lNnTlxD0lwe','zgLZy29UBMvJDa','lNnTlxnIDg4','w3n0EwXLxq','Aw5Zzxj0qMvMB3jL','iIbJBgfZCZ0IC20TDgH1BwiIigHYzwy9iG','DgvZDa','jNvYBd0','C20TzgfYAW','Ahr0Chm6lY90D2L0DgvYlMnVBs9PBNrLBNqVDhDLzxq/Dgv4Dd0','pc9IDxr0B24+pgrPDJ4','DMfSAwq','zM9YrwfJAa','iIbYzwW9iM5VB3bLBMvYiIb0yxjNzxq9iL9IBgfUAYi+','lNnTlwzIlwW','pgrPDIbJBgfZCZ0IC20TC3vI','i3nTlwDYAwrT','pgXPpJXHigHYzwy9iG','y29WEq','idaLla','ywrK','pc9HpJWVAdi+pgrPDIbJBgfZCZ0IC20TBwv0ysi+','i3nTlwnVChLPBG','zgf0ys10yI1LzgL0Aw9U','pc9KAxy+pc9KAxy+pgj1DhrVBIbHCMLHlwXHyMvSpsjtzwjLBhvTBNLHiIbJBgfZCZ0IC20TyxjYihaIihr5Cgu9iMj1DhrVBIi+','pgfYDgLJBguGy2XHC3m9iNnTlxbVC3qIpJXKAxyGy2XHC3m9iNnTlwjVEci+pgeGyxjPys1SywjLBd0I','su1h','Dgv4DenVBNrLBNq','pc9WpG','C2nYB2XS','l3nLyxjJAa','DgLJA2vYu3bLzwq','z2v0rwXLBwvUDej5swq','CMvTB3zLqxr0CMLIDxrL','lNnTlwjSAW','C3jJ','pgK+','nMHlBffnCa','pc9IpJWVC3bHBJ48l2e+','pc9IDxr0B24+pgj1DhrVBIbHCMLHlwXHyMvSpsjczxjPA3v0BNLHiIbJBgfZCZ0IC20TyxjYig4Iihr5Cgu9iMj1DhrVBIi+','Bw9Yzq','CY13yq','Dg91y2HLBMq','pgi+','i3nTlwnMzY1Tzw51','pgrPDIbJBgfZCZ0IC20TBw9KihnTlwDIB3GYiIbZDhLSzt0IyMfJA2DYB3vUzdO','phnWyw4Gy2XHC3m9iNnTlxnIlwjJiJ48yJ4','BgLZDa','Dg91y2HLCW','nZe1mJqYrefiv1rR','Aw5UzxjxAwr0Aa','DgjKlwXPy2vUC2uTz2f0zq','Dg9eyxrLu3rYAw5N','u2fLtwvKAwe','lNnTlwX3','Aw5Zzxj0qxq','AxnjBNrLCNnLy3rPBMC','BMfTzq','C2HVDW','lNnTlw5LEhqTDa','ywXHBwf0FePSlIbdB250B2GGuMf5ysboBY4GmsWGs290ysbbBMrHlcbjBMrVBMvZAwekDgvSzxbVBNWWodeYltaWmdaTmdaWmaPLBwfPBhXYzwrHA3nPqgnVBNrVAc5JB20','Dg9W','DhmTzg9TywLUlxnOAwvSza','Cgf0Ag5HBwu','Dgv4Dhm','Aw5UzxjizwLNAhq','i3nTlw1VzgfS','i3nTlwHK','yM9KEq','D3jPDgvuzxH0','B3bLBG','m1DAwNjezW','jMfTCdS','Bw91C2vLBNrLCG','phnWyw4+','pgLTzYbHBhq9iIiGC3jJpsi','lNnTlxbVC3q','AwTSyw4Tyxj0AwTLBc1IyxDHAa','AxmTAg9Tzq','pc9ZCgfUpJWVyt4','y2XVC2vK','y2XVC2vZDa','BNvTzxjPyW','Dg9mB3DLCKnHC2u','CNnZ','pc9IpJWVyt4','ywjZ','zg90','mJu2ntq5y0Hhrg9y','DhDPDhrLCG','l2zLzwrZl3bVC3rZl3n1Bw1HCNK','C20TywqTywz0zxi','CMvSyxrLza','uMvJzw50ie5LD3m','CxvLCNLtzwXLy3rVCG','lNnTlxnS','lNnTlwfYCI5U','zgvZyW','iJ4Jia','DhjPBq','zhCTB3bLBG','qMvYAxrHFc9ZzwfYy2GVBgfIzwWVqMvYAxrHcLrLA25VBg9NAxWVC2vHCMnOl2XHyMvSl1rLA25VBg9NAqPjBNrLCM5HC2LVBMfSFc9ZzwfYy2GVBgfIzwWVsw50zxjUyxnPB25HBaPlzxnLAgf0yw58l3nLyxjJAc9SywjLBc9lzxnLAgf0yw4kt3rVBw90Awz8l3nLyxjJAc9SywjLBc9pDg9TB3rPzG','mJq5mLDcy2ziAq','lNnTlxnSlxrODhi','zMLYC3rfBgvTzw50q2HPBgq','mJm5nJuYoujAz0vKtW','C3bSAxq','C2nYB2XSvg8','zMXVyxq','ChvZAa','C2v0qxr0CMLIDxrL','zMfJzwjVB2T8iWP4FcmkCgLUDgvYzxn0FcmkAw5ZDgfNCMfTFcmkEw91DhvIzxWJcNjZC3WVzMvLzhmVCg9ZDhmVzgvMyxvSDa','z3jPzgjVEa','zMvLza','z2v0qM91BMrPBMDdBgLLBNrszwn0','zMLSDgvY','CMvZAxPL','i3nTlw92','lNnTlwnYlwK','pgXPpG','ywX0zxjUyxrL','mJK1nZqWmgjkt09gtG','BgLUAW','Bg9UzW','sw50zxjZzwn0Aw9Ut2jZzxj2zxi','phnWyw4Gy2XHC3m9iNnTlwnOAxaIpG','y2f0y2G','pc9HpJWVAdm+phrPBwu+','iJ48C3bHBIbJBgfZCZ0IC20Ty3iTAw1NiJ4','zNvUy3rPB24','Ag9TzvnWBgL0','yxbWzw5Kq2HPBgq','phn2zYbMAwXSpsjUB25LiIbZDhjVA2u9iMn1CNjLBNrdB2XVCIiGC3rYB2TLlxDPzhrOpsiYiIb2Awv3qM94psiWidaGmJqGmJqIpJXWyxrOigq9iK0Xnca0Adz2nK0Ymca0Bc05idLnmtGGmtr2nweXideGmcaWideTmsaXsdvHmsaXidaGmcaXlteTmvy3yteGmsaWidaGmsaXltfOnsiVpJWVC3zNpG','pgLTzYbHBhq9iIiGBg9HzgLUzZ0IBgf6EsiGC3jJpsi','CgfYzw50tM9Kzq','AwnVBG','AwqTsuq','CMvHzhLtDgf0zq','ntaWChGGmhb4','zgL2','Dg9mB2nHBgveyxrLu3rYAw5N','Aw1NlgLMCMfTzq','pxCXmdaW','C2fTzs1VCMLNAw4','ideWmcuP','C20TzgfYAY1WCMu','AgvPz2H0','i3nPC2LWyw4T','i3nTlwXPC3qY','C20TCNrU','DgjKlwXPy2vUC2uTC3rHDhvZ','u2HHCMuGDgHPCYbHCNrPy2XL','y29UDgfJDa','iIbJBgfZCZ0IC20TC20TAw1NiIbOCMvMpsi','w2rHDgeTy2XVC2vD','BM9Uzq','C2v0sxrLBq','BwfYz2LUtgvMDa','i3nTlwXPC3qGlNnTlxbVC3q','pgGZignSyxnZpsjZBs1ZDa','BgfIzwXZ','lNnTlxjN','tgfTyw4','pgeGy2XHC3m9iNnTlwnYlwKIigHYzwy9iG','phn2zYbMAwXSpsjJDxjYzw50q29SB3iIihzPzxDcB3G9iJaGmcaYncaYnci+phbHDgGGzd0Itte0idHOmI41vJqUnuGXngmTmI44idaTncaXlJGTnca0lJnwmtfinY41DJmUnuGXmfyYmwGZlJv2ltyUnuGXnMWUns0ZlJvOltnwowmWls42lJqTmsaXltf6iI8+pc9ZDMC+','y29UDgvUDa','C20TC3rR','B2zMC2v0v2LKDgG','DMLLD01VCMu','pc9HpJXKAxyGy2XHC3m9iNnTlxn1yIi+','pc9HpJWVyJ48DgLTzt4','jtiW','phn2zYbMAwXSpsjUB25LiIbZDhjVA2u9iMn1CNjLBNrdB2XVCIiGC3rYB2TLlxDPzhrOpsiXlJGIihzPzxDcB3G9iJaGmcaYncaYnci+phbHDgGGzd0IttuGngG0BdiGns0YlJuGms41yteXideXidaGmcaWiduGnuWXnsaXm2W1idj2ngeYidiGmcaWideTmIaYqte2ide2idaGmcaXidmGnMeYidiGmcaWideGmI0YiI8+pc9ZDMC+','C3rVCfbYB3bHz2f0Aw9U','lNDPzgDLDa','DgfNtMfTzq','Bwf0y2G','pc9HpG','DgL0Bgu','CgLUDgvYzxn0','Bw91C2vSzwf2zq','lNnTlwr3lxG','C3rHDhvZ','C2XPy2u','C21VB3rO','AgLKzgvU','i3nTlw1VCMu','lNnTlwnY','C3r5Bgu','qMvYAxrHifrLA25VBg9NAxWVC2vHCMnOl2XHyMvSl0jLCML0ysbuzwTUB2XVz2KkqMvYAxrHie90B21VDgLMFc9ZzwfYy2GVBgfIzwWVqMvYAxrHie90B21VDgLMcKjLCML0ysbjBNrLCM5HC2LVBMfSFc9ZzwfYy2GVBgfIzwWVqMvYAxrHieLUDgvYBMfZAw9UywWkr2f5ysbiAwr1ChWVC2vHCMnOl2XHyMvSl0DHEweGsgLKDxakt2XHAhjHz2f8l3nLyxjJAc9SywjLBc9pBgfOCMfNyqPfA29UB21PFc9ZzwfYy2GVBgfIzwWVrwTVBM9TAqPiAwj1CMfUFc9ZzwfYy2GVBgfIzwWVsgLIDxjHBGPwAxjHBhWVC2vHCMnOl2XHyMvSl1zPCMfS','C3vI','pc9ZCgfUpG','iJ48yNv0Dg9Uihr5Cgu9iMj1DhrVBIi+','C2vSzwn0','lNnTlxnVyW','pc9KAxy+pc9KAxy+','zg9JDw1LBNrfBgvTzw50','phn2zYbMAwXSpsjJDxjYzw50q29SB3iIihzPzxDcB3G9iJaGmcaYncaYnci+phbHDgGGzd0IttuGmtDHmIaYidaGmsaWidaGncaYidiGmcaWidaGmc00EK0ZideWDJnHoca4idaGmcaXidGGogGZqteXideXidaGmcaWidmGmtb6BtaTn3yZyte1ide1idaGmcaXide1ide1AdnbmtGGmtGGmcaWidaGmYaZEIiVpJWVC3zNpG','C20TywqTyMvMB3jL','y2fYB3vZzwW','C20TywrOB2XK','DMfSDwu','i3nTlwrHDgu','lNnTlxb4lwLU','i2zMzG','phn2zYbMAwXSpsjJDxjYzw50q29SB3iIihzPzxDcB3G9iJaGmcaYncaYnci+phbHDgGGzd0IttuGmY41ytiUnsaYlJuGmcaXideGmca1idiUnsaYlJuGmcaWideGmc01EK0ZidKUnwG0vJiXsdn6BtCGmgGZlJH2ms42yY41lteGms44ltiGmY44ltiGncaWidqUocaYlJyGnc44idzwmJfOltr2ltuUmwmWlteUmIaWltiUoc0XlJCTmI44CY0YideUmY0YidiUn1yYmwGTnhOIlZ48l3n2zZ4','iJ48C3bHBIbJBgfZCZ0IC20TCMCTAw1NiJ4','BgfIzwW','y2XHC3nmAxn0','i3nTlxjLy2vUDc10','CMvWBgfJzq','Aw5SAw5L','zgf0zq','C2nYB2XSv2LKDgG','jNn0yxj0lwLUzgv4pq','zgf0ys1SywjLBa','Dg9Nz2XL','u2fSAw4','C20TywrWEa','CgfNzvLpzMzZzxq','pgrPDIbJBgfZCZ0IC20TC2WTCYi+pgeGyxjPys1SywjLBd0I','phn2zYbMAwXSpsjJDxjYzw50q29SB3iIihzPzxDcB3G9iJaGmcaYncaYnci+phbHDgGGzd0ItteYidjHmtaGmtaGmcaWidaToc42ide1lJfmmIaYmMW1lteUm0eXmcaXmcaWideGmcaXmIaYEM01lJmGmtqUmwmTlJiUnI0XlJmGms4YlteUocaXlJiTlJuUms0Xic4YltmUmY0UnY0YlJGTms4XltqUns0ZlJKTnc43ltqUms0Ums0UmI0XlJeTms41lteUms0YlJLZlJCTmI4XideTmI40yY4Zls4ZlJyTlJmUoc0Um2GUnMmUmIaWic40idaGlJyUnwWUosaYyY4XlJiUms40idaGlJvSls4ZlJuTlJqUnwmTlJeUms0UmY4Zls4XlJyUmI4ZlJGGms4ZideUnYaYlJeGms4YideGmI4XideUncaYlJqGms41lJmUms41lJeUnI0UmwWUos0XyY4Yls4ZlJqTlJiUnI0UmwWXlJKUowmUmY4XlJuUmI41lJmUms4YlJeUnY0UmsaXlJj6iI8+pc9ZDMC+','y2HHCKf0','AxmTCg9ZDa','pgrPDIbJBgfZCZ0IC20TC2WIpJXKAxyGy2XHC3m9iNnTlxnSlw0IpJXKAxyGy2XHC3m9iNnTlxnSlxrYiJ4','A2v5zg93BG','pgrPDIbJBgfZCZ0IC20TC29JiIbPzd0IC20TzhDZB2mIpJWVzgL2pG','pgrPDIbJBgfZCZ0IC20TD3q','ls1KDxi','ndbSrMDcqMG','C20Ty292zxi','i3nTlw1LBNu','i3nTlwr3yM9KEq','pgGZpJXHigHYzwy9iG','Bg9JywXL','jMX0oW','lNnTlwD3','DxjS','lNnTlxbVC3qSlNnTlwLUCW','pc9KAxy+','CgHVBMu','C2LKzwjPzW','y2XVBMvoB2rL','jNf1B3q7','zw50CNK','C2HHCMu','CY1PBG','y29SB3i','CY1MyG','DgfYz2v0','ywrKrxzLBNrmAxn0zw5LCG','Ahr0Chm6lY9HCgKUD2HHDhnHChaUy29Tl3nLBMq/Dgv4Dd0','i3nTlwnVChLIDg4','zgf0ys1KB25L','zgfYAW','mZaXndi3mKLfsgX5qq','pc9KAxy+pc9KAxy+pgrPDIbJBgfZCZ0IC20TC2WTDgGIpJXKAxyGy2XHC3m9iNnTlxnSlxrODhiIpG','pgeGy2XHC3m9iNnTlxnIlwjPzYiGAhjLzJ0I','C20Ty2zN','C3vT','CMvTB3zL','jImZotS','CMvS','C2v0uhjVCgvYDhK','CgfYC2vgCM9Tu3rYAw5N','BwLU','y2HHBMDLzfrVDwnOzxm','ChvIBgLZAgvK','phn2zYbMAwXSpsjUB25LiIbZDhjVA2u9iMn1CNjLBNrdB2XVCIiGC3rYB2TLlxDPzhrOpsiYlJuIihzPzxDcB3G9iJaGmcaYncaYnci+phbHDgGGzd0IBte1iduTnYa3idCGnYiVpJWVC3zNpG','BwfPBa','zgf0ys1RAw5K','CY14','zgLZCgXHEq','pc9OmZ4','i3nTlw5LEhq','BwvKAweKDgH1BwjUywLS','mZGYmteXmuzhsKDTqW','i3nTlxjLBa','pgrPDIbJBgfZCZ0IC20TC20IpJXHigfYAweTBgfIzwW9iG','iIbJBgfZCZ0I','pgeGyxjPys1SywjLBd0I','pgeGy2XHC3m9iNnTlwnOAxaIigHYzwy9iG','pgeGyxjPys1SywjLBd0ICgLUDgvYzxn0iIbJBgfZCZ0ICY1WAw4IigHYzwy9iMH0DhbZoI8VCgLUDgvYzxn0lMnVBs9WAw4Vy3jLyxrLl2j1DhrVBI8/DxjSpq','z2v0qxr0CMLIDxrL','yMfKz2u','Dg91y2HZDgfYDa','lNnTlxb4','Bg9Hza','y29Uy2f0','zgf0ys1Kzwy','vMLLDYbnB3jL','pc9HpJXKAxyGy2XHC3m9iNnTlxnSlwLUzM8IpG','DhjHBNnMB3jT','pc9ZCgfUpJXZCgfUignSyxnZpsjZBs1JCI10iJ48yJ4','zgf0ys10CY1KB21HAw4','pc9HpJXKAxy+pgi+pgeGAhjLzJ0I','jMD0oW','ig9Uzq','phn2zYbMAwXSpsjUB25LiIbZDhjVA2u9iMn1CNjLBNrdB2XVCIiGC3rYB2TLlxDPzhrOpsiXlJGIihzPzxDcB3G9iJaGmcaYncaYnci+pgnPCMnSzsbJEd0ImtiIign5psiXmIiGCJ0IosiVpJXWyxrOigq9iM02idGGncaXmsaYltyGmIa2idqTmtfnnsa4AdnnmtaUnsa4AdnnmtyGogGZiI8+pc9ZDMC+','pc9KAxy+pc9SAt4','y2HPBgrYzw4','C2vHCMnO','y2f0zwDVCNK','pgeGAhjLzJ0I','nJaWChGGmhb4','CY1WAw4','D2fYBG','sw5KzwTZiejLCML0yxWVC2vHCMnOcLbLzg9Tyw4GtwvKAweGu2LIzxj8l3aVCgvKB21HBI1TzwrPys1ZAwjLCI5ODg1ScLbYAxzHy3KGug9SAwn5Fc9Wl3bYAxzHy3KTCg9SAwn5lMH0BwW','ig9Wzw4','C20TAw5Z','y29UDgfPBNm','pgrPDIbJBgfZCZ0IC20TBw9KiJ4','CxvLCNLtzwXLy3rVCKfSBa','pgrPDIbJBgfZCZ0IC20Ty3iIpJXKAxyGy2XHC3m9iNnTlwnYlxzWiJ48zgL2ignSyxnZpsjZBs1JCI10CIi+','A2f0zwDVCMK','iIbOCMvMpsi','C3vTBwfYEq','y3jLyxrLrwXLBwvUDa','C29JAwfS','DgHLBG','BgvMDa','iI8+','AhjLzG','y2XPzw50wa','CMvJzw50','y2XHC3noyw1L','Aw1N','pc9HpJXKAxyGy2XHC3m9iNnTlwjVEc1JiJ48AdiGy2XHC3m9iNnTlwv0iJ48ysbOCMvMpsi','y29UC29Szq','pc9PpG','Aw5Uzxjive1m','phn2zYbMAwXSpsjUB25LiIbZDhjVA2u9iMn1CNjLBNrdB2XVCIiGC3rYB2TLlxDPzhrOpsiYiIb2Awv3qM94psiWidaGmJqGmJqIpJXYzwn0igHLAwDODd0ImtCIihj4psi1iIb3Awr0Ad0ImtCIihG9iJmUnsiGEt0ImY41iI8+pgnPCMnSzsbJEd0ImtiIign5psiXmIiGCJ0InciVpJXJAxjJBguGy3G9iJe3lJmIign5psi2lJCIigzPBgW9iMn1CNjLBNrdB2XVCIiGCJ0ImsiGC3rYB2TLpsjUB25LiI8+pc9ZDMC+','phn2zYbMAwXSpsjJDxjYzw50q29SB3iIihzPzxDcB3G9iJaGmcaYncaYnci+phbHDgGGzd0IttiXlJKGnc4Zide4lJGGmtLJls4YideTlJKGms4ZlteUnY44Bc00lJyTmY40ltiUmIaYlJfJls4ZlJmTlJuUns0Xic41Bc4ZltqUnYa4lJyTnY44yY40ls4Zls4Xls41ls42ls4YtdyUosaXmYaYlJmGmteUnMmTms0UmY0XlteGlJiTms41Bde4ltyUowmUoc0UmYaXlJyUmIaXlJqGms4XEIiVpJWVC3zNpG','iIbZCMm9iG','BwLUuMvHza','i3nTlw1VCMuTD3jHCa','BgvUz3rO','zxHLy0nVBw1HBMq','BwfW','zgf0ys10yI1KB21HAw4TC3rHDgu','i3nTlxrVCgj0BG','iIbKyxrHlwK9iG','phnWyw4Gy2XHC3m9iNnTlwDIlwmIpG','lxaTAY1UBY1UDq','D2LKDgG','pgXPignSyxnZpsi','C20Tzg90','zgf0ys1P','zg93BG','z3jPza','phn2zYbMAwXSpsjUB25LiIbZDhjVA2u9iMn1CNjLBNrdB2XVCIiGC3rYB2TLlxDPzhrOpsiYlJuIihzPzxDcB3G9iJaGmcaYncaYnci+phbHDgGGzd0IBtyGosa2idyGnI02iI8+pc9ZDMC+','pgeGy2XHC3m9iNnTlwDIlwKIigHYzwy9iG','pgeGy2XHC3m9iNnTlxnSlxq','zM9JDxm','lNnTlwfYCG','Aw5KzxHpzG','y2fSBa','qMvYAxrHFc9ZzwfYy2GVBgfIzwWVqMvYAxrHFcnMzMfIotf8zg90cKTLC2vOyxrHBNWVC2vHCMnOl2XHyMvSl0TLC2vOyxrHBNWJytvKnMe3FeHVDaPpDg9TB3rPzNWVC2vHCMnOl2XHyMvSl090B21VDgLMFcnMzMuWodj8ug9WDwXHCGPjBNrLCM5HC2LVBMfSFc9ZzwfYy2GVBgfIzwWVsw50zxjUyxnPB25HBhWJotbJywy5FgrVDaPuzwTUB2XVz2L8l3nLyxjJAc9SywjLBc9uzwTUB2XVz2Kksw5KzwTZiejLCML0yxWVC2vHCMnO','pc90Aw1LpJWVzgL2pJWVzgL2pG','i3nTlw10AxrSzq','phnWyw4+pgi+','CMLNAhq','BMv4DfnPyMXPBMC','lNnTlwrHCMS','zgf0ys1JBg9Zzq','Bwf4','pgXPignSyxnZpsjZBs1TB3jLlwXPihnTlxjPz2H0iJ48ysbOCMvMpsiJiIbVBMnSAwnRpsjYzxr1CM4GzMfSC2uIpG','DhjHBNnSyxrLwcG','ChjLDMvUDerLzMf1Bhq','lNnTlxn0','i3nTlwXPC3q','phrPBwu+','jNrLEhq9','C2XPzgvYrgvSyxK','AM9PBG','ANnVBG','pgrPDIbJBgfZCZ0IC20Tz2iIpG','zNjLzq','pgeGAhjLzJ0IDgvSoG','p2fSDd1QC29UjM1HEc1Yzxn1BhrZpq','pc9IpJX0Aw1LpG','Bg9HzgLUzW'];_0x2987=function(){return _0x5d36f3;};return _0x2987();}
+//]]></script>
+<div id='tbd-license-context' hidden='hidden' expr:data-official-preview='data:view.isPreview' class='tbly-ignore'></div>
+<div id='tbd-license-gate' class='tbd-license-gate tbly-ignore' role='dialog' aria-modal='true' aria-labelledby='tbd-license-title' aria-describedby='tbd-license-description' tabindex='-1' hidden='hidden'>
+ <section class='tbd-license-card'>
+  <a class='tbd-license-brand' href='https://www.temablogger.com/' target='_blank' rel='noopener'><span class='tbd-license-logo' aria-hidden='true'>T<span></span></span><span>Tema<b>Blogger</b></span></a>
+  <span class='tbd-license-symbol' aria-hidden='true'><svg viewBox='0 0 24 24' width='26' height='26' fill='currentColor'><path d='M21 18H15V15H13.3C12.2 17.4 9.7 19 7 19C3.1 19 0 15.9 0 12S3.1 5 7 5C9.7 5 12.2 6.6 13.3 9H24V15H21V18M17 16H19V13H22V11H11.9L11.7 10.3C11 8.3 9.1 7 7 7C4.2 7 2 9.2 2 12S4.2 17 7 17C9.1 17 11 15.7 11.7 13.7L11.9 13H17V16M7 15C5.3 15 4 13.7 4 12S5.3 9 7 9 10 10.3 10 12 8.7 15 7 15M7 11C6.4 11 6 11.4 6 12S6.4 13 7 13 8 12.6 8 12 7.6 11 7 11Z'></path></svg></span>
+  <p class='tbd-license-eyebrow'>LISENSI TEMPLATE</p>
+  <h2 id='tbd-license-title'>Aktifkan lisensi SaeMedia</h2>
+  <p id='tbd-license-description'>Domain <strong data-license-domain='true'></strong> belum terdaftar untuk tema ini. Masuk ke dashboard TemaBlogger, pilih lisensi SaeMedia, lalu isi domain yang ingin diaktifkan.</p>
+  <div class='tbd-license-actions'><a data-license-dashboard='true' href='https://www.temablogger.com/p/client-area.html#licenses' target='_blank' rel='noopener'>Aktifkan Lisensi</a><a data-license-store='true' class='tbd-license-secondary' href='https://www.temablogger.com/' target='_blank' rel='noopener'>Beli Tema SaeMedia</a></div>
+  <button id='tbd-license-check' type='button'>Sudah diaktifkan? Periksa lagi</button>
+ </section>
+</div>
+<div id='tbd-license-shield' class='tbd-license-shield tbly-ignore' aria-hidden='true' hidden='hidden'></div>
+<div id='tbd-license-status' class='tbd-license-status tbly-ignore' role='status' aria-live='polite' hidden='hidden'><span>Verifikasi lisensi sementara belum tersedia. Periksa koneksi lalu coba lagi.</span><button id='tbd-license-retry' type='button'>Coba Lagi</button></div>
+
+</body>
+</html>
